@@ -572,9 +572,9 @@ Transform:
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 587411963}
-  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: -0, y: -1, z: 0}
-  m_LocalScale: {x: 1, y: 0.95, z: 1}
+  m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
+  m_LocalPosition: {x: 0, y: -1, z: 0}
+  m_LocalScale: {x: 1, y: 0.95000005, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children: []
   m_Father: {fileID: 0}
@@ -794,18 +794,18 @@ MonoBehaviour:
   m_GameObject: {fileID: 1036983373}
   m_Enabled: 1
   m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: bce6ffadb448f77458ecea5c3a8997b1, type: 3}
+  m_Script: {fileID: 11500000, guid: 9c5fc58b3f6571048a5645da2df4c1f5, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
   slider: {fileID: 0}
   pictureFrames:
-  - {fileID: 21300000, guid: 5f68d4c9805b0184eba9b2f546f1daf1, type: 3}
-  - {fileID: 21300000, guid: 66915109336be8144816400eaa88213a, type: 3}
-  - {fileID: 21300000, guid: bf9e786fbc9b256499b2db8f8c48fd93, type: 3}
-  - {fileID: 21300000, guid: ec0145be64b914949806bedb1b0172cb, type: 3}
-  - {fileID: 21300000, guid: 69f850fd563f88345a3074de50e1b1ed, type: 3}
+  - {fileID: 21300000, guid: 3b6eb557fb66a59478e6ad67e3dad910, type: 3}
+  - {fileID: 21300000, guid: 1b8ab85cd60660e4d8d7d26514f0632a, type: 3}
+  - {fileID: 21300000, guid: abf9441ea60dc0b46b20a1eafa8acb7c, type: 3}
+  - {fileID: 21300000, guid: b53291b95624c4a44bfaaa7ebe18a7a5, type: 3}
+  - {fileID: 21300000, guid: ed302364f8ef82a47b0e1f76217f84aa, type: 3}
   picture: {fileID: 587411963}
-  moveSpeed: 5
+  moveSpeed: 10
   correctRange: 1
   currentRange: 3
 --- !u!1 &1214512301
@@ -1135,7 +1135,7 @@ GameObject:
   - component: {fileID: 1817579342}
   - component: {fileID: 1817579341}
   m_Layer: 0
-  m_Name: Light Icon
+  m_Name: Humidity Icon
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
