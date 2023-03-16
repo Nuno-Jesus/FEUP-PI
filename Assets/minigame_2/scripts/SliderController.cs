@@ -27,6 +27,9 @@ public class SliderController : MonoBehaviour
 
     void Update()
     {   
+        // If the users are touching the screen to lock the result, don't move the slider
+        if (Input.touchCount != 0)
+            return ;
         slider.value = Mathf.Clamp(slider.value + Input.acceleration.x * moveSpeed, slider.minValue, slider.maxValue);
         for (int i = 0; i < 5; i++)
         {
