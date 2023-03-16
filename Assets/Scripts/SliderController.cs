@@ -13,8 +13,6 @@ public class SliderController : MonoBehaviour
     void Start()
     {
         slider = gameObject.GetComponent<Slider>();
-        slider.minValue = 20.0f;
-        slider.maxValue = 500.0f;
         slider.value = (slider.minValue - slider.maxValue)/2;
 
         ranges = new KeyValuePair<float, float>[5];
