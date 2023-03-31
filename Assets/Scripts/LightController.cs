@@ -2,6 +2,8 @@ using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 using UnityEngine.UI;
+using UnityEngine.SceneManagement;
+
 public class LightController : MonoBehaviour
 {
     public Slider slider;
@@ -9,7 +11,7 @@ public class LightController : MonoBehaviour
     public GameObject picture;
     public float moveSpeed = 10.0f;
     private KeyValuePair<float, float>[] ranges;
-    public int correctRange = 1;
+    public int correctRange = 2;
     public int currentRange = 3;
 
     void Start()
@@ -41,5 +43,8 @@ public class LightController : MonoBehaviour
                 break;                
             }
         }
+
+        if (correctRange == currentRange)
+            SceneManager.LoadScene("TemperatureScene");
     }
 }
