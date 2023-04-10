@@ -541,7 +541,7 @@ RectTransform:
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0, y: 1}
   m_AnchorMax: {x: 0, y: 1}
-  m_AnchoredPosition: {x: 535, y: -544}
+  m_AnchoredPosition: {x: 542, y: -544}
   m_SizeDelta: {x: 860, y: 260}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!114 &1022885782
@@ -786,7 +786,7 @@ PrefabInstance:
       objectReference: {fileID: 952502610}
     - target: {fileID: 4256887245250979428, guid: f65afebfdf2f3ee469a77620b467f2fd, type: 3}
       propertyPath: nextScene
-      value: LightScene
+      value: HumidityScene
       objectReference: {fileID: 0}
     - target: {fileID: 8529813206863935920, guid: f65afebfdf2f3ee469a77620b467f2fd, type: 3}
       propertyPath: m_RootOrder
