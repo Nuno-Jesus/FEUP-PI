@@ -45,6 +45,6 @@ public class LightController : MonoBehaviour
         }
 
         if (correctRange == currentRange)
-            SceneManager.LoadScene("TemperatureScene");
+            SceneManager.LoadScene("HumidityScene");
     }
 }
