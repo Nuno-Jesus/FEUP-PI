@@ -6,15 +6,19 @@ using UnityEngine.UI;
 public class HumidityController : MonoBehaviour
 {
     public Sprite[] pictureFrames;
-    public GameObject picture;
 
     public Slider humiditySlider;
-    public Slider temperatureSlider;
-    private KeyValuePair<float, float>[] humidityRanges;
+    public GameObject humidityPicture;
     private KeyValuePair<float, float>[] temperatureRanges;
+    public int humidityCurrentFrame = 5;
+    public int humidityCorrectFrame = 2;
 
-	public int correctFrame = 2;
-    public int currentFrame = 0;
+    public Slider temperatureSlider;
+    public GameObject temperaturePicture;
+    private KeyValuePair<float, float>[] humidityRanges;
+    public int temperatureCurrentFrame = 0;
+    public int temperatureCorrectFrame = 2;
+
 
     void Start()
     {
@@ -26,6 +30,8 @@ public class HumidityController : MonoBehaviour
         humidityRanges[4] = new KeyValuePair<float, float>(65.0f, 79.9f);
         humidityRanges[5] = new KeyValuePair<float, float>(80.0f, 100.0f);
 
+        humiditySlider.value = humidityRanges[humidityCurrentFrame].Key;
+        
         temperatureRanges = new KeyValuePair<float, float>[6];
         temperatureRanges[0] = new KeyValuePair<float, float>(0.0f, 4.9f);
         temperatureRanges[1] = new KeyValuePair<float, float>(5.0f, 9.9f);
@@ -33,6 +39,9 @@ public class HumidityController : MonoBehaviour
         temperatureRanges[3] = new KeyValuePair<float, float>(15.0f, 24.9f);
         temperatureRanges[4] = new KeyValuePair<float, float>(25.0f, 39.9f);
         temperatureRanges[5] = new KeyValuePair<float, float>(40.0f, 50.0f);
+
+        temperatureSlider.value = temperatureRanges[temperatureCurrentFrame].Key;
+        
     }
 
 	bool between(float n, float a, float b)
@@ -53,12 +62,10 @@ public class HumidityController : MonoBehaviour
 		Debug.Log("Humidity Value: " + humiditySlider.value);
 		Debug.Log("Temperature Value: " + temperatureSlider.value);
 
-		int	tFrame = getPictureFrame(temperatureSlider, temperatureRanges);     
-		int	hFrame = getPictureFrame(humiditySlider, humidityRanges);
-		if (tFrame == hFrame)
-		{
-			currentFrame = tFrame;
-			picture.GetComponent<SpriteRenderer>().sprite = pictureFrames[currentFrame];
-		}
-    }
+		temperatureCurrentFrame = getPictureFrame(temperatureSlider, temperatureRanges);     
+        temperaturePicture.GetComponent<SpriteRenderer>().sprite = pictureFrames[temperatureCurrentFrame];
+		
+		humidityCurrentFrame = getPictureFrame(humiditySlider, humidityRanges);
+        humidityPicture.GetComponent<SpriteRenderer>().sprite = pictureFrames[humidityCurrentFrame];
+    }   
 }
