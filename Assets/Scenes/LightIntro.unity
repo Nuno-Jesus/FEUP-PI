@@ -277,7 +277,7 @@ MonoBehaviour:
     m_HorizontalOverflow: 0
     m_VerticalOverflow: 0
     m_LineSpacing: 1
-  m_Text: INICIAR
+  m_Text: CONTINUAR
 --- !u!222 &265807566
 CanvasRenderer:
   m_ObjectHideFlags: 0
@@ -784,7 +784,7 @@ PrefabInstance:
       objectReference: {fileID: 952502610}
     - target: {fileID: 4256887245250979428, guid: f65afebfdf2f3ee469a77620b467f2fd, type: 3}
       propertyPath: nextScene
-      value: LightScene
+      value: LightTutorial
       objectReference: {fileID: 0}
     - target: {fileID: 8529813206863935920, guid: f65afebfdf2f3ee469a77620b467f2fd, type: 3}
       propertyPath: m_RootOrder

@@ -56,11 +56,10 @@ public class HumidityController : MonoBehaviour
     {   
 		if (hasEnteredCorrectRange() && !hotDetectorSoundSource.isPlaying)
 			hotDetectorSoundSource.Play();
-		else if (hasEnteredCorrectRange())
-			checkSuccess();
 		else if (!hasEnteredCorrectRange())
 			hotDetectorSoundSource.Stop();
 		
+		checkSuccess();
 		temperatureCurrentFrame = getPictureFrame(temperatureSlider, temperatureRanges);     
         temperaturePicture.GetComponent<SpriteRenderer>().sprite = pictureFrames[temperatureCurrentFrame];
 		
@@ -98,15 +97,18 @@ public class HumidityController : MonoBehaviour
 
 	void checkSuccess()
 	{
+		if (!hasEnteredCorrectRange())
+			return ;
 		if (!wasLoadingRendered)
 		{
 			loadingHumiditySliderClone = Instantiate(loadingHumiditySlider, canvas.transform);
 			// loadingTemperatureSliderClone = Instantiate(loadingTemperatureSlider, canvas.transform);
 			wasLoadingRendered = true;
 		}
-		if (loadingHumiditySliderClone.value < 3.0f && loadingTemperatureSliderClone.value < 3.0f)
+		if (loadingHumiditySliderClone.value < 3.0f /* && loadingTemperatureSliderClone.value < 3.0f */)
 			return ;
-		SceneManager.LoadScene("HumidityIntro");
+		SceneManager.LoadScene("PlayerSwap2");
 		wasLoadingRendered = false;
+		loadingHumiditySliderClone = null;
 	}
 }

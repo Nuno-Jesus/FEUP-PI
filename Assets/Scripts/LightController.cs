@@ -70,9 +70,10 @@ public class LightController : MonoBehaviour
 		if (loadingSliderClone.value < 3.0f)
 			return ;
 		if (hasEnteredCorrectRange())
-			SceneManager.LoadScene("HumidityIntro");
+			SceneManager.LoadScene("PlayerSwap1");
 		isFingerprintClicked = false;
 		wasLoadingRendered = false;
+		loadingSliderClone = null;
 	}
 
 	bool hasEnteredCorrectRange()

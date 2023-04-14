@@ -158,7 +158,7 @@ RectTransform:
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0, y: 1}
   m_AnchorMax: {x: 0, y: 1}
-  m_AnchoredPosition: {x: 540, y: -1542.1}
+  m_AnchoredPosition: {x: 540, y: -1569.67}
   m_SizeDelta: {x: 807, y: 400}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!114 &56783975
@@ -183,7 +183,7 @@ MonoBehaviour:
       m_Calls: []
   m_FontData:
     m_Font: {fileID: 12800000, guid: 13c7569242dacd14c9950edd70261914, type: 3}
-    m_FontSize: 55
+    m_FontSize: 50
     m_FontStyle: 0
     m_BestFit: 0
     m_MinSize: 0
@@ -194,8 +194,8 @@ MonoBehaviour:
     m_HorizontalOverflow: 0
     m_VerticalOverflow: 0
     m_LineSpacing: 1
-  m_Text: "Inclinem o dispositivo para mexerem a barra e acertarem com o intervalo
-    certo. \nFiquem quietos quando ouvirem um som!"
+  m_Text: Rodem o dispositivo para jogarem a pares e usem o dedo para procurarem
+    os intervalos ideais. Devem de parar quando ouvirem 2 sons distintos.
 --- !u!222 &56783976
 CanvasRenderer:
   m_ObjectHideFlags: 0
@@ -529,7 +529,7 @@ RectTransform:
   m_GameObject: {fileID: 1011664128}
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
   m_LocalPosition: {x: 0, y: 0, z: 0}
-  m_LocalScale: {x: 8, y: 7, z: 1}
+  m_LocalScale: {x: 8, y: 8, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children: []
   m_Father: {fileID: 1894740102}
@@ -560,7 +560,7 @@ MonoBehaviour:
   m_OnCullStateChanged:
     m_PersistentCalls:
       m_Calls: []
-  m_Sprite: {fileID: 21300000, guid: 36358830e9e5e6545b4d5c67da5f6e65, type: 3}
+  m_Sprite: {fileID: 21300000, guid: 2f075daf24e0e784cb49ddbbc103b6d9, type: 3}
   m_Type: 0
   m_PreserveAspect: 0
   m_FillCenter: 1
@@ -778,7 +778,7 @@ PrefabInstance:
       objectReference: {fileID: 952502610}
     - target: {fileID: 4256887245250979428, guid: f65afebfdf2f3ee469a77620b467f2fd, type: 3}
       propertyPath: nextScene
-      value: LightScene
+      value: HumidityScene
       objectReference: {fileID: 0}
     - target: {fileID: 8529813206863935920, guid: f65afebfdf2f3ee469a77620b467f2fd, type: 3}
       propertyPath: m_RootOrder
