@@ -2,6 +2,7 @@ using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 using UnityEngine.UI;
+using UnityEngine.VFX;
 using UnityEngine.SceneManagement;
 
 public class LightController : MonoBehaviour
@@ -18,7 +19,6 @@ public class LightController : MonoBehaviour
     public float moveSpeed = 10.0f;
     public int lightCurrentFrame = 0;
     public int lightCorrectFrame = 2;
-	public float timer = 0.0f;
     private KeyValuePair<float, float>[] lightRanges;
 
     void Start()
@@ -59,16 +59,12 @@ public class LightController : MonoBehaviour
 			loadingSliderClone = Instantiate(loadingSlider, canvas.transform);
 			wasLoadingRendered = true;
 		}
-		timer += Time.deltaTime;
-		loadingSliderClone.value += Time.deltaTime;
-		if (timer < 3.0f)
+		if (loadingSliderClone.value < 3.0f)
 			return ;
 		if (lightCurrentFrame == lightCorrectFrame)
 			SceneManager.LoadScene("HumidityIntro");
-		timer = 0.0f;
 		isFingerprintClicked = false;
 		wasLoadingRendered = false;
-		Destroy(loadingSliderClone, 0.0f);
 	}
 
 	bool between(float n, float a, float b)

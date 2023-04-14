@@ -238,6 +238,7 @@ GameObject:
   m_Component:
   - component: {fileID: 3582196164517837840}
   - component: {fileID: 8282948746816495662}
+  - component: {fileID: 3770725246933033261}
   m_Layer: 5
   m_Name: Loading Slider
   m_TagString: Untagged
@@ -319,6 +320,19 @@ MonoBehaviour:
   m_OnValueChanged:
     m_PersistentCalls:
       m_Calls: []
+--- !u!114 &3770725246933033261
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 7194381687927535085}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 5029d31fcca9e9841883f42f0a95894b, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  maxTime: 3
 --- !u!1 &7840776305383550616
 GameObject:
   m_ObjectHideFlags: 0
