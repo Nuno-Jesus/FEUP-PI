@@ -9,13 +9,16 @@ public class LightController : MonoBehaviour
 {
     public Slider lightSlider;
 	public Slider loadingSlider;
-	public Slider loadingSliderClone;
+	private Slider loadingSliderClone;
+	public AudioSource hotDetectorSoundSource;
+	public AudioSource correctRangeSoundSource;
 	public Button fingerprint;
     public GameObject lightPaint;
 	public Canvas canvas;
     public Sprite[] pictureFrames = new Sprite[5];
 	public bool isFingerprintClicked = false;
 	public bool wasLoadingRendered = false;
+	public bool enteredCorrectRange = false;
     public float moveSpeed = 10.0f;
     public int lightCurrentFrame = 0;
     public int lightCorrectFrame = 2;
@@ -35,7 +38,11 @@ public class LightController : MonoBehaviour
     }
 
     void Update()
-    {   
+    {   if (hasEnteredCorrectRange() && !hotDetectorSoundSource.isPlaying)
+			hotDetectorSoundSource.Play();
+		else if (!hasEnteredCorrectRange())
+			hotDetectorSoundSource.Stop();
+
 		if (isFingerprintClicked)
 			checkSuccess();
 		else
@@ -49,7 +56,7 @@ public class LightController : MonoBehaviour
 				lightPaint.GetComponent<SpriteRenderer>().sprite = pictureFrames[i];
 				break;                
 			}
-		}			
+		}
     }
 
 	void checkSuccess()
@@ -61,10 +68,18 @@ public class LightController : MonoBehaviour
 		}
 		if (loadingSliderClone.value < 3.0f)
 			return ;
-		if (lightCurrentFrame == lightCorrectFrame)
+		if (hasEnteredCorrectRange())
+		{	
+			hotDetectorSoundSource.Play();
 			SceneManager.LoadScene("HumidityIntro");
+		}
 		isFingerprintClicked = false;
 		wasLoadingRendered = false;
+	}
+
+	bool hasEnteredCorrectRange()
+	{
+		return (lightCorrectFrame == lightCurrentFrame);
 	}
 
 	bool between(float n, float a, float b)
