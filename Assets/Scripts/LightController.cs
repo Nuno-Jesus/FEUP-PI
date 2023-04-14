@@ -48,16 +48,17 @@ public class LightController : MonoBehaviour
 		else
 			lightSlider.value = Mathf.Clamp(lightSlider.value + Input.acceleration.x * moveSpeed, lightSlider.minValue, lightSlider.maxValue);	
 
-		for (int i = 0; i < 5; i++)
-		{
-			if (between(lightSlider.value, lightRanges[i].Key, lightRanges[i].Value))
-			{
-				lightCurrentFrame = i;
-				lightPaint.GetComponent<SpriteRenderer>().sprite = pictureFrames[i];
-				break;                
-			}
-		}
+		lightCurrentFrame = getPictureFrame(lightSlider, lightRanges);
+		lightPaint.GetComponent<SpriteRenderer>().sprite = pictureFrames[lightCurrentFrame];
     }
+
+	int getPictureFrame(Slider slider, KeyValuePair<float, float>[] ranges)
+	{
+        for (int i = 0; i < 5; i++)
+			if (between(slider.value, ranges[i].Key, ranges[i].Value))
+				return i;
+		return 0;
+	}
 
 	void checkSuccess()
 	{
@@ -69,10 +70,7 @@ public class LightController : MonoBehaviour
 		if (loadingSliderClone.value < 3.0f)
 			return ;
 		if (hasEnteredCorrectRange())
-		{	
-			hotDetectorSoundSource.Play();
 			SceneManager.LoadScene("HumidityIntro");
-		}
 		isFingerprintClicked = false;
 		wasLoadingRendered = false;
 	}

@@ -935,6 +935,7 @@ MonoBehaviour:
   - {fileID: 21300000, guid: 69f850fd563f88345a3074de50e1b1ed, type: 3}
   isFingerprintClicked: 0
   wasLoadingRendered: 0
+  enteredCorrectRange: 0
   moveSpeed: 5
   lightCurrentFrame: 0
   lightCorrectFrame: 2

@@ -2,11 +2,11 @@ using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 using UnityEngine.UI;
+using UnityEngine.SceneManagement;
 
 public class HumidityController : MonoBehaviour
 {
     public Sprite[] pictureFrames;
-
     public Slider humiditySlider;
     public GameObject humidityPicture;
     private KeyValuePair<float, float>[] temperatureRanges;
@@ -19,6 +19,14 @@ public class HumidityController : MonoBehaviour
     public int temperatureCurrentFrame = 0;
     public int temperatureCorrectFrame = 2;
 
+	public Slider loadingHumiditySlider;
+	public Slider loadingTemperatureSlider;
+	private Slider loadingHumiditySliderClone;
+	private Slider loadingTemperatureSliderClone;
+	private bool wasLoadingRendered = false;
+	public AudioSource hotDetectorSoundSource;
+	public AudioSource correctRangeSoundSource;
+	public Canvas canvas;
 
     void Start()
     {
@@ -44,9 +52,40 @@ public class HumidityController : MonoBehaviour
         
     }
 
+    void Update()
+    {   
+		if (hasEnteredCorrectRange() && !hotDetectorSoundSource.isPlaying)
+			hotDetectorSoundSource.Play();
+		else if (hasEnteredCorrectRange())
+			checkSuccess();
+		else if (!hasEnteredCorrectRange())
+			hotDetectorSoundSource.Stop();
+		
+		temperatureCurrentFrame = getPictureFrame(temperatureSlider, temperatureRanges);     
+        temperaturePicture.GetComponent<SpriteRenderer>().sprite = pictureFrames[temperatureCurrentFrame];
+		
+		humidityCurrentFrame = getPictureFrame(humiditySlider, humidityRanges);
+        humidityPicture.GetComponent<SpriteRenderer>().sprite = pictureFrames[humidityCurrentFrame];
+		
+	}
+
 	bool between(float n, float a, float b)
 	{
 		return (n >= a && n <= b);
+	}
+
+	bool hasEnteredCorrectHumidityRange()
+	{
+		return (humidityCorrectFrame == humidityCurrentFrame);
+	}
+	bool hasEnteredCorrectTemperatureRange()
+	{
+		return (temperatureCorrectFrame == temperatureCurrentFrame);
+	}
+
+	bool hasEnteredCorrectRange()
+	{
+		return (hasEnteredCorrectHumidityRange() && hasEnteredCorrectTemperatureRange());
 	}
 
 	int getPictureFrame(Slider slider, KeyValuePair<float, float>[] ranges)
@@ -57,15 +96,17 @@ public class HumidityController : MonoBehaviour
 		return 0;
 	}
 
-    void Update()
-    {   
-		Debug.Log("Humidity Value: " + humiditySlider.value);
-		Debug.Log("Temperature Value: " + temperatureSlider.value);
-
-		temperatureCurrentFrame = getPictureFrame(temperatureSlider, temperatureRanges);     
-        temperaturePicture.GetComponent<SpriteRenderer>().sprite = pictureFrames[temperatureCurrentFrame];
-		
-		humidityCurrentFrame = getPictureFrame(humiditySlider, humidityRanges);
-        humidityPicture.GetComponent<SpriteRenderer>().sprite = pictureFrames[humidityCurrentFrame];
-    }   
+	void checkSuccess()
+	{
+		if (!wasLoadingRendered)
+		{
+			loadingHumiditySliderClone = Instantiate(loadingHumiditySlider, canvas.transform);
+			// loadingTemperatureSliderClone = Instantiate(loadingTemperatureSlider, canvas.transform);
+			wasLoadingRendered = true;
+		}
+		if (loadingHumiditySliderClone.value < 3.0f && loadingTemperatureSliderClone.value < 3.0f)
+			return ;
+		SceneManager.LoadScene("HumidityIntro");
+		wasLoadingRendered = false;
+	}
 }
