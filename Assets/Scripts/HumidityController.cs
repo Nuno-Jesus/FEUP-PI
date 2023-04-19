@@ -24,8 +24,8 @@ public class HumidityController : MonoBehaviour
 	private Slider loadingHumiditySliderClone;
 	private Slider loadingTemperatureSliderClone;
 	private bool wasLoadingRendered = false;
-	public AudioSource hotDetectorSoundSource;
-	public AudioSource correctRangeSoundSource;
+	public AudioSource temperatureCorrectSoundSource;
+	public AudioSource humidityCorrectSoundSource;
 	public Canvas canvas;
 
     void Start()
@@ -54,18 +54,24 @@ public class HumidityController : MonoBehaviour
 
     void Update()
     {   
-		if (hasEnteredCorrectRange() && !hotDetectorSoundSource.isPlaying)
-			hotDetectorSoundSource.Play();
-		else if (!hasEnteredCorrectRange())
-			hotDetectorSoundSource.Stop();
+		if (hasEnteredCorrectTemperatureRange() && !temperatureCorrectSoundSource.isPlaying)
+			temperatureCorrectSoundSource.Play();
+		else if (!hasEnteredCorrectTemperatureRange())
+			temperatureCorrectSoundSource.Stop();
 		
-		checkSuccess();
+		if (hasEnteredCorrectHumidityRange() && !humidityCorrectSoundSource.isPlaying)
+			humidityCorrectSoundSource.Play();
+		else if (!hasEnteredCorrectHumidityRange())
+			humidityCorrectSoundSource.Stop();
+		
+		if (hasEnteredCorrectHumidityRange() && hasEnteredCorrectTemperatureRange())
+			checkSuccess();
+
 		temperatureCurrentFrame = getPictureFrame(temperatureSlider, temperatureRanges);     
         temperaturePicture.GetComponent<SpriteRenderer>().sprite = pictureFrames[temperatureCurrentFrame];
 		
 		humidityCurrentFrame = getPictureFrame(humiditySlider, humidityRanges);
         humidityPicture.GetComponent<SpriteRenderer>().sprite = pictureFrames[humidityCurrentFrame];
-		
 	}
 
 	bool between(float n, float a, float b)
@@ -77,14 +83,10 @@ public class HumidityController : MonoBehaviour
 	{
 		return (humidityCorrectFrame == humidityCurrentFrame);
 	}
+
 	bool hasEnteredCorrectTemperatureRange()
 	{
 		return (temperatureCorrectFrame == temperatureCurrentFrame);
-	}
-
-	bool hasEnteredCorrectRange()
-	{
-		return (hasEnteredCorrectHumidityRange() && hasEnteredCorrectTemperatureRange());
 	}
 
 	int getPictureFrame(Slider slider, KeyValuePair<float, float>[] ranges)
@@ -97,8 +99,6 @@ public class HumidityController : MonoBehaviour
 
 	void checkSuccess()
 	{
-		if (!hasEnteredCorrectRange())
-			return ;
 		if (!wasLoadingRendered)
 		{
 			loadingHumiditySliderClone = Instantiate(loadingHumiditySlider, canvas.transform);

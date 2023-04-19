@@ -415,8 +415,8 @@ MonoBehaviour:
   temperatureCorrectFrame: 2
   loadingHumiditySlider: {fileID: 3577092049406640921, guid: 71701a9e8b7f6454db4f99e1be365255, type: 3}
   loadingTemperatureSlider: {fileID: 4861899907999420876, guid: 3abf39be88cf1944999888ebbefb890b, type: 3}
-  hotDetectorSoundSource: {fileID: 1038461161}
-  correctRangeSoundSource: {fileID: 1244624675}
+  temperatureCorrectSoundSource: {fileID: 1038461161}
+  humidityCorrectSoundSource: {fileID: 1244624675}
   canvas: {fileID: 323402578}
 --- !u!1 &345287885
 GameObject:
@@ -1241,7 +1241,7 @@ GameObject:
   - component: {fileID: 1038461162}
   - component: {fileID: 1038461161}
   m_Layer: 0
-  m_Name: HotDetectorSoundSource
+  m_Name: Temperature Correct Sound Source
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -1257,7 +1257,7 @@ AudioSource:
   m_Enabled: 1
   serializedVersion: 4
   OutputAudioMixerGroup: {fileID: 0}
-  m_audioClip: {fileID: 8300000, guid: 1e23d619788cd4643b4e0d2f99d8eb34, type: 3}
+  m_audioClip: {fileID: 8300000, guid: c5561fe91c7e664448d81a6110054640, type: 3}
   m_PlayOnAwake: 0
   m_Volume: 1
   m_Pitch: 1
@@ -1449,7 +1449,7 @@ GameObject:
   - component: {fileID: 1244624676}
   - component: {fileID: 1244624675}
   m_Layer: 0
-  m_Name: CorrectRangeSoundSource
+  m_Name: Humidity Correct Sound Source
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -1465,7 +1465,7 @@ AudioSource:
   m_Enabled: 1
   serializedVersion: 4
   OutputAudioMixerGroup: {fileID: 0}
-  m_audioClip: {fileID: 8300000, guid: bfbc904f87b34f94dae1223e3615f5e3, type: 3}
+  m_audioClip: {fileID: 8300000, guid: 5e651cc9d87bb84488d7af4c383b33ab, type: 3}
   m_PlayOnAwake: 0
   m_Volume: 1
   m_Pitch: 1
