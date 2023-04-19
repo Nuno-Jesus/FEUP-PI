@@ -8,20 +8,13 @@ using UnityEngine.SceneManagement;
 public class LightController : MonoBehaviour
 {
     public Slider lightSlider;
-	public Slider loadingSlider;
-	private Slider loadingSliderClone;
 	public AudioSource hotDetectorSoundSource;
-	public AudioSource correctRangeSoundSource;
-	public Button fingerprint;
     public GameObject lightPaint;
-	public Canvas canvas;
+	public GameObject overlay;
     public Sprite[] pictureFrames = new Sprite[5];
-	public bool isFingerprintClicked = false;
-	public bool wasLoadingRendered = false;
-	public bool enteredCorrectRange = false;
-    public float moveSpeed = 10.0f;
-    public int lightCurrentFrame = 0;
-    public int lightCorrectFrame = 2;
+    public const float moveSpeed = 10.0f;
+    public int paintCurrentFrame = 0;
+    public const int paintCorrectFrame = 2;
     private KeyValuePair<float, float>[] lightRanges;
 
     void Start()
@@ -33,26 +26,28 @@ public class LightController : MonoBehaviour
         lightRanges[3] = new KeyValuePair<float, float>(150.0f, 324.9f);
         lightRanges[4] = new KeyValuePair<float, float>(325.0f, 500.0f);
 
-		lightSlider.value = lightRanges[lightCurrentFrame].Key;
-		fingerprint.onClick.AddListener(onFingerprintClick);
+		lightSlider.value = lightRanges[paintCurrentFrame].Key;
     }
 
     void Update()
-    {   if (hasEnteredCorrectRange() && !hotDetectorSoundSource.isPlaying)
+    {   
+		//If the user entered the correct range and the sound wasn't playing so far, play it
+		if (hasEnteredCorrectRange() && !hotDetectorSoundSource.isPlaying)
 			hotDetectorSoundSource.Play();
 		else if (!hasEnteredCorrectRange())
 			hotDetectorSoundSource.Stop();
 
-		if (isFingerprintClicked)
-			checkSuccess();
-		else
-			lightSlider.value = Mathf.Clamp(lightSlider.value + Input.acceleration.x * moveSpeed, lightSlider.minValue, lightSlider.maxValue);	
-
-		lightCurrentFrame = getPictureFrame(lightSlider, lightRanges);
-		lightPaint.GetComponent<SpriteRenderer>().sprite = pictureFrames[lightCurrentFrame];
+		//If the user clicked the fingerprint and opened the overlay, stop the paint update
+		if (overlay.activeSelf)
+			return ;
+			
+		//Update the sliders value based on the tilting of the phone
+		lightSlider.value = Mathf.Clamp(lightSlider.value + Input.acceleration.x * moveSpeed, lightSlider.minValue, lightSlider.maxValue);	
+		paintCurrentFrame = getPaintFrame(lightSlider, lightRanges);
+		lightPaint.GetComponent<SpriteRenderer>().sprite = pictureFrames[paintCurrentFrame];
     }
 
-	int getPictureFrame(Slider slider, KeyValuePair<float, float>[] ranges)
+	int getPaintFrame(Slider slider, KeyValuePair<float, float>[] ranges)
 	{
         for (int i = 0; i < 5; i++)
 			if (between(slider.value, ranges[i].Key, ranges[i].Value))
@@ -60,34 +55,13 @@ public class LightController : MonoBehaviour
 		return 0;
 	}
 
-	void checkSuccess()
+	public bool hasEnteredCorrectRange()
 	{
-		if (!wasLoadingRendered)
-		{
-			loadingSliderClone = Instantiate(loadingSlider, canvas.transform);
-			wasLoadingRendered = true;
-		}
-		if (loadingSliderClone.value < 3.0f)
-			return ;
-		if (hasEnteredCorrectRange())
-			SceneManager.LoadScene("PlayerSwap1");
-		isFingerprintClicked = false;
-		wasLoadingRendered = false;
-		loadingSliderClone = null;
-	}
-
-	bool hasEnteredCorrectRange()
-	{
-		return (lightCorrectFrame == lightCurrentFrame);
+		return (paintCorrectFrame == paintCurrentFrame);
 	}
 
 	bool between(float n, float a, float b)
 	{
 		return (n >= a && n <= b);
-	}
-
-	void onFingerprintClick()
-	{
-		isFingerprintClicked = !isFingerprintClicked;
 	}
 }

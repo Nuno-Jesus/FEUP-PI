@@ -135,6 +135,7 @@ GameObject:
   - component: {fileID: 94666104}
   - component: {fileID: 94666103}
   - component: {fileID: 94666102}
+  - component: {fileID: 94666105}
   m_Layer: 5
   m_Name: Fingerprint Button
   m_TagString: Untagged
@@ -155,7 +156,7 @@ RectTransform:
   m_ConstrainProportionsScale: 0
   m_Children: []
   m_Father: {fileID: 323402579}
-  m_RootOrder: 1
+  m_RootOrder: 2
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0.5, y: 0.5}
   m_AnchorMax: {x: 0.5, y: 0.5}
@@ -205,7 +206,19 @@ MonoBehaviour:
   m_TargetGraphic: {fileID: 94666103}
   m_OnClick:
     m_PersistentCalls:
-      m_Calls: []
+      m_Calls:
+      - m_Target: {fileID: 94666105}
+        m_TargetAssemblyTypeName: FingerprintController, Assembly-CSharp
+        m_MethodName: togglePanel
+        m_Mode: 1
+        m_Arguments:
+          m_ObjectArgument: {fileID: 0}
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+          m_IntArgument: 0
+          m_FloatArgument: 0
+          m_StringArgument: 
+          m_BoolArgument: 0
+        m_CallState: 2
 --- !u!114 &94666103
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -244,6 +257,98 @@ CanvasRenderer:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 94666100}
   m_CullTransparentMesh: 1
+--- !u!114 &94666105
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 94666100}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: d4b8438c6ce9b5d429185fed1ff3dabf, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  canvas: {fileID: 323402578}
+  overlay: {fileID: 217759526}
+  loading: {fileID: 8282948746816495662, guid: b94d59a3fc194124e84bb48051317f14, type: 3}
+  lightSlider: {fileID: 1036983375}
+--- !u!1 &217759526
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 217759529}
+  - component: {fileID: 217759528}
+  - component: {fileID: 217759527}
+  m_Layer: 5
+  m_Name: Overlay
+  m_TagString: Untagged
+  m_Icon: {fileID: 7250588514170254948, guid: 0000000000000000d000000000000000, type: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 0
+--- !u!114 &217759527
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 217759526}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: fe87c0e1cc204ed48ad3b37840f39efc, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  m_Material: {fileID: 0}
+  m_Color: {r: 0, g: 0, b: 0, a: 0.8784314}
+  m_RaycastTarget: 1
+  m_RaycastPadding: {x: 0, y: 0, z: 0, w: 0}
+  m_Maskable: 1
+  m_OnCullStateChanged:
+    m_PersistentCalls:
+      m_Calls: []
+  m_Sprite: {fileID: 10907, guid: 0000000000000000f000000000000000, type: 0}
+  m_Type: 1
+  m_PreserveAspect: 0
+  m_FillCenter: 1
+  m_FillMethod: 4
+  m_FillAmount: 1
+  m_FillClockwise: 1
+  m_FillOrigin: 0
+  m_UseSpriteMesh: 0
+  m_PixelsPerUnitMultiplier: 1
+--- !u!222 &217759528
+CanvasRenderer:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 217759526}
+  m_CullTransparentMesh: 1
+--- !u!224 &217759529
+RectTransform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 217759526}
+  m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
+  m_LocalPosition: {x: 0, y: 0, z: 0}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_ConstrainProportionsScale: 0
+  m_Children: []
+  m_Father: {fileID: 323402579}
+  m_RootOrder: 1
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+  m_AnchorMin: {x: 0, y: 0}
+  m_AnchorMax: {x: 1, y: 1}
+  m_AnchoredPosition: {x: 0, y: 0}
+  m_SizeDelta: {x: 0, y: 0}
+  m_Pivot: {x: 0.5, y: 0.5}
 --- !u!1 &323402575
 GameObject:
   m_ObjectHideFlags: 0
@@ -337,6 +442,7 @@ RectTransform:
   m_ConstrainProportionsScale: 0
   m_Children:
   - {fileID: 1036983374}
+  - {fileID: 217759529}
   - {fileID: 94666101}
   m_Father: {fileID: 0}
   m_RootOrder: 3
@@ -921,24 +1027,16 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   lightSlider: {fileID: 1036983375}
-  loadingSlider: {fileID: 8282948746816495662, guid: b94d59a3fc194124e84bb48051317f14, type: 3}
   hotDetectorSoundSource: {fileID: 1038461161}
-  correctRangeSoundSource: {fileID: 1244624675}
-  fingerprint: {fileID: 94666102}
   lightPaint: {fileID: 587411963}
-  canvas: {fileID: 323402578}
+  overlay: {fileID: 217759526}
   pictureFrames:
   - {fileID: 21300000, guid: 5f68d4c9805b0184eba9b2f546f1daf1, type: 3}
   - {fileID: 21300000, guid: 66915109336be8144816400eaa88213a, type: 3}
   - {fileID: 21300000, guid: bf9e786fbc9b256499b2db8f8c48fd93, type: 3}
   - {fileID: 21300000, guid: ec0145be64b914949806bedb1b0172cb, type: 3}
   - {fileID: 21300000, guid: 69f850fd563f88345a3074de50e1b1ed, type: 3}
-  isFingerprintClicked: 0
-  wasLoadingRendered: 0
-  enteredCorrectRange: 0
-  moveSpeed: 5
-  lightCurrentFrame: 0
-  lightCorrectFrame: 2
+  paintCurrentFrame: 0
 --- !u!1 &1038461160
 GameObject:
   m_ObjectHideFlags: 0
