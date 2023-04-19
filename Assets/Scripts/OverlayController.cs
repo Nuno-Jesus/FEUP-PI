@@ -11,8 +11,8 @@ public class OverlayController : MonoBehaviour
 	private Slider loadingClone;
 	public Slider lightSlider;
 	public Button[] fingerprints = new Button[4];
-	public bool[] wasFingerprintClicked = new bool[4];
-	public bool wasLoadingRendered = false; 
+	private bool[] wasFingerprintClicked = new bool[4];	
+	private bool wasLoadingRendered = false; 
 	public Sprite activeSprite;
 	public Sprite inactiveSprite;
 
