@@ -11,13 +11,13 @@ EditorBuildSettings:
   - enabled: 1
     path: Assets/Scenes/LightIntro.unity
     guid: 68f949dccd6b3274a8a399655308d1f7
-  - enabled: 1
-    path: Assets/Scenes/PlayerSwap1.unity
-    guid: 785294d2e1b709c49bf598c8d3fb36a2
+  - enabled: 0
+    path: 
+    guid: 00000000000000000000000000000000
   - enabled: 1
     path: Assets/Scenes/HumidityIntro.unity
     guid: 15b843abe83a884418f288ddacd88578
-  - enabled: 1
-    path: Assets/Scenes/HumidityScene.unity
-    guid: afba6fc2398553e49bf67119f25f9eb0
+  - enabled: 0
+    path: 
+    guid: 00000000000000000000000000000000
   m_configObjects: {}
