@@ -3,7 +3,7 @@ using System.Linq;
 using UnityEngine;
 using UnityEngine.UI;
 using UnityEngine.SceneManagement;
-public class OverlayController : MonoBehaviour
+public class LightOverlayController : MonoBehaviour
 {
 	public Canvas canvas;
 	public GameObject overlay;

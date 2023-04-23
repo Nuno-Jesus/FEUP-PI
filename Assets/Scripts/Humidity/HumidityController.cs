@@ -11,22 +11,16 @@ public class HumidityController : MonoBehaviour
     public GameObject humidityPicture;
     private KeyValuePair<float, float>[] temperatureRanges;
     public int humidityCurrentFrame = 5;
-    public int humidityCorrectFrame = 2;
+    public const int humidityCorrectFrame = 2;
 
     public Slider temperatureSlider;
     public GameObject temperaturePicture;
     private KeyValuePair<float, float>[] humidityRanges;
     public int temperatureCurrentFrame = 0;
-    public int temperatureCorrectFrame = 2;
+    public const int temperatureCorrectFrame = 2;
 
-	public Slider loadingHumiditySlider;
-	public Slider loadingTemperatureSlider;
-	private Slider loadingHumiditySliderClone;
-	private Slider loadingTemperatureSliderClone;
-	private bool wasLoadingRendered = false;
 	public AudioSource temperatureCorrectSoundSource;
 	public AudioSource humidityCorrectSoundSource;
-	public Canvas canvas;
 
     void Start()
     {
@@ -48,8 +42,7 @@ public class HumidityController : MonoBehaviour
         temperatureRanges[4] = new KeyValuePair<float, float>(25.0f, 39.9f);
         temperatureRanges[5] = new KeyValuePair<float, float>(40.0f, 50.0f);
 
-        temperatureSlider.value = temperatureRanges[temperatureCurrentFrame].Key;
-        
+        temperatureSlider.value = temperatureRanges[temperatureCurrentFrame].Key;    
     }
 
     void Update()
@@ -63,9 +56,6 @@ public class HumidityController : MonoBehaviour
 			humidityCorrectSoundSource.Play();
 		else if (!hasEnteredCorrectHumidityRange())
 			humidityCorrectSoundSource.Stop();
-		
-		if (hasEnteredCorrectHumidityRange() && hasEnteredCorrectTemperatureRange())
-			checkSuccess();
 
 		temperatureCurrentFrame = getPictureFrame(temperatureSlider, temperatureRanges);     
         temperaturePicture.GetComponent<SpriteRenderer>().sprite = pictureFrames[temperatureCurrentFrame];
@@ -89,26 +79,16 @@ public class HumidityController : MonoBehaviour
 		return (temperatureCorrectFrame == temperatureCurrentFrame);
 	}
 
+	public bool hasEnteredCorrectRange()
+	{
+		return (hasEnteredCorrectHumidityRange() && hasEnteredCorrectTemperatureRange());
+	}
+
 	int getPictureFrame(Slider slider, KeyValuePair<float, float>[] ranges)
 	{
         for (int i = 0; i < 6; i++)
 			if (between(slider.value, ranges[i].Key, ranges[i].Value))
 				return i;
 		return 0;
-	}
-
-	void checkSuccess()
-	{
-		if (!wasLoadingRendered)
-		{
-			loadingHumiditySliderClone = Instantiate(loadingHumiditySlider, canvas.transform);
-			// loadingTemperatureSliderClone = Instantiate(loadingTemperatureSlider, canvas.transform);
-			wasLoadingRendered = true;
-		}
-		if (loadingHumiditySliderClone.value < 3.0f /* && loadingTemperatureSliderClone.value < 3.0f */)
-			return ;
-		SceneManager.LoadScene("PlayerSwap2");
-		wasLoadingRendered = false;
-		loadingHumiditySliderClone = null;
 	}
 }
