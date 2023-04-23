@@ -657,7 +657,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   button: {fileID: 1742140986}
-  nextScene: 
+  nextScene: Scratch Card
 --- !u!1 &1742140983
 GameObject:
   m_ObjectHideFlags: 0
