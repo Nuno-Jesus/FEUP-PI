@@ -4,9 +4,6 @@
 [Bb]uild/
 [Bb]uilds/
 [Ll]ogs/
-Library/
-Logs/
-Temp/
 *.csproj
 *.sln
 .vscode/
