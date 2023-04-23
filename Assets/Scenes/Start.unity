@@ -199,7 +199,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   button: {fileID: 952502610}
-  nextScene: '?'
+  nextScene: Initial Animation
 --- !u!1 &265807563
 GameObject:
   m_ObjectHideFlags: 0
