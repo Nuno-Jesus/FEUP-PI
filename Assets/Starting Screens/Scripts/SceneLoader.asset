@@ -13,6 +13,7 @@ MonoBehaviour:
   m_Name: SceneLoader
   m_EditorClassIdentifier: 
   minigames:
-  - Test Minigame 2
   - Test Minigame 1
+  - Test Minigame 2
   - Test Minigame 3
+  minigameIndex: 9

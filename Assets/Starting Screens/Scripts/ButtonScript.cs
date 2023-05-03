@@ -19,13 +19,8 @@ public class ButtonScript : MonoBehaviour
 
     public void onClick()
 	{
-		if (isPlayerSwap)
-		{
-			sceneLoader.MinigameIndex++;
-			if (sceneLoader.MinigameIndex > 2)
-				sceneLoader.MinigameIndex = 0;
-			SceneManager.LoadScene(sceneLoader.Minigames[sceneLoader.MinigameIndex]);
-		}
+		if (isPlayerSwap)			
+			sceneLoader.loadNextMinigame();
 		else
 			SceneManager.LoadScene(nextScene);
 	}
