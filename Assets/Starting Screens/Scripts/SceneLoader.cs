@@ -26,18 +26,6 @@ public class SceneLoader : ScriptableObject
 
 	public void loadNextMinigame()
 	{
-		// if (minigameIndex < 0)
-		// {
-		// 	minigameIndex = 0;
-		// 	SceneManager.LoadScene(minigames[0]);
-		// }
-		// else 
-		// {
-		// 	minigameIndex++;
-		// 	if (minigameIndex > 2)
-		// 		minigameIndex = 0;
-		// 	SceneManager.LoadScene(minigames[minigameIndex]);
-		// }
 		SceneManager.LoadScene(minigames[minigameIndex++ % 3]);
 	}	
 }
