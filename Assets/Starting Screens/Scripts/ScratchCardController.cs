@@ -12,10 +12,4 @@ public class ScratchCardController : MonoBehaviour
 		sceneLoader.MinigameIndex = 0;
 		text.text = sceneLoader.Minigames[0];
     }
-
-    // Update is called once per frame
-    void Update()
-    {
-        
-    }
 }

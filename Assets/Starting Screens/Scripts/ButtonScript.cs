@@ -29,19 +29,21 @@ public class ButtonScript : MonoBehaviour
 	{
 		Debug.Log("Minigame 1");
 		sceneLoader.Minigames = null;
-		sceneLoader.Minigames = new string[3];
-		sceneLoader.Minigames[0] = "Test Minigame 1";
-		sceneLoader.Minigames[1] = "LightIntro";
+		sceneLoader.Minigames = new string[4];
+		sceneLoader.Minigames[0] = "InsectsStartScene";
+		sceneLoader.Minigames[1] = "LightStartScene";
 		sceneLoader.Minigames[2] = "Test Minigame 3";
+		sceneLoader.Minigames[3] = "Test Minigame 4";
 	}
 
 	public void onMinigame2()
 	{
 		Debug.Log("Minigame 2");
 		sceneLoader.Minigames = null;
-		sceneLoader.Minigames = new string[3];
-		sceneLoader.Minigames[0] = "LightIntro";
-		sceneLoader.Minigames[1] = "Test Minigame 1";
+		sceneLoader.Minigames = new string[4];
+		sceneLoader.Minigames[0] = "LightStartScene";
+		sceneLoader.Minigames[1] = "InsectsStartScene";
 		sceneLoader.Minigames[2] = "Test Minigame 3";
+		sceneLoader.Minigames[3] = "Test Minigame 4";
 	}
 }

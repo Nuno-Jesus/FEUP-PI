@@ -7,7 +7,7 @@ using UnityEngine.SceneManagement;
 public class SceneLoader : ScriptableObject
 {
 	[SerializeField]
-	private string[] minigames = new string[3];
+	private string[] minigames = new string[4];
 	
 	[SerializeField]
 	private int minigameIndex;
@@ -26,6 +26,6 @@ public class SceneLoader : ScriptableObject
 
 	public void loadNextMinigame()
 	{
-		SceneManager.LoadScene(minigames[minigameIndex++ % 3]);
+		SceneManager.LoadScene(minigames[minigameIndex++ % minigames.Length]);
 	}	
 }

@@ -895,6 +895,6 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   button: {fileID: 952502610}
-  nextScene: LightIntro
-  isPlayerSwap: 0
+  nextScene: ???
+  isPlayerSwap: 1
   sceneLoader: {fileID: 11400000, guid: 2d9636fbb4ef449458eedc6cb0b5c9aa, type: 2}
