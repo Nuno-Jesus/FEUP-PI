@@ -24,7 +24,7 @@ EditorBuildSettings:
     path: Assets/Minigame 2/Scenes/LightTutorial.unity
     guid: 28450257d3f7ff145995b746fab1ffc7
   - enabled: 1
-    path: Assets/Minigame 2/Scenes/PlayerSwap1.unity
+    path: Assets/Minigame 2/Scenes/LightHumiditySwap.unity
     guid: b3f52d6325b21804f98c1d70ed1d9645
   - enabled: 1
     path: Assets/Minigame 2/Scenes/HumidityTutorial.unity
@@ -33,6 +33,6 @@ EditorBuildSettings:
     path: Assets/Minigame 2/Scenes/HumidityScene.unity
     guid: d1903134f437b794b8940609ddcf5a38
   - enabled: 1
-    path: Assets/Minigame 2/Scenes/PlayerSwap2.unity
+    path: Assets/Minigame 2/Scenes/MinigameSwap1.unity
     guid: 560633d4780bba1499c0b5c8a631c3a9
   m_configObjects: {}

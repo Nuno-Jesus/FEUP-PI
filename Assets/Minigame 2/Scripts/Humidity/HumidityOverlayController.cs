@@ -37,7 +37,7 @@ public class HumidityOverlayController : MonoBehaviour
 		
 		// If the user locked the input in the right range, load next screen
 		if (canvas.GetComponent<HumidityController>().hasEnteredCorrectRange())
-			SceneManager.LoadScene("PlayerSwap2");
+			SceneManager.LoadScene("MinigameSwap1");
 		
 		//Otherwise, untoggle the overlay and reset variables
 		resetPanel();

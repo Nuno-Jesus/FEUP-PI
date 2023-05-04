@@ -61,7 +61,7 @@ public class LightOverlayController : MonoBehaviour
 		
 		// If the user locked the input in the right range, load next screen
 		if (lightSlider.GetComponent<LightController>().hasEnteredCorrectRange())
-			SceneManager.LoadScene("PlayerSwap1");
+			SceneManager.LoadScene("LightHumiditySwap");
 		
 		//Otherwise, untoggle the overlay and reset variables
 		resetPanel();

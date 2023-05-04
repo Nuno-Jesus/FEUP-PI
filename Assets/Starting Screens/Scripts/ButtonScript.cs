@@ -31,7 +31,7 @@ public class ButtonScript : MonoBehaviour
 		sceneLoader.Minigames = null;
 		sceneLoader.Minigames = new string[3];
 		sceneLoader.Minigames[0] = "Test Minigame 1";
-		sceneLoader.Minigames[1] = "Test Minigame 2";
+		sceneLoader.Minigames[1] = "LightIntro";
 		sceneLoader.Minigames[2] = "Test Minigame 3";
 	}
 
@@ -40,7 +40,7 @@ public class ButtonScript : MonoBehaviour
 		Debug.Log("Minigame 2");
 		sceneLoader.Minigames = null;
 		sceneLoader.Minigames = new string[3];
-		sceneLoader.Minigames[0] = "Test Minigame 2";
+		sceneLoader.Minigames[0] = "LightIntro";
 		sceneLoader.Minigames[1] = "Test Minigame 1";
 		sceneLoader.Minigames[2] = "Test Minigame 3";
 	}

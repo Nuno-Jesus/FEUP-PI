@@ -200,6 +200,8 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   button: {fileID: 1389535680}
   nextScene: Save Museum Animation
+  isPlayerSwap: 0
+  sceneLoader: {fileID: 0}
 --- !u!1 &358984631
 GameObject:
   m_ObjectHideFlags: 0
@@ -477,7 +479,7 @@ MonoBehaviour:
     m_PersistentCalls:
       m_Calls: []
   m_FontData:
-    m_Font: {fileID: 12800000, guid: 13c7569242dacd14c9950edd70261914, type: 3}
+    m_Font: {fileID: 12800000, guid: 67b427962ae3e5748aa08315250bdae5, type: 3}
     m_FontSize: 70
     m_FontStyle: 0
     m_BestFit: 0
@@ -659,7 +661,7 @@ MonoBehaviour:
     m_PersistentCalls:
       m_Calls: []
   m_FontData:
-    m_Font: {fileID: 12800000, guid: 13c7569242dacd14c9950edd70261914, type: 3}
+    m_Font: {fileID: 12800000, guid: 67b427962ae3e5748aa08315250bdae5, type: 3}
     m_FontSize: 70
     m_FontStyle: 0
     m_BestFit: 0

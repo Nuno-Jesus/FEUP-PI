@@ -182,7 +182,7 @@ MonoBehaviour:
     m_PersistentCalls:
       m_Calls: []
   m_FontData:
-    m_Font: {fileID: 12800000, guid: 13c7569242dacd14c9950edd70261914, type: 3}
+    m_Font: {fileID: 12800000, guid: 67b427962ae3e5748aa08315250bdae5, type: 3}
     m_FontSize: 55
     m_FontStyle: 0
     m_BestFit: 0
@@ -300,7 +300,7 @@ MonoBehaviour:
     m_PersistentCalls:
       m_Calls: []
   m_FontData:
-    m_Font: {fileID: 12800000, guid: 13c7569242dacd14c9950edd70261914, type: 3}
+    m_Font: {fileID: 12800000, guid: 67b427962ae3e5748aa08315250bdae5, type: 3}
     m_FontSize: 60
     m_FontStyle: 0
     m_BestFit: 0
@@ -1248,5 +1248,27 @@ PrefabInstance:
       propertyPath: m_Name
       value: Button Manager
       objectReference: {fileID: 0}
-    m_RemovedComponents: []
+    m_RemovedComponents:
+    - {fileID: 4256887245250979428, guid: f65afebfdf2f3ee469a77620b467f2fd, type: 3}
   m_SourcePrefab: {fileID: 100100000, guid: f65afebfdf2f3ee469a77620b467f2fd, type: 3}
+--- !u!1 &8380741532893738137 stripped
+GameObject:
+  m_CorrespondingSourceObject: {fileID: 8975273075148747887, guid: f65afebfdf2f3ee469a77620b467f2fd, type: 3}
+  m_PrefabInstance: {fileID: 8380741532893738136}
+  m_PrefabAsset: {fileID: 0}
+--- !u!114 &8380741532893738138
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 8380741532893738137}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 85cc52ce8daaa2841a3773ba220d25e9, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  button: {fileID: 952502610}
+  nextScene: LightScene
+  isPlayerSwap: 0
+  sceneLoader: {fileID: 0}
