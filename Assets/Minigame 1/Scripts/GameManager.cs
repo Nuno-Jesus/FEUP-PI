@@ -15,8 +15,11 @@ public class GameManager : MonoBehaviour
     public Draggable player_script;
 
     // Start is called before the first frame update
+
+    // Start is called before the first frame update
     void Start()
     {
+        Screen.SetResolution(1080, 2400, true);
         InvokeRepeating("SpawnCinto", 1, 4);
         InvokeRepeating("SpawnChapeu", 1, 5);
         InvokeRepeating("SpawnQuadro", 2, 5);
