@@ -364,8 +364,8 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   button: {fileID: 952502610}
   nextScene: Initial Animation
-  isPlayerSwap: 0
-  sceneLoader: {fileID: 0}
+  isMinigameSwap: 0
+  MinigameLoader: {fileID: 0}
 --- !u!1 &265807563
 GameObject:
   m_ObjectHideFlags: 0

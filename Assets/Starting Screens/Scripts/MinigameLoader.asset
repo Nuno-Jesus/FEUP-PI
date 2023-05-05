@@ -13,8 +13,8 @@ MonoBehaviour:
   m_Name: MinigameLoader
   m_EditorClassIdentifier: 
   minigames:
-  - InsectsStartScene
-  - LightStartScene
   - EarthquakeStartScene
+  - LightStartScene
+  - InsectsStartScene
   - EraserStartScene
   minigameIndex: 9
