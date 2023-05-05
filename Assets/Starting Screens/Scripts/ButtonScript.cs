@@ -32,8 +32,8 @@ public class ButtonScript : MonoBehaviour
 		sceneLoader.Minigames = new string[4];
 		sceneLoader.Minigames[0] = "InsectsStartScene";
 		sceneLoader.Minigames[1] = "LightStartScene";
-		sceneLoader.Minigames[2] = "Test Minigame 3";
-		sceneLoader.Minigames[3] = "Test Minigame 4";
+		sceneLoader.Minigames[2] = "EarthquakeStartScene";
+		sceneLoader.Minigames[3] = "EraserStartScene";
 	}
 
 	public void onMinigame2()
@@ -43,7 +43,7 @@ public class ButtonScript : MonoBehaviour
 		sceneLoader.Minigames = new string[4];
 		sceneLoader.Minigames[0] = "LightStartScene";
 		sceneLoader.Minigames[1] = "InsectsStartScene";
-		sceneLoader.Minigames[2] = "Test Minigame 3";
-		sceneLoader.Minigames[3] = "Test Minigame 4";
+		sceneLoader.Minigames[2] = "EarthquakeStartScene";
+		sceneLoader.Minigames[3] = "EraserStartScene";
 	}
 }

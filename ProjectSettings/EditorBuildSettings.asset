@@ -35,4 +35,5 @@ EditorBuildSettings:
   - enabled: 1
     path: Assets/Minigame 2/Scenes/MinigameSwap1.unity
     guid: 560633d4780bba1499c0b5c8a631c3a9
-  m_configObjects: {}
+  m_configObjects:
+    com.unity.adaptiveperformance.simulator.provider_settings: {fileID: 11400000, guid: fd13200201374fc499d40e409488e0b1, type: 2}
