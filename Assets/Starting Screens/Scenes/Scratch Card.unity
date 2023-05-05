@@ -199,9 +199,9 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   button: {fileID: 1389535680}
-  nextScene: Start
-  isPlayerSwap: 1
-  sceneLoader: {fileID: 11400000, guid: 2d9636fbb4ef449458eedc6cb0b5c9aa, type: 2}
+  nextScene: ???
+  isMinigameSwap: 1
+  MinigameLoader: {fileID: 11400000, guid: 2d9636fbb4ef449458eedc6cb0b5c9aa, type: 2}
 --- !u!1 &358984631
 GameObject:
   m_ObjectHideFlags: 0
@@ -538,7 +538,7 @@ MonoBehaviour:
   masks: []
   button: {fileID: 1389535680}
   counter: 0
-  maxMasks: 2000
+  maxMasks: 1700
 --- !u!1 &1389535679
 GameObject:
   m_ObjectHideFlags: 0

@@ -200,8 +200,8 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   button: {fileID: 952502610}
   nextScene: Start
-  isPlayerSwap: 0
-  sceneLoader: {fileID: 11400000, guid: 2d9636fbb4ef449458eedc6cb0b5c9aa, type: 2}
+  isMinigameSwap: 0
+  MinigameLoader: {fileID: 0}
 --- !u!1 &265807563
 GameObject:
   m_ObjectHideFlags: 0
@@ -566,8 +566,8 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   button: {fileID: 0}
   nextScene: 
-  isPlayerSwap: 0
-  sceneLoader: {fileID: 11400000, guid: 2d9636fbb4ef449458eedc6cb0b5c9aa, type: 2}
+  isMinigameSwap: 0
+  MinigameLoader: {fileID: 11400000, guid: 2d9636fbb4ef449458eedc6cb0b5c9aa, type: 2}
 --- !u!114 &919450342
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -1156,8 +1156,8 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   button: {fileID: 0}
   nextScene: 
-  isPlayerSwap: 0
-  sceneLoader: {fileID: 11400000, guid: 2d9636fbb4ef449458eedc6cb0b5c9aa, type: 2}
+  isMinigameSwap: 0
+  MinigameLoader: {fileID: 11400000, guid: 2d9636fbb4ef449458eedc6cb0b5c9aa, type: 2}
 --- !u!1 &1366930637
 GameObject:
   m_ObjectHideFlags: 0
@@ -1294,8 +1294,8 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   button: {fileID: 0}
   nextScene: 
-  isPlayerSwap: 0
-  sceneLoader: {fileID: 11400000, guid: 2d9636fbb4ef449458eedc6cb0b5c9aa, type: 2}
+  isMinigameSwap: 0
+  MinigameLoader: {fileID: 11400000, guid: 2d9636fbb4ef449458eedc6cb0b5c9aa, type: 2}
 --- !u!114 &1427604972
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -1570,8 +1570,8 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   button: {fileID: 0}
   nextScene: 
-  isPlayerSwap: 0
-  sceneLoader: {fileID: 11400000, guid: 2d9636fbb4ef449458eedc6cb0b5c9aa, type: 2}
+  isMinigameSwap: 0
+  MinigameLoader: {fileID: 11400000, guid: 2d9636fbb4ef449458eedc6cb0b5c9aa, type: 2}
 --- !u!1 &1894740097
 GameObject:
   m_ObjectHideFlags: 0

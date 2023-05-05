@@ -15,5 +15,6 @@ MonoBehaviour:
   minigames:
   - InsectsStartScene
   - LightStartScene
-  - Test Minigame 3
+  - EarthquakeStartScene
+  - EraserStartScene
   minigameIndex: 9
