@@ -1,16 +1,18 @@
 using System.Collections;
 using System.Collections.Generic;
+using System.IO;
 using UnityEngine;
 using UnityEngine.SceneManagement;
 
-[CreateAssetMenu]
-public class SceneLoader : ScriptableObject
+[CreateAssetMenu(fileName ="ScriptableSaver", menuName ="SaveSystem")]
+public class SceneLoader : MonoBehaviour
 {
 	[SerializeField]
-	private string[] minigames = new string[4];
+	public static string[] minigames = new string[4];
 	
 	[SerializeField]
-	private int minigameIndex;
+	public static int minigameIndex;
+	private const string FILENAME = "order.dat";
   
 	public string[] Minigames
 	{
@@ -24,8 +26,16 @@ public class SceneLoader : ScriptableObject
 		set { minigameIndex = value; }
 	}
 
-	public void loadNextMinigame()
+	public static void loadNextMinigame()
 	{
-		SceneManager.LoadScene(minigames[minigameIndex++ % minigames.Length]);
-	}	
+		//Debug the previous minigame with the index and name
+		Debug.Log("Previous Minigame " + minigameIndex + ": " + minigames[minigameIndex]);
+		//Debug the minigames.length
+		Debug.Log("Minigames Length: " + minigames.Length);
+
+		SceneLoader.minigameIndex++;
+		//Debug the next minigame with the index and name
+		Debug.Log("Next Minigame " + minigameIndex + ": " + minigames[SceneLoader.minigameIndex % SceneLoader.minigames.Length]);
+		SceneManager.LoadScene(minigames[(SceneLoader.minigameIndex - 1) % SceneLoader.minigames.Length]);
+	}
 }

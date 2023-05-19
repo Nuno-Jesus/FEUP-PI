@@ -9,10 +9,10 @@ public class ButtonScript : MonoBehaviour
 	public Button button;
 	public string nextScene;
 	public bool isMinigameSwap;
-	public SceneLoader MinigameLoader;
 
 	void Start()
 	{
+		//Get the sceneLoader from the assets
 		if (button)
 			button.onClick.AddListener(onClick);
 	}
@@ -20,30 +20,40 @@ public class ButtonScript : MonoBehaviour
     public void onClick()
 	{
 		if (isMinigameSwap)			
-			MinigameLoader.loadNextMinigame();
+			SceneLoader.loadNextMinigame();
 		else
 			SceneManager.LoadScene(nextScene);
 	}
-
+	
 	public void goingDownPath()
 	{
 		Debug.Log("Minigame 1");
-		MinigameLoader.Minigames = null;
-		MinigameLoader.Minigames = new string[4];
-		MinigameLoader.Minigames[0] = "InsectsStartScene";
-		MinigameLoader.Minigames[1] = "LightStartScene";
-		MinigameLoader.Minigames[2] = "EarthquakeStartScene";
-		MinigameLoader.Minigames[3] = "EraserStartScene";
+		SceneLoader.minigames = null;
+		SceneLoader.minigames = new string[4];
+		SceneLoader.minigames[0] = "InsectsStartScene";
+		SceneLoader.minigames[1] = "LightStartScene";
+		SceneLoader.minigames[2] = "EarthquakeStartScene";
+		SceneLoader.minigames[3] = "EraserStartScene";
+		Text text = GameObject.FindGameObjectWithTag("debug").GetComponent<Text>();
+		text.text = SceneLoader.minigames[0] + "\n" + 
+					SceneLoader.minigames[1] + "\n" + 
+					SceneLoader.minigames[2] + "\n" + 
+					SceneLoader.minigames[3];
 	}
 
 	public void goingUpPath()
 	{
 		Debug.Log("Minigame 2");
-		MinigameLoader.Minigames = null;
-		MinigameLoader.Minigames = new string[4];
-		MinigameLoader.Minigames[0] = "EarthquakeStartScene";
-		MinigameLoader.Minigames[1] = "LightStartScene";
-		MinigameLoader.Minigames[2] = "InsectsStartScene";
-		MinigameLoader.Minigames[3] = "EraserStartScene";
+		SceneLoader.minigames = null;
+		SceneLoader.minigames = new string[4];
+		SceneLoader.minigames[0] = "EarthquakeStartScene";
+		SceneLoader.minigames[1] = "LightStartScene";
+		SceneLoader.minigames[2] = "InsectsStartScene";
+		SceneLoader.minigames[3] = "EraserStartScene";
+		Text text = GameObject.FindGameObjectWithTag("debug").GetComponent<Text>();
+		text.text = SceneLoader.minigames[0] + "\n" + 
+					SceneLoader.minigames[1] + "\n" + 
+					SceneLoader.minigames[2] + "\n" + 
+					SceneLoader.minigames[3];
 	}
 }
