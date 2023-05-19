@@ -5,7 +5,7 @@ using UnityEngine;
 using UnityEngine.SceneManagement;
 
 [CreateAssetMenu(fileName ="ScriptableSaver", menuName ="SaveSystem")]
-public class SceneLoader : MonoBehaviour
+public class GameLoader : MonoBehaviour
 {
 	[SerializeField]
 	public static string[] minigames = new string[4];
@@ -28,14 +28,7 @@ public class SceneLoader : MonoBehaviour
 
 	public static void loadNextMinigame()
 	{
-		//Debug the previous minigame with the index and name
-		Debug.Log("Previous Minigame " + minigameIndex + ": " + minigames[minigameIndex]);
-		//Debug the minigames.length
-		Debug.Log("Minigames Length: " + minigames.Length);
-
-		SceneLoader.minigameIndex++;
-		//Debug the next minigame with the index and name
-		Debug.Log("Next Minigame " + minigameIndex + ": " + minigames[SceneLoader.minigameIndex % SceneLoader.minigames.Length]);
-		SceneManager.LoadScene(minigames[(SceneLoader.minigameIndex - 1) % SceneLoader.minigames.Length]);
+		GameLoader.minigameIndex++;
+		SceneManager.LoadScene(minigames[(GameLoader.minigameIndex - 1) % GameLoader.minigames.Length]);
 	}
 }

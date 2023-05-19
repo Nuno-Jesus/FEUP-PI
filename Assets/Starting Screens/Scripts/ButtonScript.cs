@@ -20,7 +20,7 @@ public class ButtonScript : MonoBehaviour
     public void onClick()
 	{
 		if (isMinigameSwap)			
-			SceneLoader.loadNextMinigame();
+			GameLoader.loadNextMinigame();
 		else
 			SceneManager.LoadScene(nextScene);
 	}
@@ -28,32 +28,32 @@ public class ButtonScript : MonoBehaviour
 	public void goingDownPath()
 	{
 		Debug.Log("Minigame 1");
-		SceneLoader.minigames = null;
-		SceneLoader.minigames = new string[4];
-		SceneLoader.minigames[0] = "InsectsStartScene";
-		SceneLoader.minigames[1] = "LightStartScene";
-		SceneLoader.minigames[2] = "EarthquakeStartScene";
-		SceneLoader.minigames[3] = "EraserStartScene";
+		GameLoader.minigames = null;
+		GameLoader.minigames = new string[4];
+		GameLoader.minigames[0] = "InsectsStartScene";
+		GameLoader.minigames[1] = "LightStartScene";
+		GameLoader.minigames[2] = "EarthquakeStartScene";
+		GameLoader.minigames[3] = "EraserStartScene";
 		Text text = GameObject.FindGameObjectWithTag("debug").GetComponent<Text>();
-		text.text = SceneLoader.minigames[0] + "\n" + 
-					SceneLoader.minigames[1] + "\n" + 
-					SceneLoader.minigames[2] + "\n" + 
-					SceneLoader.minigames[3];
+		text.text = GameLoader.minigames[0] + "\n" + 
+					GameLoader.minigames[1] + "\n" + 
+					GameLoader.minigames[2] + "\n" + 
+					GameLoader.minigames[3];
 	}
 
 	public void goingUpPath()
 	{
 		Debug.Log("Minigame 2");
-		SceneLoader.minigames = null;
-		SceneLoader.minigames = new string[4];
-		SceneLoader.minigames[0] = "EarthquakeStartScene";
-		SceneLoader.minigames[1] = "LightStartScene";
-		SceneLoader.minigames[2] = "InsectsStartScene";
-		SceneLoader.minigames[3] = "EraserStartScene";
+		GameLoader.minigames = null;
+		GameLoader.minigames = new string[4];
+		GameLoader.minigames[0] = "EarthquakeStartScene";
+		GameLoader.minigames[1] = "LightStartScene";
+		GameLoader.minigames[2] = "InsectsStartScene";
+		GameLoader.minigames[3] = "EraserStartScene";
 		Text text = GameObject.FindGameObjectWithTag("debug").GetComponent<Text>();
-		text.text = SceneLoader.minigames[0] + "\n" + 
-					SceneLoader.minigames[1] + "\n" + 
-					SceneLoader.minigames[2] + "\n" + 
-					SceneLoader.minigames[3];
+		text.text = GameLoader.minigames[0] + "\n" + 
+					GameLoader.minigames[1] + "\n" + 
+					GameLoader.minigames[2] + "\n" + 
+					GameLoader.minigames[3];
 	}
 }

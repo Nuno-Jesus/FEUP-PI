@@ -22,15 +22,15 @@ public class ScratchCardController : MonoBehaviour
 		colorBlock.normalColor = new Color(0.46f, 0.46f, 0.46f, 1.0f);
 		button.colors = colorBlock;
 
-		SceneLoader.minigameIndex = 0;
+		GameLoader.minigameIndex = 0;
 		
-		if (SceneLoader.minigames[0] == "LightStartScene")
+		if (GameLoader.minigames[0] == "LightStartScene")
 			text.text = "Saiu o jogo da luz e da humidade!";
-		else if (SceneLoader.minigames[0] == "InsectsStartScene")
+		else if (GameLoader.minigames[0] == "InsectsStartScene")
 			text.text = "Saiu o jogo dos insectos!";
-		else if (SceneLoader.minigames[0] == "EarthquakeStartScene")
+		else if (GameLoader.minigames[0] == "EarthquakeStartScene")
 			text.text = "Saiu o jogo do terramoto!";
-		else if (SceneLoader.minigames[0] == "EraserStartScene")
+		else if (GameLoader.minigames[0] == "EraserStartScene")
 			text.text = "Saiu o jogo do Sr.Borracha!";
 		// text.text = SceneLoader.minigames[0] + "\n" + 
 		// 			SceneLoader.minigames[1] + "\n" + 
