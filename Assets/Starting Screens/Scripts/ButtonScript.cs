@@ -12,7 +12,6 @@ public class ButtonScript : MonoBehaviour
 
 	void Start()
 	{
-		//Get the sceneLoader from the assets
 		if (button)
 			button.onClick.AddListener(onClick);
 	}
@@ -27,7 +26,6 @@ public class ButtonScript : MonoBehaviour
 	
 	public void goingDownPath()
 	{
-		Debug.Log("Minigame 1");
 		GameLoader.minigames = null;
 		GameLoader.minigames = new string[4];
 		GameLoader.minigames[0] = "InsectsStartScene";
@@ -35,15 +33,14 @@ public class ButtonScript : MonoBehaviour
 		GameLoader.minigames[2] = "EarthquakeStartScene";
 		GameLoader.minigames[3] = "EraserStartScene";
 		Text text = GameObject.FindGameObjectWithTag("debug").GetComponent<Text>();
-		text.text = GameLoader.minigames[0] + "\n" + 
-					GameLoader.minigames[1] + "\n" + 
-					GameLoader.minigames[2] + "\n" + 
-					GameLoader.minigames[3];
+		text.text = "1 -> Insects Minigame\n" + 
+					"2 -> Light Minigame\n" + 
+					"3 -> Earthquake Minigame\n" + 
+					"4 -> Eraser Minigame\n";
 	}
 
 	public void goingUpPath()
 	{
-		Debug.Log("Minigame 2");
 		GameLoader.minigames = null;
 		GameLoader.minigames = new string[4];
 		GameLoader.minigames[0] = "EarthquakeStartScene";
@@ -51,9 +48,9 @@ public class ButtonScript : MonoBehaviour
 		GameLoader.minigames[2] = "InsectsStartScene";
 		GameLoader.minigames[3] = "EraserStartScene";
 		Text text = GameObject.FindGameObjectWithTag("debug").GetComponent<Text>();
-		text.text = GameLoader.minigames[0] + "\n" + 
-					GameLoader.minigames[1] + "\n" + 
-					GameLoader.minigames[2] + "\n" + 
-					GameLoader.minigames[3];
+		text.text = "1 -> Earthquake Minigame\n" + 
+					"2 -> Light Minigame\n" + 
+					"3 -> Insects Minigame\n" + 
+					"4 -> Eraser Minigame\n";
 	}
 }

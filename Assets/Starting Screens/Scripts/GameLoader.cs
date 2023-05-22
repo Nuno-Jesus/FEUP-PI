@@ -4,7 +4,6 @@ using System.IO;
 using UnityEngine;
 using UnityEngine.SceneManagement;
 
-[CreateAssetMenu(fileName ="ScriptableSaver", menuName ="SaveSystem")]
 public class GameLoader : MonoBehaviour
 {
 	[SerializeField]
