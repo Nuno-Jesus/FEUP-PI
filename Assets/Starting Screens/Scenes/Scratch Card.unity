@@ -201,7 +201,6 @@ MonoBehaviour:
   button: {fileID: 1389535680}
   nextScene: ???
   isMinigameSwap: 1
-  MinigameLoader: {fileID: 11400000, guid: 2d9636fbb4ef449458eedc6cb0b5c9aa, type: 2}
 --- !u!1 &358984631
 GameObject:
   m_ObjectHideFlags: 0
@@ -539,14 +538,13 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: a0ceed1b71935fd4cb3ba503e5fc5727, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  sceneLoader: {fileID: 11400000, guid: 2d9636fbb4ef449458eedc6cb0b5c9aa, type: 2}
   maskPrefab: {fileID: 2240349551959451523, guid: 63546de79036c7949b5ab73220e24cc6, type: 3}
   canvas: {fileID: 1894740101}
   text: {fileID: 792226482}
   masks: []
   button: {fileID: 1389535680}
   counter: 0
-  maxMasks: 800
+  maxMasks: 400
 --- !u!1 &1389535679
 GameObject:
   m_ObjectHideFlags: 0
