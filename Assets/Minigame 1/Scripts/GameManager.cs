@@ -15,11 +15,8 @@ public class GameManager : MonoBehaviour
     public Draggable player_script;
 
     // Start is called before the first frame update
-
-    // Start is called before the first frame update
     void Start()
     {
-        Screen.SetResolution(1080, 2400, true);
         InvokeRepeating("SpawnCinto", 1, 4);
         InvokeRepeating("SpawnChapeu", 1, 5);
         InvokeRepeating("SpawnQuadro", 2, 5);
@@ -37,43 +34,43 @@ public class GameManager : MonoBehaviour
 
     void SpawnArma()
     {
-        float tempPos = Random.Range(-10f, 10f);
+        float tempPos = Random.Range(-8f, 8f);
         Instantiate(arma_prefab, new Vector3(tempPos, 4f, 0), Quaternion.identity);
     }
 
     void SpawnCasaco()
     {
-        float tempPos = Random.Range(-10f, 10f);
+        float tempPos = Random.Range(-8f, 8f);
         Instantiate(casaco_prefab, new Vector3(tempPos, 4f, 0), Quaternion.identity);
     }
 
     void SpawnRelogio()
     {
-        float tempPos = Random.Range(-10f, 10f);
+        float tempPos = Random.Range(-8f, 8f);
         Instantiate(relogio_prefab, new Vector3(tempPos, 4f, 0), Quaternion.identity);
     }
 
     void SpawnCinto()
     {
-        float tempPos = Random.Range(-9f, 9f);
+        float tempPos = Random.Range(-7f, 7f);
         Instantiate(cinto_prefab, new Vector3(tempPos, 4f, 0), Quaternion.identity);
     }
 
     void SpawnChapeu()
     {
-        float tempPos = Random.Range(-10f, 10f);
+        float tempPos = Random.Range(-8f, 8f);
         Instantiate(chapeu_prefab, new Vector3(tempPos, 4f, 0), Quaternion.identity);
     }
 
     void SpawnQuadro()
     {
-        float tempPos = Random.Range(-9f, 9f);
+        float tempPos = Random.Range(-7f, 7f);
         Instantiate(quadro_prefab, new Vector3(tempPos, 4f, 0), Quaternion.identity);
     }
 
     void SpawnBusto()
     {
-        float tempPos = Random.Range(-10f, 10f);
+        float tempPos = Random.Range(-8f, 8f);
         Instantiate(busto_prefab, new Vector3(tempPos, 4f, 0), Quaternion.identity);
     }
 
