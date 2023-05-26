@@ -90,8 +90,8 @@ EditorBuildSettings:
     path: Assets/Minigame 2/Scenes/MinigameSwap1.unity
     guid: 560633d4780bba1499c0b5c8a631c3a9
   - enabled: 0
-    path: Assets/Minigame 3/Scenes/Avatar.unity
-    guid: b1181efc21c1eff488f9219cc5b909da
+    path: 
+    guid: 00000000000000000000000000000000
   - enabled: 1
     path: Assets/Minigame 3/Scenes/MapJacket.unity
     guid: 16f1acf75fc106d4d890b8aa0d9225a8
@@ -125,9 +125,9 @@ EditorBuildSettings:
   - enabled: 1
     path: Assets/Minigame 4/Scenes/Abrir_cofre1.unity
     guid: 7991d25cda8bbe34da46b3fc24707010
-  - enabled: 1
-    path: Assets/Minigame 4/Scenes/Codigo1.unity
-    guid: d5d5f14775bf8b44c82e8b1217a650ec
+  - enabled: 0
+    path: 
+    guid: 00000000000000000000000000000000
   - enabled: 1
     path: Assets/Minigame 4/Scenes/Cofre1.unity
     guid: 7d66b639e4835ae47b0d523c09794706
@@ -173,15 +173,15 @@ EditorBuildSettings:
   - enabled: 0
     path: 
     guid: 00000000000000000000000000000000
-  - enabled: 1
-    path: Assets/Minigame 4/Scenes/Codigo2.unity
-    guid: 961b4ef1cb685424f9a2318f92d2fa7e
-  - enabled: 1
-    path: Assets/Minigame 4/Scenes/Codigo3.unity
-    guid: bfa73b2e51ac35345827c2e9f500f8e2
-  - enabled: 1
-    path: Assets/Minigame 4/Scenes/Codigo4.unity
-    guid: 9c2e1579558406f479774eca55262b0e
+  - enabled: 0
+    path: 
+    guid: 00000000000000000000000000000000
+  - enabled: 0
+    path: 
+    guid: 00000000000000000000000000000000
+  - enabled: 0
+    path: 
+    guid: 00000000000000000000000000000000
   - enabled: 1
     path: Assets/Minigame 4/Scenes/Tjogador1.unity
     guid: 86265fb05ba13e749b607cdf8077ef40
@@ -191,6 +191,48 @@ EditorBuildSettings:
   - enabled: 1
     path: Assets/Minigame 4/Scenes/Tjogador3.unity
     guid: 3bf61a3ce9da3e64a9d997b918af3a5b
+  - enabled: 1
+    path: Assets/Minigame 4/Scenes/Bronze.unity
+    guid: 016fe6819c1aefd4894a5b9161ba1f56
+  - enabled: 1
+    path: Assets/Minigame 4/Scenes/Codigo1.unity
+    guid: 7b705441ca6596049b808ddbd3ccd8c2
+  - enabled: 1
+    path: Assets/Minigame 4/Scenes/Codigo2.unity
+    guid: 0069baa8e3a984649b93ddf66b49da2f
+  - enabled: 1
+    path: Assets/Minigame 4/Scenes/Codigo3.unity
+    guid: 632d3805092850b4182ebbf97d0351c5
+  - enabled: 1
+    path: Assets/Minigame 4/Scenes/Codigo4.unity
+    guid: ef24a5f3bf6196d4494feb2685744f89
+  - enabled: 1
+    path: Assets/Minigame 4/Scenes/Desintegrador.unity
+    guid: 9226f88bdb38942448f8a123d0494aa1
+  - enabled: 1
+    path: Assets/Minigame 4/Scenes/Escudo_final.unity
+    guid: f3e851146ba90784696faad4b0fc6d19
+  - enabled: 1
+    path: Assets/Minigame 4/Scenes/Fisga.unity
+    guid: 925d404ead725054dbbcdf0a81cc23e8
+  - enabled: 1
+    path: Assets/Minigame 4/Scenes/Ftecnica1.unity
+    guid: 1218ba319bd96b345a6187e2d5b365b0
+  - enabled: 1
+    path: Assets/Minigame 4/Scenes/Ftecnica2.unity
+    guid: cc16821900de7cb4996695c4532406cb
+  - enabled: 1
+    path: Assets/Minigame 4/Scenes/Gold.unity
+    guid: 1604b4403b220344bacc678f0b0771cd
+  - enabled: 1
+    path: Assets/Minigame 4/Scenes/Jogo_desintegrador.unity
+    guid: addab1575c8663f488eff3c12aa06d6b
+  - enabled: 1
+    path: Assets/Minigame 4/Scenes/Jogo_fisga.unity
+    guid: 12e4578bdf7445c41bb9ca353c946864
+  - enabled: 1
+    path: Assets/Minigame 4/Scenes/Silver.unity
+    guid: 71a17551854e8f149ade27de9282185e
   - enabled: 1
     path: Assets/Quiz Screens/Scenes/Quiz1.unity
     guid: 5b74c8ca6766e454eb622bcc81e70937

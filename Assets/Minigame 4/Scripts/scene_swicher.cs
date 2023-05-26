@@ -7,6 +7,7 @@ public class scene_swicher : MonoBehaviour
 {
     public string sceneName;
 
+    
     public void changeScene()
     {
         SceneManager.LoadScene(sceneName);

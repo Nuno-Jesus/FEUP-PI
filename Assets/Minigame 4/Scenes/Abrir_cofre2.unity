@@ -270,7 +270,8 @@ PrefabInstance:
       propertyPath: m_Name
       value: Button Manager
       objectReference: {fileID: 0}
-    m_RemovedComponents: []
+    m_RemovedComponents:
+    - {fileID: 1817491889765008813, guid: 00a8470e6c405f54cb4dc85151356f5e, type: 3}
   m_SourcePrefab: {fileID: 100100000, guid: 00a8470e6c405f54cb4dc85151356f5e, type: 3}
 --- !u!1 &274382715
 GameObject:
@@ -555,6 +556,24 @@ CanvasRenderer:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 827576539}
   m_CullTransparentMesh: 1
+--- !u!1 &1144800932 stripped
+GameObject:
+  m_CorrespondingSourceObject: {fileID: 8975273075148747887, guid: 00a8470e6c405f54cb4dc85151356f5e, type: 3}
+  m_PrefabInstance: {fileID: 224817932}
+  m_PrefabAsset: {fileID: 0}
+--- !u!114 &1144800935
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1144800932}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: d2f0eeadb39119644aada02d561d78c8, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  button: {fileID: 827576541}
 --- !u!1 &1168844021
 GameObject:
   m_ObjectHideFlags: 0

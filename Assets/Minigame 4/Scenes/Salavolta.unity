@@ -893,7 +893,7 @@ PrefabInstance:
       objectReference: {fileID: 882148148}
     - target: {fileID: 1817491889765008813, guid: 00a8470e6c405f54cb4dc85151356f5e, type: 3}
       propertyPath: nextScene
-      value: Quizz 3
+      value: Mapa_piso2
       objectReference: {fileID: 0}
     - target: {fileID: 8529813206863935920, guid: 00a8470e6c405f54cb4dc85151356f5e, type: 3}
       propertyPath: m_RootOrder
@@ -1198,7 +1198,6 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: f4a8f8f2e7ecc6e4589a3246a15efbe7, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  timeRemaining: 180
   CountDownTimer: {fileID: 1845255886}
 --- !u!114 &1845255886
 MonoBehaviour:

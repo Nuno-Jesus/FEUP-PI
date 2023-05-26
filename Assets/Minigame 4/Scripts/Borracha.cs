@@ -2,14 +2,15 @@ using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 using UnityEngine.UI;
+using UnityEngine.SceneManagement;
 
 public class Borracha : MonoBehaviour
 {
-    public GameObject vida;
-
     private Vector2 startposition = new Vector2(0f, -2.56f);
     private Vector2 endposition = Vector2.zero;
+    public GameObject l1;
 
+    public int lifes = 50;
     private float showDuration = 0.5f;
     private int ftime = 60;
 
@@ -17,17 +18,33 @@ public class Borracha : MonoBehaviour
 
     private bool IsHittable = false;
 
-    public float minHideTime = 0.1f;
-    public float maxHideTime = 0.3f;
-    public float minShowTime = 1f;
-    public float maxShowTime = 1.3f;
+    public float minHideTime = 0.2f;
+    public float maxHideTime = 0.7f;
+    public float minShowTime = 0.1f;
+    public float maxShowTime = 0.3f;
 
-    private void OnCollisionEnter2D(Collision2D other)
-    {   if(IsHittable){
-            Destroy(gameObject);
-            Destroy(vida);
-        }
+    private void OnTriggerEnter2D(Collider2D collision)
         
+    {   
+
+            if(IsHittable){
+            Destroy(collision.gameObject);
+            Destroy(gameObject);
+            Destroy(l1);
+            time.lifes -= 1;
+            Debug.Log(time.lifes.ToString());
+
+            if (time.lifes <= 0)
+            {
+                changeScreen();
+            }
+        }
+
+               
+    }
+    public void changeScreen()
+    {
+        SceneManager.LoadScene("DefeatScreen");
     }
 
     private IEnumerator ShowHide(Vector2 start, Vector2 end)
@@ -66,6 +83,11 @@ public class Borracha : MonoBehaviour
     private void OnEnable()
     {
         StartCoroutine(ShowHide(startposition, endposition));
+    }
+
+    void Update()
+    {          
+
     }
 }
 

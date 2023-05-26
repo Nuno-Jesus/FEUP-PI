@@ -2,16 +2,24 @@ using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 using UnityEngine.UI;
+using UnityEngine.SceneManagement;
 
 public class time : MonoBehaviour
 {
-    public float timeRemaining = 60;
+    public static float timeRemaining = 60;
+
+    public static int lifes = 5;
 
     public Text CountDownTimer;
 
+    public void changeScreen2()
+    {
+        SceneManager.LoadScene("VictoryScreen");
+    }
+
     void Update()
     {
-        if (timeRemaining > 0)
+        if (timeRemaining > 0.1)
         {
             timeRemaining -= Time.deltaTime;
             int minutes = Mathf.FloorToInt(timeRemaining / 60);
@@ -20,8 +28,7 @@ public class time : MonoBehaviour
         }
         else
         {
-            // Game over logic
-            CountDownTimer.text = "TIME'S UP!!!";
+            changeScreen2();
         }
     }
 }
