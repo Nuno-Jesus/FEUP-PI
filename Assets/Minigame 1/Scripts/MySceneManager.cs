@@ -7,6 +7,14 @@ public class MySceneManager : MonoBehaviour
 {
     public string sceneName;
 
+    public AudioSource somErrado;
+
+    public void playErrado()
+    {
+        somErrado.Play();
+    }
+
+
     public void changeScene()
     {
         SceneManager.LoadScene(sceneName);
