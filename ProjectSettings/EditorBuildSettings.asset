@@ -254,6 +254,12 @@ EditorBuildSettings:
   - enabled: 1
     path: Assets/Quiz Screens/Scenes/Quiz7.unity
     guid: db5b41109fa98634d8fbc1c428c90f53
+  - enabled: 1
+    path: Assets/Avatars/Scenes/Avatar.unity
+    guid: 8285753c7f410e140b58c3857765c311
+  - enabled: 1
+    path: Assets/Avatars/Scenes/CustomizeScene.unity
+    guid: b9016059bfbec0945952228107f7f752
   m_configObjects:
     com.unity.adaptiveperformance.loader_settings: {fileID: 11400000, guid: f34db9bf4b2a84845afbc76a860e695b, type: 2}
     com.unity.adaptiveperformance.samsung.android.provider_settings: {fileID: 11400000, guid: 962de8d8379fb2241811f7687c7e9a77, type: 2}

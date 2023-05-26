@@ -734,6 +734,7 @@ MonoBehaviour:
   button: {fileID: 890242754}
   nextScene: More Info
   isMinigameSwap: 0
+  isShieldIncrement: 0
 --- !u!1001 &1729437854
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -811,8 +812,9 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   button: {fileID: 602010482}
-  nextScene: Shield Tutorial
+  nextScene: Avatar
   isMinigameSwap: 0
+  isShieldIncrement: 0
 --- !u!1 &1894740097
 GameObject:
   m_ObjectHideFlags: 0
