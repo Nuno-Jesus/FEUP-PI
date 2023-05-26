@@ -1181,7 +1181,7 @@ PrefabInstance:
       objectReference: {fileID: 978142890}
     - target: {fileID: 1817491889765008813, guid: 00a8470e6c405f54cb4dc85151356f5e, type: 3}
       propertyPath: nextScene
-      value: Quiz6
+      value: InsectsPlayerSwap
       objectReference: {fileID: 0}
     - target: {fileID: 1817491889765008813, guid: 00a8470e6c405f54cb4dc85151356f5e, type: 3}
       propertyPath: sceneLoader

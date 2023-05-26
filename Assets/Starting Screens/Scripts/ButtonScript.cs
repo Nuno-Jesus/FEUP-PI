@@ -26,31 +26,21 @@ public class ButtonScript : MonoBehaviour
 	
 	public void goingDownPath()
 	{
-		GameLoader.minigames = null;
-		GameLoader.minigames = new string[4];
-		GameLoader.minigames[0] = "InsectsStartScene";
-		GameLoader.minigames[1] = "LightStartScene";
-		GameLoader.minigames[2] = "EarthquakeStartScene";
-		GameLoader.minigames[3] = "EraserStartScene";
+		GameLoader.setInsectsFirst();
 		Text text = GameObject.FindGameObjectWithTag("debug").GetComponent<Text>();
-		text.text = "1 -> Insects Minigame\n" + 
-					"2 -> Light Minigame\n" + 
-					"3 -> Earthquake Minigame\n" + 
-					"4 -> Eraser Minigame\n";
+		text.text = "1º: Jogos dos Insectos\n" + 
+					"2º: Jogo da Luz/Humidade\n" + 
+					"3º: Jogo do Terramoto\n" + 
+					"4º: Jogo Final";
 	}
 
 	public void goingUpPath()
 	{
-		GameLoader.minigames = null;
-		GameLoader.minigames = new string[4];
-		GameLoader.minigames[0] = "EarthquakeStartScene";
-		GameLoader.minigames[1] = "LightStartScene";
-		GameLoader.minigames[2] = "InsectsStartScene";
-		GameLoader.minigames[3] = "EraserStartScene";
+		GameLoader.setEarthquakeFirst();
 		Text text = GameObject.FindGameObjectWithTag("debug").GetComponent<Text>();
-		text.text = "1 -> Earthquake Minigame\n" + 
-					"2 -> Light Minigame\n" + 
-					"3 -> Insects Minigame\n" + 
-					"4 -> Eraser Minigame\n";
+		text.text = "1º: Jogo do Terramoto\n" + 
+					"2º: Jogo da Luz/Humidade\n" + 
+					"3º: Jogos dos Insectos\n" + 
+					"4º: Jogo Final";
 	}
 }

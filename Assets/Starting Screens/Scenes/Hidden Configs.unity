@@ -202,7 +202,6 @@ MonoBehaviour:
   button: {fileID: 952502610}
   nextScene: Start
   isMinigameSwap: 0
-  MinigameLoader: {fileID: 11400000, guid: 2d9636fbb4ef449458eedc6cb0b5c9aa, type: 2}
 --- !u!1 &265807563
 GameObject:
   m_ObjectHideFlags: 0
@@ -254,7 +253,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   m_Material: {fileID: 0}
-  m_Color: {r: 0, g: 0, b: 0, a: 1}
+  m_Color: {r: 0.427451, g: 0.72156864, b: 0.7372549, a: 1}
   m_RaycastTarget: 1
   m_RaycastPadding: {x: 0, y: 0, z: 0, w: 0}
   m_Maskable: 1
@@ -274,7 +273,7 @@ MonoBehaviour:
     m_HorizontalOverflow: 0
     m_VerticalOverflow: 0
     m_LineSpacing: 1
-  m_Text: VOLTAR
+  m_Text: CONFIRMAR
 --- !u!222 &265807566
 CanvasRenderer:
   m_ObjectHideFlags: 0
@@ -365,7 +364,7 @@ GameObject:
   - component: {fileID: 952502610}
   - component: {fileID: 952502613}
   m_Layer: 5
-  m_Name: Voltar Button
+  m_Name: Confirmar Button
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -385,11 +384,11 @@ RectTransform:
   m_Children:
   - {fileID: 265807564}
   m_Father: {fileID: 1894740102}
-  m_RootOrder: 4
+  m_RootOrder: 5
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0, y: 1}
   m_AnchorMax: {x: 0, y: 1}
-  m_AnchoredPosition: {x: 540, y: -2031}
+  m_AnchoredPosition: {x: 540, y: -2095}
   m_SizeDelta: {x: 800, y: 150}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!114 &952502610
@@ -498,7 +497,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: e19747de3f5aca642ab2be37e372fb86, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  m_EffectColor: {r: 0.9921569, g: 0.8000001, b: 0.003921569, a: 1}
+  m_EffectColor: {r: 0.427451, g: 0.72156864, b: 0.7372549, a: 1}
   m_EffectDistance: {x: 12, y: 12}
   m_UseGraphicAlpha: 1
 --- !u!1 &1167713983
@@ -526,7 +525,7 @@ Transform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1167713983}
   m_LocalRotation: {x: -0, y: -0, z: -0.18080024, w: 0.9835199}
-  m_LocalPosition: {x: 41, y: 667, z: -21599.998}
+  m_LocalPosition: {x: 41, y: 850, z: 0}
   m_LocalScale: {x: 47.999996, y: 47.999996, z: 47.999996}
   m_ConstrainProportionsScale: 0
   m_Children: []
@@ -636,7 +635,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   m_Material: {fileID: 0}
-  m_Color: {r: 0, g: 0, b: 0, a: 1}
+  m_Color: {r: 1, g: 1, b: 1, a: 1}
   m_RaycastTarget: 1
   m_RaycastPadding: {x: 0, y: 0, z: 0, w: 0}
   m_Maskable: 1
@@ -645,7 +644,7 @@ MonoBehaviour:
       m_Calls: []
   m_FontData:
     m_Font: {fileID: 12800000, guid: 67b427962ae3e5748aa08315250bdae5, type: 3}
-    m_FontSize: 70
+    m_FontSize: 60
     m_FontStyle: 0
     m_BestFit: 0
     m_MinSize: 0
@@ -656,7 +655,7 @@ MonoBehaviour:
     m_HorizontalOverflow: 0
     m_VerticalOverflow: 0
     m_LineSpacing: 1
-  m_Text: Going Down Path
+  m_Text: "COME\xC7AR NO TERRAMOTO"
 --- !u!222 &1284950176
 CanvasRenderer:
   m_ObjectHideFlags: 0
@@ -700,11 +699,11 @@ RectTransform:
   m_Children:
   - {fileID: 1366930638}
   m_Father: {fileID: 1894740102}
-  m_RootOrder: 3
+  m_RootOrder: 4
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0, y: 1}
   m_AnchorMax: {x: 0, y: 1}
-  m_AnchoredPosition: {x: 540, y: -1715}
+  m_AnchoredPosition: {x: 540, y: -1756}
   m_SizeDelta: {x: 800, y: 150}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!114 &1300450859
@@ -719,7 +718,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: e19747de3f5aca642ab2be37e372fb86, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  m_EffectColor: {r: 0.9921569, g: 0.8000001, b: 0.003921569, a: 1}
+  m_EffectColor: {r: 0.427451, g: 0.72156864, b: 0.7372549, a: 1}
   m_EffectDistance: {x: 12, y: 12}
   m_UseGraphicAlpha: 1
 --- !u!114 &1300450860
@@ -791,7 +790,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   m_Material: {fileID: 0}
-  m_Color: {r: 1, g: 1, b: 1, a: 1}
+  m_Color: {r: 0.427451, g: 0.72156864, b: 0.7372549, a: 1}
   m_RaycastTarget: 1
   m_RaycastPadding: {x: 0, y: 0, z: 0, w: 0}
   m_Maskable: 1
@@ -831,7 +830,6 @@ MonoBehaviour:
   button: {fileID: 0}
   nextScene: 
   isMinigameSwap: 0
-  MinigameLoader: {fileID: 11400000, guid: 2d9636fbb4ef449458eedc6cb0b5c9aa, type: 2}
 --- !u!1 &1366930637
 GameObject:
   m_ObjectHideFlags: 0
@@ -883,6 +881,86 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   m_Material: {fileID: 0}
+  m_Color: {r: 1, g: 1, b: 1, a: 1}
+  m_RaycastTarget: 1
+  m_RaycastPadding: {x: 0, y: 0, z: 0, w: 0}
+  m_Maskable: 1
+  m_OnCullStateChanged:
+    m_PersistentCalls:
+      m_Calls: []
+  m_FontData:
+    m_Font: {fileID: 12800000, guid: 67b427962ae3e5748aa08315250bdae5, type: 3}
+    m_FontSize: 60
+    m_FontStyle: 0
+    m_BestFit: 0
+    m_MinSize: 0
+    m_MaxSize: 70
+    m_Alignment: 4
+    m_AlignByGeometry: 0
+    m_RichText: 1
+    m_HorizontalOverflow: 0
+    m_VerticalOverflow: 0
+    m_LineSpacing: 1
+  m_Text: "COME\xC7AR NOS INSETOS"
+--- !u!222 &1366930640
+CanvasRenderer:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1366930637}
+  m_CullTransparentMesh: 1
+--- !u!1 &1444858366
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 1444858367}
+  - component: {fileID: 1444858369}
+  - component: {fileID: 1444858368}
+  m_Layer: 5
+  m_Name: Titulo
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!224 &1444858367
+RectTransform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1444858366}
+  m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
+  m_LocalPosition: {x: 0, y: 0, z: 0}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_ConstrainProportionsScale: 0
+  m_Children: []
+  m_Father: {fileID: 1894740102}
+  m_RootOrder: 1
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+  m_AnchorMin: {x: 0, y: 0}
+  m_AnchorMax: {x: 1, y: 1}
+  m_AnchoredPosition: {x: 7, y: 357}
+  m_SizeDelta: {x: -128.9, y: -2231.1}
+  m_Pivot: {x: 0.5, y: 0.5}
+--- !u!114 &1444858368
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1444858366}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 5f7201a12d95ffc409449d95f23cf332, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  m_Material: {fileID: 0}
   m_Color: {r: 0, g: 0, b: 0, a: 1}
   m_RaycastTarget: 1
   m_RaycastPadding: {x: 0, y: 0, z: 0, w: 0}
@@ -903,14 +981,14 @@ MonoBehaviour:
     m_HorizontalOverflow: 0
     m_VerticalOverflow: 0
     m_LineSpacing: 1
-  m_Text: Going Up Path
---- !u!222 &1366930640
+  m_Text: ORDEM DOS MINIJOGOS
+--- !u!222 &1444858369
 CanvasRenderer:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 1366930637}
+  m_GameObject: {fileID: 1444858366}
   m_CullTransparentMesh: 1
 --- !u!1 &1519498768
 GameObject:
@@ -943,12 +1021,12 @@ RectTransform:
   m_ConstrainProportionsScale: 0
   m_Children: []
   m_Father: {fileID: 1894740102}
-  m_RootOrder: 1
+  m_RootOrder: 2
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0, y: 0}
   m_AnchorMax: {x: 1, y: 1}
-  m_AnchoredPosition: {x: 0, y: 156.30005}
-  m_SizeDelta: {x: -280, y: -1984.8}
+  m_AnchoredPosition: {x: 61.700012, y: 48}
+  m_SizeDelta: {x: -238.4, y: -2003.1}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!114 &1519498770
 MonoBehaviour:
@@ -963,7 +1041,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   m_Material: {fileID: 0}
-  m_Color: {r: 1, g: 1, b: 1, a: 1}
+  m_Color: {r: 0, g: 0, b: 0, a: 1}
   m_RaycastTarget: 1
   m_RaycastPadding: {x: 0, y: 0, z: 0, w: 0}
   m_Maskable: 1
@@ -972,26 +1050,19 @@ MonoBehaviour:
       m_Calls: []
   m_FontData:
     m_Font: {fileID: 12800000, guid: 67b427962ae3e5748aa08315250bdae5, type: 3}
-    m_FontSize: 50
+    m_FontSize: 60
     m_FontStyle: 0
     m_BestFit: 0
     m_MinSize: 0
     m_MaxSize: 70
-    m_Alignment: 4
+    m_Alignment: 3
     m_AlignByGeometry: 0
     m_RichText: 1
     m_HorizontalOverflow: 0
     m_VerticalOverflow: 0
     m_LineSpacing: 1
-  m_Text: 'A
-
-    B
-
-    C
-
-    D
-
-    E'
+  m_Text: "1\xBA: Jogo do Terramoto\n2\xBA: Jogo da Luz/Humidade\r\n3\xBA: Jogos
+    dos Insetos\r\n4\xBA: Jogo Final"
 --- !u!222 &1519498771
 CanvasRenderer:
   m_ObjectHideFlags: 0
@@ -1035,11 +1106,11 @@ RectTransform:
   m_Children:
   - {fileID: 1284950174}
   m_Father: {fileID: 1894740102}
-  m_RootOrder: 2
+  m_RootOrder: 3
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0, y: 1}
   m_AnchorMax: {x: 0, y: 1}
-  m_AnchoredPosition: {x: 540, y: -1471}
+  m_AnchoredPosition: {x: 540, y: -1535}
   m_SizeDelta: {x: 800, y: 150}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!114 &1834492590
@@ -1054,7 +1125,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: e19747de3f5aca642ab2be37e372fb86, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  m_EffectColor: {r: 0.9921569, g: 0.8000001, b: 0.003921569, a: 1}
+  m_EffectColor: {r: 0.427451, g: 0.72156864, b: 0.7372549, a: 1}
   m_EffectDistance: {x: 12, y: 12}
   m_UseGraphicAlpha: 1
 --- !u!114 &1834492591
@@ -1126,7 +1197,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   m_Material: {fileID: 0}
-  m_Color: {r: 1, g: 1, b: 1, a: 1}
+  m_Color: {r: 0.427451, g: 0.72156864, b: 0.7372549, a: 1}
   m_RaycastTarget: 1
   m_RaycastPadding: {x: 0, y: 0, z: 0, w: 0}
   m_Maskable: 1
@@ -1166,7 +1237,6 @@ MonoBehaviour:
   button: {fileID: 0}
   nextScene: 
   isMinigameSwap: 0
-  MinigameLoader: {fileID: 11400000, guid: 2d9636fbb4ef449458eedc6cb0b5c9aa, type: 2}
 --- !u!1 &1894740097
 GameObject:
   m_ObjectHideFlags: 0
@@ -1260,6 +1330,7 @@ RectTransform:
   m_ConstrainProportionsScale: 0
   m_Children:
   - {fileID: 1167713984}
+  - {fileID: 1444858367}
   - {fileID: 1519498769}
   - {fileID: 1834492589}
   - {fileID: 1300450858}
@@ -1308,7 +1379,7 @@ Camera:
   m_Enabled: 1
   serializedVersion: 2
   m_ClearFlags: 1
-  m_BackGroundColor: {r: 0.427451, g: 0.72156864, b: 0.7372549, a: 1}
+  m_BackGroundColor: {r: 1, g: 1, b: 1, a: 1}
   m_projectionMatrixMode: 1
   m_GateFitMode: 2
   m_FOVAxisMode: 0

@@ -7,12 +7,11 @@ using UnityEngine.SceneManagement;
 public class GameLoader : MonoBehaviour
 {
 	[SerializeField]
-	public static string[] minigames = new string[4];
+	public static string[] minigames;
 	
 	[SerializeField]
 	public static int minigameIndex;
-	private const string FILENAME = "order.dat";
-  
+	
 	public string[] Minigames
 	{
 		get { return minigames; }
@@ -29,5 +28,24 @@ public class GameLoader : MonoBehaviour
 	{
 		GameLoader.minigameIndex++;
 		SceneManager.LoadScene(minigames[(GameLoader.minigameIndex - 1) % GameLoader.minigames.Length]);
+	}
+
+	public static void setInsectsFirst()
+	{
+		GameLoader.minigames = null;
+		GameLoader.minigames = new string[4];
+		GameLoader.minigames[0] = "InsectsStartScene";
+		GameLoader.minigames[1] = "LightStartScene";
+		GameLoader.minigames[2] = "EarthquakeStartScene";
+		GameLoader.minigames[3] = "EraserStartScene";
+	}
+	public static void setEarthquakeFirst()
+	{
+		GameLoader.minigames = null;
+		GameLoader.minigames = new string[4];
+		GameLoader.minigames[0] = "EarthquakeStartScene";
+		GameLoader.minigames[1] = "LightStartScene";
+		GameLoader.minigames[2] = "InsectsStartScene";
+		GameLoader.minigames[3] = "EraserStartScene";
 	}
 }

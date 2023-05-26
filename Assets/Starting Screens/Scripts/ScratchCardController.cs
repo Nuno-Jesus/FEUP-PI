@@ -23,6 +23,8 @@ public class ScratchCardController : MonoBehaviour
 		button.colors = colorBlock;
 
 		GameLoader.minigameIndex = 0;
+		if (GameLoader.minigames == null)
+			GameLoader.setInsectsFirst();
 		
 		if (GameLoader.minigames[0] == "LightStartScene")
 			text.text = "Saiu o jogo da luz e da humidade!";
@@ -32,10 +34,6 @@ public class ScratchCardController : MonoBehaviour
 			text.text = "Saiu o jogo do terramoto!";
 		else if (GameLoader.minigames[0] == "EraserStartScene")
 			text.text = "Saiu o jogo do Sr.Borracha!";
-		// text.text = SceneLoader.minigames[0] + "\n" + 
-		// 			SceneLoader.minigames[1] + "\n" + 
-		// 			SceneLoader.minigames[2] + "\n" + 
-		// 			SceneLoader.minigames[3];
 	}
 
 	void Update()
