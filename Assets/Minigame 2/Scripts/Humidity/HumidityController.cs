@@ -25,21 +25,21 @@ public class HumidityController : MonoBehaviour
     void Start()
     {
         humidityRanges = new KeyValuePair<float, float>[6];
-        humidityRanges[0] = new KeyValuePair<float, float>(0.0f, 34.9f);
-        humidityRanges[1] = new KeyValuePair<float, float>(35.0f, 39.9f);
-        humidityRanges[2] = new KeyValuePair<float, float>(40.0f, 59.9f);
-        humidityRanges[3] = new KeyValuePair<float, float>(60.0f, 64.9f);
-        humidityRanges[4] = new KeyValuePair<float, float>(65.0f, 79.9f);
+        humidityRanges[0] = new KeyValuePair<float, float>(0.0f, 34.99f);
+        humidityRanges[1] = new KeyValuePair<float, float>(35.0f, 39.99f);
+        humidityRanges[2] = new KeyValuePair<float, float>(40.0f, 59.99f);
+        humidityRanges[3] = new KeyValuePair<float, float>(60.0f, 64.99f);
+        humidityRanges[4] = new KeyValuePair<float, float>(65.0f, 79.99f);
         humidityRanges[5] = new KeyValuePair<float, float>(80.0f, 100.0f);
 
         humiditySlider.value = humidityRanges[humidityCurrentFrame].Key;
         
         temperatureRanges = new KeyValuePair<float, float>[6];
-        temperatureRanges[0] = new KeyValuePair<float, float>(0.0f, 4.9f);
-        temperatureRanges[1] = new KeyValuePair<float, float>(5.0f, 9.9f);
-        temperatureRanges[2] = new KeyValuePair<float, float>(10.0f, 14.9f);
-        temperatureRanges[3] = new KeyValuePair<float, float>(15.0f, 24.9f);
-        temperatureRanges[4] = new KeyValuePair<float, float>(25.0f, 39.9f);
+        temperatureRanges[0] = new KeyValuePair<float, float>(0.0f, 4.99f);
+        temperatureRanges[1] = new KeyValuePair<float, float>(5.0f, 9.99f);
+        temperatureRanges[2] = new KeyValuePair<float, float>(10.0f, 14.99f);
+        temperatureRanges[3] = new KeyValuePair<float, float>(15.0f, 24.99f);
+        temperatureRanges[4] = new KeyValuePair<float, float>(25.0f, 39.99f);
         temperatureRanges[5] = new KeyValuePair<float, float>(40.0f, 50.0f);
 
         temperatureSlider.value = temperatureRanges[temperatureCurrentFrame].Key;    

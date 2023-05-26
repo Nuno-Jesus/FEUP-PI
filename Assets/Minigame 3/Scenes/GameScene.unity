@@ -2481,7 +2481,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 8887532426819686158, guid: 028977f832dd0454f9e6d46dd49cf561, type: 3}
       propertyPath: maxX
-      value: 2.5
+      value: 2
       objectReference: {fileID: 0}
     - target: {fileID: 8887532426819686158, guid: 028977f832dd0454f9e6d46dd49cf561, type: 3}
       propertyPath: maxY
@@ -2489,7 +2489,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 8887532426819686158, guid: 028977f832dd0454f9e6d46dd49cf561, type: 3}
       propertyPath: minX
-      value: -2.5
+      value: -2
       objectReference: {fileID: 0}
     - target: {fileID: 8887532426819686158, guid: 028977f832dd0454f9e6d46dd49cf561, type: 3}
       propertyPath: minY

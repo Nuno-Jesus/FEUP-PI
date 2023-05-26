@@ -196,7 +196,7 @@ SpriteRenderer:
   m_SortingLayerID: 0
   m_SortingLayer: 0
   m_SortingOrder: 0
-  m_Sprite: {fileID: 21300000, guid: 547322a8f460f0346af549b795ed9142, type: 3}
+  m_Sprite: {fileID: 21300000, guid: 26208d77f2b18154290cd4bf344f8841, type: 3}
   m_Color: {r: 1, g: 1, b: 1, a: 1}
   m_FlipX: 0
   m_FlipY: 0
@@ -401,12 +401,12 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   pictureFrames:
-  - {fileID: 21300000, guid: 3b6eb557fb66a59478e6ad67e3dad910, type: 3}
-  - {fileID: 21300000, guid: 1b8ab85cd60660e4d8d7d26514f0632a, type: 3}
-  - {fileID: 21300000, guid: abf9441ea60dc0b46b20a1eafa8acb7c, type: 3}
-  - {fileID: 21300000, guid: b53291b95624c4a44bfaaa7ebe18a7a5, type: 3}
+  - {fileID: 21300000, guid: 298426507dc36664f93c645a67661470, type: 3}
+  - {fileID: 21300000, guid: 97668ed7e2779f546a25837bca59dba5, type: 3}
+  - {fileID: 21300000, guid: f434fd5423b0aad4297e4a7572f488a4, type: 3}
+  - {fileID: 21300000, guid: bab00856f326a5043b6f1850ae819dcc, type: 3}
   - {fileID: 21300000, guid: ed302364f8ef82a47b0e1f76217f84aa, type: 3}
-  - {fileID: 21300000, guid: 547322a8f460f0346af549b795ed9142, type: 3}
+  - {fileID: 21300000, guid: 26208d77f2b18154290cd4bf344f8841, type: 3}
   humiditySlider: {fileID: 861237328}
   humidityPicture: {fileID: 71233477}
   humidityCurrentFrame: 5
@@ -822,7 +822,7 @@ SpriteRenderer:
   m_SortingLayerID: 0
   m_SortingLayer: 0
   m_SortingOrder: 0
-  m_Sprite: {fileID: 21300000, guid: 3b6eb557fb66a59478e6ad67e3dad910, type: 3}
+  m_Sprite: {fileID: 21300000, guid: 298426507dc36664f93c645a67661470, type: 3}
   m_Color: {r: 1, g: 1, b: 1, a: 1}
   m_FlipX: 0
   m_FlipY: 0

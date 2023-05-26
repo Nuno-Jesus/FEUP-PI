@@ -595,6 +595,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   timer: 0
+  maxTime: 0
   button: {fileID: 1389535680}
 --- !u!4 &1676592783
 Transform:
