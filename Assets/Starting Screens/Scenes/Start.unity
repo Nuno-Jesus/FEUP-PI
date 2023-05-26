@@ -367,6 +367,7 @@ MonoBehaviour:
   nextScene: Initial Animation
   isMinigameSwap: 0
   isShieldIncrement: 0
+  somerr: {fileID: 0}
 --- !u!1 &265807563
 GameObject:
   m_ObjectHideFlags: 0

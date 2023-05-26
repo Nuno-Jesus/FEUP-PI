@@ -5,7 +5,7 @@ using UnityEngine;
 public static class FinalAvatarManager
 {
     private static List<Sprite> finalAvatarImages;
-
+	private static int index;
     static FinalAvatarManager()
     {
         finalAvatarImages = new List<Sprite>();
@@ -20,4 +20,9 @@ public static class FinalAvatarManager
     {
         return finalAvatarImages;
     }
+
+	public static Sprite GetNextAvatarImage()
+	{
+		return finalAvatarImages[index++ % finalAvatarImages.Count];
+	}
 }

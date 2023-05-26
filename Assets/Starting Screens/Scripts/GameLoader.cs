@@ -47,8 +47,8 @@ public class GameLoader : MonoBehaviour
 	{
 		GameLoader.minigames = null;
 		GameLoader.minigames = new string[4];
-		GameLoader.minigames[0] = "InsectsStartScene";
-		GameLoader.minigames[1] = "LightStartScene";
+		GameLoader.minigames[0] = "LightStartScene";
+		GameLoader.minigames[1] = "InsectsStartScene";
 		GameLoader.minigames[2] = "EarthquakeStartScene";
 		GameLoader.minigames[3] = "EraserStartScene";
 	}
