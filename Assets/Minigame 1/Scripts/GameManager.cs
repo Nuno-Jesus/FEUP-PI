@@ -17,6 +17,7 @@ public class GameManager : MonoBehaviour
     // Start is called before the first frame update
     void Start()
     {
+		OrientationController.setLandscapeView();
         InvokeRepeating("SpawnCinto", 1, 4);
         InvokeRepeating("SpawnChapeu", 1, 5);
         InvokeRepeating("SpawnQuadro", 2, 5);

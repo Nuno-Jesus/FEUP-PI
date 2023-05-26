@@ -80,6 +80,7 @@ public class GroundController : MonoBehaviour
     public void changeScreen()
     {
         SceneManager.LoadScene("DefeatScreen");
+		OrientationController.setPortraitView();
     }
 
     // Update is called once per frame
