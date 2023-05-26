@@ -10,6 +10,9 @@ public class LightOverlayController : MonoBehaviour
 	public Slider loading;
 	private Slider loadingClone;
 	public Slider lightSlider;
+	public int numberOfPlayers = 4;
+	public GameObject container;
+	public Button buttonPrefab;
 	public Button[] fingerprints = new Button[4];
 	private bool[] wasFingerprintClicked = new bool[4];	
 	private bool wasLoadingRendered = false; 
@@ -26,9 +29,28 @@ public class LightOverlayController : MonoBehaviour
 
 	public void Start()
 	{
+		GameObject button;
+
+		button = Instantiate(buttonPrefab.gameObject, container.transform);
+		fingerprints[0] = button.GetComponent<Button>();
 		fingerprints[0].onClick.AddListener(onFirstFingerprintClick);
+		
+		button = Instantiate(buttonPrefab.gameObject, container.transform);
+		fingerprints[1] = button.GetComponent<Button>();
 		fingerprints[1].onClick.AddListener(onSecondFingerprintClick);
+		
+		if (numberOfPlayers < 3)
+			return ;
+
+		button = Instantiate(buttonPrefab.gameObject, container.transform);
+		fingerprints[2] = button.GetComponent<Button>();
 		fingerprints[2].onClick.AddListener(onThirdFingerprintClick);
+
+		if (numberOfPlayers < 4)
+			return ;
+			
+		button = Instantiate(buttonPrefab.gameObject, container.transform);
+		fingerprints[3] = button.GetComponent<Button>();
 		fingerprints[3].onClick.AddListener(onFourthFingerprintClick);
 	}
 
@@ -39,8 +61,9 @@ public class LightOverlayController : MonoBehaviour
 			return;
 		
 		// If one of the buttons wasn't clicked, abort
-		if (!wasFingerprintClicked.All(x => x == true))
-			return ;
+		for (int i = 0; i < numberOfPlayers; i++)
+			if (!wasFingerprintClicked[i])
+				return ;
 		
 		// If this is the first time rendering the loader
 		if (!wasLoadingRendered)
@@ -50,7 +73,8 @@ public class LightOverlayController : MonoBehaviour
 			wasLoadingRendered = true;
 			
 			// Disable the fingerprint buttons
-			Array.ForEach(fingerprints, button => button.enabled = false);
+			for (int i = 0; i < numberOfPlayers; i++)
+				fingerprints[i].enabled = false;
 			gameObject.GetComponent<Button>().enabled = false;
 		}
 
@@ -106,8 +130,11 @@ public class LightOverlayController : MonoBehaviour
 		gameObject.GetComponent<Button>().enabled = true;
 		lightSlider.enabled = false;
 		Array.Fill(wasFingerprintClicked, false);
-		Array.ForEach(fingerprints, button => button.enabled = true);
-		Array.ForEach(fingerprints, button => button.GetComponent<Image>().sprite = inactiveSprite);
+		for (int i = 0; i < numberOfPlayers; i++)
+		{
+			fingerprints[i].enabled = true;
+			fingerprints[i].GetComponent<Image>().sprite = inactiveSprite;
+		}
 		overlay.SetActive(true);
 	}
 

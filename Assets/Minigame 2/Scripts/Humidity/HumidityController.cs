@@ -47,10 +47,11 @@ public class HumidityController : MonoBehaviour
 
     void Update()
     {   
-		if (!hasEnteredOneCorrectRange())
+		if (hasEnteredTwoCorrectRanges())
 		{
 			oneCorrectSoundSource.Stop();
-			twoCorrectSoundSource.Stop();
+			if (!twoCorrectSoundSource.isPlaying)
+				twoCorrectSoundSource.Play();
 		}
 		else if (hasEnteredOneCorrectRange())
 		{
@@ -58,11 +59,10 @@ public class HumidityController : MonoBehaviour
 			if (!oneCorrectSoundSource.isPlaying)
 				oneCorrectSoundSource.Play();
 		}
-		else if (hasEnteredTwoCorrectRanges())
+		else if (!hasEnteredOneCorrectRange())
 		{
 			oneCorrectSoundSource.Stop();
-			if (!twoCorrectSoundSource.isPlaying)
-				twoCorrectSoundSource.Play();
+			twoCorrectSoundSource.Stop();
 		}
 		
 		temperatureCurrentFrame = getPictureFrame(temperatureSlider, temperatureRanges);     
