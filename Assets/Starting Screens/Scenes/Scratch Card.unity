@@ -545,7 +545,6 @@ MonoBehaviour:
   button: {fileID: 1389535680}
   counter: 0
   maxMasks: 400
---- !u!1 &1389535679
 GameObject:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}

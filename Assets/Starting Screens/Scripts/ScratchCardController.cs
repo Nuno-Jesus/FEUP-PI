@@ -41,7 +41,7 @@ public class ScratchCardController : MonoBehaviour
 
 	void Update()
 	{
-		if (Input.touchCount <= 0)
+		if (Input.touchCount != 1)
 			return ;
 		
 		//Count the number of scratches

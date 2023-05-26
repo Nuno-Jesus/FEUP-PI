@@ -102,6 +102,27 @@ EditorBuildSettings:
     path: Assets/Minigame 3/Scenes/InsectsDescription.unity
     guid: 9f1f03e4fe90cc24a8bb90c7c4747ef3
   - enabled: 1
+    path: Assets/Starting Screens/Scenes/Shield Tutorial.unity
+    guid: 359b07914da258c449f9d4a3b486eee6
+  - enabled: 1
+    path: Assets/Starting Screens/Scenes/More Info.unity
+    guid: bb48aaf29c385d04cad574d6011c8dee
+  - enabled: 1
+    path: Assets/Starting Screens/Scenes/Initial Animation.unity
+    guid: 499ddbe0d174dcc4e961668df3c4de0a
+  - enabled: 1
+    path: Assets/Starting Screens/Scenes/Hidden Configs.unity
+    guid: 6443b123ff750cf4c9680406fb69359a
+  - enabled: 1
+    path: Assets/Starting Screens/Scenes/Save Museum Animation.unity
+    guid: feb8c5c994625074d9ad39b50cc500cf
+  - enabled: 1
+    path: Assets/Starting Screens/Scenes/Start.unity
+    guid: 068fcbe7b4553af46b2417dd9ffa3210
+  - enabled: 1
+    path: Assets/Starting Screens/Scenes/Scratch Card.unity
+    guid: 67754a64b40603c4b9557f7877dc17eb
+  - enabled: 1
     path: Assets/Minigame 3/Scenes/GameOverGorPlayAgain.unity
     guid: 6bb7a946d20d32a439be02b1e225fd35
   - enabled: 1
@@ -272,6 +293,11 @@ EditorBuildSettings:
   - enabled: 1
     path: Assets/Minigame 2/Scenes/BestResult.unity
     guid: 1237706afb37bad4d8f70b55c56250ce
+    path: Assets/Minigame 3/Scenes/InsectsStartScene.unity
+    guid: 9f1f03e4fe90cc24a8bb90c7c4747ef3
+  - enabled: 1
+    path: Assets/Minigame 3/Scenes/GameScene.unity
+    guid: 3fc8acdd13e6c734bafef6554d6fdbcd
   m_configObjects:
     com.unity.adaptiveperformance.loader_settings: {fileID: 11400000, guid: f34db9bf4b2a84845afbc76a860e695b, type: 2}
     com.unity.adaptiveperformance.samsung.android.provider_settings: {fileID: 11400000, guid: 962de8d8379fb2241811f7687c7e9a77, type: 2}
