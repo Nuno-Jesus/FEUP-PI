@@ -9,6 +9,7 @@ public class ButtonScript : MonoBehaviour
 	public Button button;
 	public string nextScene;
 	public bool isMinigameSwap;
+	public bool isShieldIncrement;
 
 	void Start()
 	{
@@ -20,6 +21,8 @@ public class ButtonScript : MonoBehaviour
 	{
 		if (isMinigameSwap)			
 			GameLoader.loadNextMinigame();
+		else if (isShieldIncrement)
+			GameLoader.loadNextShieldFrame();
 		else
 			SceneManager.LoadScene(nextScene);
 	}

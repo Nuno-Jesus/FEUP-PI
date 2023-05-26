@@ -202,6 +202,7 @@ MonoBehaviour:
   button: {fileID: 952502610}
   nextScene: Start
   isMinigameSwap: 0
+  isShieldIncrement: 0
 --- !u!1 &265807563
 GameObject:
   m_ObjectHideFlags: 0
@@ -655,7 +656,7 @@ MonoBehaviour:
     m_HorizontalOverflow: 0
     m_VerticalOverflow: 0
     m_LineSpacing: 1
-  m_Text: "COME\xC7AR NO TERRAMOTO"
+  m_Text: "COME\xC7AR NOS INSETOS"
 --- !u!222 &1284950176
 CanvasRenderer:
   m_ObjectHideFlags: 0
@@ -830,6 +831,7 @@ MonoBehaviour:
   button: {fileID: 0}
   nextScene: 
   isMinigameSwap: 0
+  isShieldIncrement: 0
 --- !u!1 &1366930637
 GameObject:
   m_ObjectHideFlags: 0
@@ -901,7 +903,7 @@ MonoBehaviour:
     m_HorizontalOverflow: 0
     m_VerticalOverflow: 0
     m_LineSpacing: 1
-  m_Text: "COME\xC7AR NOS INSETOS"
+  m_Text: "COME\xC7AR NO TERRAMOTO"
 --- !u!222 &1366930640
 CanvasRenderer:
   m_ObjectHideFlags: 0
@@ -1237,6 +1239,7 @@ MonoBehaviour:
   button: {fileID: 0}
   nextScene: 
   isMinigameSwap: 0
+  isShieldIncrement: 0
 --- !u!1 &1894740097
 GameObject:
   m_ObjectHideFlags: 0

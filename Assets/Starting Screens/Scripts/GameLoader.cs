@@ -11,7 +11,15 @@ public class GameLoader : MonoBehaviour
 	
 	[SerializeField]
 	public static int minigameIndex;
-	
+
+	public static string[] shields =
+	{
+		"ShieldStage1Scene",
+		"ShieldStage2Scene",
+		"ShieldStage3Scene",
+		"ShieldStage4Scene"
+	};
+
 	public string[] Minigames
 	{
 		get { return minigames; }
@@ -22,6 +30,11 @@ public class GameLoader : MonoBehaviour
 	{
 		get { return minigameIndex; }
 		set { minigameIndex = value; }
+	}
+
+	public static void loadNextShieldFrame()
+	{
+		SceneManager.LoadScene(shields[(GameLoader.minigameIndex - 1) % shields.Length]);
 	}
 
 	public static void loadNextMinigame()

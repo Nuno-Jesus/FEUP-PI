@@ -410,9 +410,11 @@ MonoBehaviour:
   humiditySlider: {fileID: 861237328}
   humidityPicture: {fileID: 71233477}
   humidityCurrentFrame: 5
+  humidityCorrectFrame: 2
   temperatureSlider: {fileID: 1036983375}
   temperaturePicture: {fileID: 587411963}
   temperatureCurrentFrame: 0
+  temperatureCorrectFrame: 2
   oneCorrectSoundSource: {fileID: 1038461161}
   twoCorrectSoundSource: {fileID: 1244624675}
 --- !u!1 &345287885

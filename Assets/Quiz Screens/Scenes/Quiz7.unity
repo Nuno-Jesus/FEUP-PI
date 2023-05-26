@@ -232,6 +232,10 @@ PrefabInstance:
       objectReference: {fileID: 11400000, guid: 2d9636fbb4ef449458eedc6cb0b5c9aa, type: 2}
     - target: {fileID: 1817491889765008813, guid: 00a8470e6c405f54cb4dc85151356f5e, type: 3}
       propertyPath: isMinigameSwap
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 1817491889765008813, guid: 00a8470e6c405f54cb4dc85151356f5e, type: 3}
+      propertyPath: isShieldIncrement
       value: 1
       objectReference: {fileID: 0}
     - target: {fileID: 8529813206863935920, guid: 00a8470e6c405f54cb4dc85151356f5e, type: 3}

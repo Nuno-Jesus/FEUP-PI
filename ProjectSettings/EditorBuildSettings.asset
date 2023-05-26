@@ -27,6 +27,18 @@ EditorBuildSettings:
     path: Assets/Starting Screens/Scenes/Shield Tutorial.unity
     guid: 359b07914da258c449f9d4a3b486eee6
   - enabled: 1
+    path: Assets/Shield Screens/Scenes/ShieldStage1Scene.unity
+    guid: 5f717801bb82672438badf35af732802
+  - enabled: 1
+    path: Assets/Shield Screens/Scenes/ShieldStage2Scene.unity
+    guid: 02f8d4d6b84cf7948a14bed7b85a7d1e
+  - enabled: 1
+    path: Assets/Shield Screens/Scenes/ShieldStage3Scene.unity
+    guid: 1924306b42deaa04ca7a104f66588a45
+  - enabled: 1
+    path: Assets/Shield Screens/Scenes/ShieldStage4Scene.unity
+    guid: fac2c2628b7ed2045b7863e26414d63f
+  - enabled: 1
     path: Assets/Minigame 1/Scenes/EarthquakeStartScene.unity
     guid: 109b87553b00bfd48b98b13cf0c6a8bf
   - enabled: 1
@@ -77,7 +89,7 @@ EditorBuildSettings:
   - enabled: 1
     path: Assets/Minigame 2/Scenes/MinigameSwap1.unity
     guid: 560633d4780bba1499c0b5c8a631c3a9
-  - enabled: 1
+  - enabled: 0
     path: Assets/Minigame 3/Scenes/Avatar.unity
     guid: b1181efc21c1eff488f9219cc5b909da
   - enabled: 1
