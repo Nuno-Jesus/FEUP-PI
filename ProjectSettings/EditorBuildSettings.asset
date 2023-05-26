@@ -30,6 +30,9 @@ EditorBuildSettings:
     path: Assets/Minigame 1/Scenes/EarthquakeStartScene.unity
     guid: 109b87553b00bfd48b98b13cf0c6a8bf
   - enabled: 1
+    path: Assets/Minigame 1/Scenes/MapStatue.unity
+    guid: ddc615f71969b7642a4fdf339675f8ba
+  - enabled: 1
     path: Assets/Minigame 1/Scenes/DefeatScreen.unity
     guid: a3e3e37d94cdac84884524f70e37e491
   - enabled: 1
@@ -47,6 +50,9 @@ EditorBuildSettings:
   - enabled: 1
     path: Assets/Minigame 2/Scenes/LightStartScene.unity
     guid: ca6fdd87aafeff74183cd97c97da5313
+  - enabled: 1
+    path: Assets/Minigame 2/Scenes/MapPaint.unity
+    guid: bc246001dfbd0ec4493c2ac4cb3a1b51
   - enabled: 1
     path: Assets/Minigame 2/Scenes/LightDescription.unity
     guid: 68f949dccd6b3274a8a399655308d1f7
@@ -75,6 +81,9 @@ EditorBuildSettings:
     path: Assets/Minigame 3/Scenes/Avatar.unity
     guid: b1181efc21c1eff488f9219cc5b909da
   - enabled: 1
+    path: Assets/Minigame 3/Scenes/MapJacket.unity
+    guid: 16f1acf75fc106d4d890b8aa0d9225a8
+  - enabled: 1
     path: Assets/Minigame 3/Scenes/InsectsStartScene.unity
     guid: 92c1b0ee2d5bf594ea2e955f14dc0406
   - enabled: 1
@@ -92,6 +101,9 @@ EditorBuildSettings:
   - enabled: 1
     path: Assets/Minigame 3/Scenes/GameScene.unity
     guid: 3fc8acdd13e6c734bafef6554d6fdbcd
+  - enabled: 1
+    path: Assets/Minigame 3/Scenes/InsectsPlayerSwap.unity
+    guid: 14ef74b8b5f744f47abaccb71255c729
   - enabled: 1
     path: Assets/Minigame 4/Scenes/EraserStartScene.unity
     guid: af6dc6626440fd64ab15eea4774d2316
