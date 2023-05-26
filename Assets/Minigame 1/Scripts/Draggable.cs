@@ -71,8 +71,8 @@ public class Draggable : MonoBehaviour
 
     public void changeScreen2()
     {
-        SceneManager.LoadScene("VictoryScreen");
 		OrientationController.setPortraitView();
+        SceneManager.LoadScene("VictoryScreen");
     }
 
     // Start is called before the first frame update

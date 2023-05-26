@@ -486,7 +486,8 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 8df34ea71902a9241bbf9fdeec833c90, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  sceneName: TerramotoGame
+  sceneName: EarthquakeTutorial
+  somErrado: {fileID: 0}
 --- !u!4 &705423309
 Transform:
   m_ObjectHideFlags: 0
@@ -891,7 +892,7 @@ MonoBehaviour:
     m_HorizontalOverflow: 0
     m_VerticalOverflow: 0
     m_LineSpacing: 1
-  m_Text: INICIAR
+  m_Text: CONTINUAR
 --- !u!222 &1876983223
 CanvasRenderer:
   m_ObjectHideFlags: 0
