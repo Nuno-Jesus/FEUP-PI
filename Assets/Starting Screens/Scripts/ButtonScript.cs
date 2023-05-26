@@ -10,6 +10,11 @@ public class ButtonScript : MonoBehaviour
 	public string nextScene;
 	public bool isMinigameSwap;
 	public bool isShieldIncrement;
+	public AudioSource somerr;
+
+    public void playErrado(){
+        somerr.Play();
+    }
 
 	void Start()
 	{

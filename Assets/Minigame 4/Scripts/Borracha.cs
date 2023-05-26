@@ -9,8 +9,8 @@ public class Borracha : MonoBehaviour
     private Vector2 startposition = new Vector2(0f, -2.56f);
     private Vector2 endposition = Vector2.zero;
     public GameObject l1;
+    public AudioSource somerr;
 
-    public int lifes = 50;
     private float showDuration = 0.5f;
     private int ftime = 60;
 
@@ -28,6 +28,7 @@ public class Borracha : MonoBehaviour
     {   
 
             if(IsHittable){
+            somerr.Play();
             Destroy(collision.gameObject);
             Destroy(gameObject);
             Destroy(l1);
@@ -44,7 +45,7 @@ public class Borracha : MonoBehaviour
     }
     public void changeScreen()
     {
-        SceneManager.LoadScene("DefeatScreen");
+        SceneManager.LoadScene("Escudo_final");
     }
 
     private IEnumerator ShowHide(Vector2 start, Vector2 end)

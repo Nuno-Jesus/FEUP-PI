@@ -17,6 +17,7 @@ public class QuizScoreManager : MonoBehaviour
     public static int right_answers = 0;
     public static int duration = 0;
     public static int medalhas = 2;
+	public bool isright = true;
 
     // Start is called before the first frame update
     void Start()
@@ -27,6 +28,11 @@ public class QuizScoreManager : MonoBehaviour
 	public void quizzScore()
     {
 
+    }
+
+	public void setfalse()
+    {
+        isright = false;
     }
 
     public void IncreaseOptions1()
@@ -51,6 +57,12 @@ public class QuizScoreManager : MonoBehaviour
 
     public void IncreaseScore()
     {
+       	if (isright) {
+            right_answers += 1;
+        }
+        else { 
+            isright = true;
+        }
         score += 100;
         scoreText.text = score.ToString();
     }

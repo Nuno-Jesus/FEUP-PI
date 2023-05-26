@@ -14,7 +14,7 @@ public class time : MonoBehaviour
 
     public void changeScreen2()
     {
-        SceneManager.LoadScene("VictoryScreen");
+        SceneManager.LoadScene("DefeatScr");
     }
 
     void Update()

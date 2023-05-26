@@ -10,6 +10,8 @@ public class tiro_spawner : MonoBehaviour
     public GameObject bulletPrefab;
     public GameObject gun;
 
+    public AudioSource somerr;
+
     public float bulletSpawnDelay = 0.3f;
     public float bulletLifetime = 1.2f;
 
@@ -23,6 +25,7 @@ public class tiro_spawner : MonoBehaviour
 
     private void SpawnBullet()
     {
+
         float spawnPositionX = gun.transform.position.x;
         Vector3 spawnPosition = new Vector3(spawnPositionX, -3.5f, 0);
         GameObject newBullet = Instantiate(bulletPrefab, spawnPosition, Quaternion.identity);
