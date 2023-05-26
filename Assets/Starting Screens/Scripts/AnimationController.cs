@@ -11,6 +11,12 @@ public class AnimationController : MonoBehaviour
 	public const float MAX_TIME = 52.0f;
 	public Button button;
 
+	void Start()
+	{
+		//Set the device orientation to landscape counter clockwise
+		Screen.orientation = ScreenOrientation.LandscapeLeft;
+	}
+
     void Update()
     {
         timer += Time.deltaTime;
