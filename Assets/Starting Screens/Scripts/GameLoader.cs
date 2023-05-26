@@ -61,4 +61,10 @@ public class GameLoader : MonoBehaviour
 		GameLoader.minigames[2] = "InsectsStartScene";
 		GameLoader.minigames[3] = "EraserStartScene";
 	}
+
+	public void resetCode()
+	{
+		Code.code = null;
+		Code.code = "";
+	}
 }

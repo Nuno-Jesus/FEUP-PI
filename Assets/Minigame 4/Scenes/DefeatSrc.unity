@@ -220,7 +220,8 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 8df34ea71902a9241bbf9fdeec833c90, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  sceneName: Jogo_desintegrador
+  sceneName: Jogo_fisga
+  somErrado: {fileID: 0}
 --- !u!4 &509210801
 Transform:
   m_ObjectHideFlags: 0
@@ -460,8 +461,8 @@ RectTransform:
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0.5, y: 0.5}
   m_AnchorMax: {x: 0.5, y: 0.5}
-  m_AnchoredPosition: {x: 0, y: -249.7}
-  m_SizeDelta: {x: 500, y: 90}
+  m_AnchoredPosition: {x: 0, y: -759.7}
+  m_SizeDelta: {x: 800, y: 150}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!114 &1146853731
 MonoBehaviour:
@@ -539,7 +540,7 @@ MonoBehaviour:
   m_OnCullStateChanged:
     m_PersistentCalls:
       m_Calls: []
-  m_Sprite: {fileID: 10905, guid: 0000000000000000f000000000000000, type: 0}
+  m_Sprite: {fileID: 0}
   m_Type: 1
   m_PreserveAspect: 0
   m_FillCenter: 1
@@ -650,7 +651,7 @@ Transform:
   m_GameObject: {fileID: 1252445741}
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
   m_LocalPosition: {x: 0, y: 3.02, z: 0}
-  m_LocalScale: {x: 0.15, y: 0.15, z: 1}
+  m_LocalScale: {x: 0.3, y: 0.3, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children: []
   m_Father: {fileID: 0}
@@ -691,8 +692,8 @@ RectTransform:
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0.5, y: 0.5}
   m_AnchorMax: {x: 0.5, y: 0.5}
-  m_AnchoredPosition: {x: 7.7, y: 27.41}
-  m_SizeDelta: {x: 600, y: 500}
+  m_AnchoredPosition: {x: 7.7, y: -83.5}
+  m_SizeDelta: {x: 719.5, y: 493.2}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!114 &1395409684
 MonoBehaviour:
@@ -716,18 +717,18 @@ MonoBehaviour:
       m_Calls: []
   m_FontData:
     m_Font: {fileID: 12800000, guid: f2194cac54b099d4a8d86fd1b7ac0250, type: 3}
-    m_FontSize: 54
+    m_FontSize: 80
     m_FontStyle: 0
     m_BestFit: 0
-    m_MinSize: 3
-    m_MaxSize: 54
+    m_MinSize: 0
+    m_MaxSize: 80
     m_Alignment: 0
     m_AlignByGeometry: 0
     m_RichText: 1
     m_HorizontalOverflow: 0
     m_VerticalOverflow: 0
     m_LineSpacing: 1
-  m_Text: "ENT\xC3O; QUE SE PASSOU??\nVOLTA A TENTAR!!!"
+  m_Text: "O Sr.Borracha escapou impune! Devem de ser mais r\xE1pidos!"
 --- !u!222 &1395409685
 CanvasRenderer:
   m_ObjectHideFlags: 0
@@ -796,18 +797,18 @@ MonoBehaviour:
       m_Calls: []
   m_FontData:
     m_Font: {fileID: 12800000, guid: f2194cac54b099d4a8d86fd1b7ac0250, type: 3}
-    m_FontSize: 54
+    m_FontSize: 70
     m_FontStyle: 0
     m_BestFit: 0
-    m_MinSize: 5
-    m_MaxSize: 54
+    m_MinSize: 0
+    m_MaxSize: 70
     m_Alignment: 4
     m_AlignByGeometry: 0
     m_RichText: 1
     m_HorizontalOverflow: 0
     m_VerticalOverflow: 0
     m_LineSpacing: 1
-  m_Text: Voltar a jogar
+  m_Text: VOLTAR A JOGAR
 --- !u!222 &1850943476
 CanvasRenderer:
   m_ObjectHideFlags: 0

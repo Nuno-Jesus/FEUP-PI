@@ -14,7 +14,14 @@ public class stats : MonoBehaviour
         ra = QuizScoreManager.right_answers;
         du = QuizScoreManager.duration;
         me = QuizScoreManager.medalhas;
-        st.text = string.Format("perguntas corretas: {0}/13\n\ntempo decorrido: {1}\n\nmedalhas: {2}/2",ra, du, me);        
+		//Set the current timestamp in int variable
+		int currentDuration = (int)System.DateTime.Now.Ticks;
+		
+		//Calculate the duration of the game
+		du = currentDuration - du;
+		du = du / 10000000;
+
+        st.text = string.Format("perguntas corretas: {0}/13\n\ntempo decorrido: {1}\n\nmedalhas: {2}/2", ra, du, me);        
     }
 
     public void show_medal() {

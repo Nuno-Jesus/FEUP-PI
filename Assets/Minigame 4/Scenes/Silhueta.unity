@@ -280,6 +280,7 @@ GameObject:
   - component: {fileID: 365526386}
   - component: {fileID: 365526385}
   - component: {fileID: 365526384}
+  - component: {fileID: 365526388}
   m_Layer: 5
   m_Name: Esta a nossa frente button
   m_TagString: Untagged
@@ -331,9 +332,9 @@ MonoBehaviour:
   m_OnClick:
     m_PersistentCalls:
       m_Calls:
-      - m_Target: {fileID: 0}
-        m_TargetAssemblyTypeName: MySceneManager, Assembly-CSharp
-        m_MethodName: changeScene
+      - m_Target: {fileID: 365526388}
+        m_TargetAssemblyTypeName: GameLoader, Assembly-CSharp
+        m_MethodName: resetCode
         m_Mode: 1
         m_Arguments:
           m_ObjectArgument: {fileID: 0}
@@ -402,6 +403,18 @@ RectTransform:
   m_AnchoredPosition: {x: 540, y: -1901}
   m_SizeDelta: {x: 800, y: 150}
   m_Pivot: {x: 0.5, y: 0.5}
+--- !u!114 &365526388
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 365526383}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 864d720b2d6a52e4288e917286118a02, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
 --- !u!1 &531628936
 GameObject:
   m_ObjectHideFlags: 0
@@ -453,7 +466,6 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: f4a8f8f2e7ecc6e4589a3246a15efbe7, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  timeRemaining: 300
   CountDownTimer: {fileID: 531628939}
 --- !u!114 &531628939
 MonoBehaviour:

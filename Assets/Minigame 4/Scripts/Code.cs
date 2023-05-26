@@ -18,6 +18,7 @@ public class Code : MonoBehaviour
     {
         number.text = n1.ToString();
         Debug.Log(code);
+		n1 = n2 = n3 = n4 = 0;
     }
 
     public void increaseNumber1() {
@@ -70,12 +71,10 @@ public class Code : MonoBehaviour
 
     public void checkCode() {
         string checker = n1.ToString() + n2.ToString() + n3.ToString() + n4.ToString();
-        if (checker == code) SceneManager.LoadScene("Abrir_cofre2"); 
-        else{Debug.Log("fds");};
+        if (checker == code) 
+			SceneManager.LoadScene("Abrir_cofre2"); 
+        else
+			Debug.Log("This is the code: " + code + " and this is the checker: " + checker);
     }
     // Update is called once per frame
-    void Update()
-    {
-        
-    }
 }

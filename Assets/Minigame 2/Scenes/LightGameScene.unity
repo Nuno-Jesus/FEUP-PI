@@ -1257,7 +1257,6 @@ MonoBehaviour:
   overlay: {fileID: 217759526}
   loading: {fileID: 8282948746816495662, guid: b94d59a3fc194124e84bb48051317f14, type: 3}
   lightSlider: {fileID: 1036983375}
-  numberOfPlayers: 3
   container: {fileID: 1783746627}
   buttonPrefab: {fileID: 923884645129415406, guid: 0fe2d0425fc85fb4897a7f61010c2c37, type: 3}
   fingerprints:
@@ -2063,7 +2062,7 @@ MonoBehaviour:
   m_GameObject: {fileID: 1783746627}
   m_Enabled: 1
   m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 30649d3a9faa99c48a7b1166b86bf2a0, type: 3}
+  m_Script: {fileID: 11500000, guid: 8a8695521f0d02e499659fee002a26c2, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
   m_Padding:
@@ -2072,14 +2071,12 @@ MonoBehaviour:
     m_Top: 0
     m_Bottom: 0
   m_ChildAlignment: 4
-  m_Spacing: 0
-  m_ChildForceExpandWidth: 1
-  m_ChildForceExpandHeight: 1
-  m_ChildControlWidth: 0
-  m_ChildControlHeight: 0
-  m_ChildScaleWidth: 0
-  m_ChildScaleHeight: 0
-  m_ReverseArrangement: 0
+  m_StartCorner: 0
+  m_StartAxis: 0
+  m_CellSize: {x: 200, y: 250}
+  m_Spacing: {x: 50, y: 50}
+  m_Constraint: 2
+  m_ConstraintCount: 2
 --- !u!1 &1817579340
 GameObject:
   m_ObjectHideFlags: 0

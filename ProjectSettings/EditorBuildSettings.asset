@@ -135,6 +135,9 @@ EditorBuildSettings:
     path: Assets/Minigame 4/Scenes/Cofre2.unity
     guid: 57e638bdea03c6546a32db4f41637049
   - enabled: 1
+    path: Assets/Minigame 4/Scenes/Jogo_desintegrador.unity
+    guid: dd55a3372b4bae5468d8909c704bb5e2
+  - enabled: 1
     path: Assets/Minigame 4/Scenes/Foto_objeto.unity
     guid: eb74c81a7c1cc2a45a54b82cdc3f1d67
   - enabled: 1
@@ -224,9 +227,9 @@ EditorBuildSettings:
   - enabled: 1
     path: Assets/Minigame 4/Scenes/Gold.unity
     guid: 1604b4403b220344bacc678f0b0771cd
-  - enabled: 1
-    path: Assets/Minigame 4/Scenes/Jogo_desintegrador.unity
-    guid: addab1575c8663f488eff3c12aa06d6b
+  - enabled: 0
+    path: 
+    guid: 00000000000000000000000000000000
   - enabled: 1
     path: Assets/Minigame 4/Scenes/Jogo_fisga.unity
     guid: 12e4578bdf7445c41bb9ca353c946864
@@ -260,6 +263,15 @@ EditorBuildSettings:
   - enabled: 1
     path: Assets/Avatars/Scenes/CustomizeScene.unity
     guid: b9016059bfbec0945952228107f7f752
+  - enabled: 1
+    path: Assets/Minigame 3/Scenes/MedalResult.unity
+    guid: 3bb37fad0f3d7804ba4edc71df7ef7e2
+  - enabled: 1
+    path: Assets/Minigame 2/Scenes/GoodResult.unity
+    guid: 04eb6514531d81e4186e83ee4998f6a4
+  - enabled: 1
+    path: Assets/Minigame 2/Scenes/BestResult.unity
+    guid: 1237706afb37bad4d8f70b55c56250ce
   m_configObjects:
     com.unity.adaptiveperformance.loader_settings: {fileID: 11400000, guid: f34db9bf4b2a84845afbc76a860e695b, type: 2}
     com.unity.adaptiveperformance.samsung.android.provider_settings: {fileID: 11400000, guid: 962de8d8379fb2241811f7687c7e9a77, type: 2}

@@ -14,6 +14,7 @@ public class randomnumber : MonoBehaviour
     {
         System.Random rnd = new System.Random();
         randomNumber = rnd.Next(0,9);
+		rndnumb.text = null;
         rndnumb.text = randomNumber.ToString();
     }
 

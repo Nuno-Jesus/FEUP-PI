@@ -16,18 +16,13 @@ public class QuizScoreManager : MonoBehaviour
     public static int score = 0;
     public static int right_answers = 0;
     public static int duration = 0;
-    public static int medalhas = 2;
+    public static int medalhas = 0;
 	public bool isright = true;
 
     // Start is called before the first frame update
     void Start()
     {
         scoreText.text = score.ToString();
-    }
-
-	public void quizzScore()
-    {
-
     }
 
 	public void setfalse()
@@ -72,6 +67,18 @@ public class QuizScoreManager : MonoBehaviour
         score -= 50;
         scoreText.text = score.ToString();
     }
+
+	//Load the medal scene if the score of this minigame was 300
+	public void showLightResult()
+	{
+		if (score >= 500)
+		{
+			QuizScoreManager.medalhas += 1;
+			SceneManager.LoadScene("BestResult");
+		}
+		else
+			SceneManager.LoadScene("GoodResult");
+	}	
 }
 
 

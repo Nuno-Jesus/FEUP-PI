@@ -202,6 +202,8 @@ MonoBehaviour:
   button: {fileID: 1389535680}
   nextScene: Save Museum Animation
   isMinigameSwap: 0
+  isShieldIncrement: 0
+  somerr: {fileID: 0}
 --- !u!1 &358984631
 GameObject:
   m_ObjectHideFlags: 0
@@ -361,7 +363,7 @@ GameObject:
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 1
+  m_IsActive: 0
 --- !u!114 &1389535680
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -595,7 +597,6 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   timer: 0
-  maxTime: 0
   button: {fileID: 1389535680}
 --- !u!4 &1676592783
 Transform:

@@ -10,11 +10,10 @@ public class LightOverlayController : MonoBehaviour
 	public Slider loading;
 	private Slider loadingClone;
 	public Slider lightSlider;
-	public int numberOfPlayers = 4;
 	public GameObject container;
 	public Button buttonPrefab;
-	public Button[] fingerprints = new Button[4];
-	private bool[] wasFingerprintClicked = new bool[4];	
+	public Button[] fingerprints;
+	private bool[] wasFingerprintClicked = new bool[6];	
 	private bool wasLoadingRendered = false; 
 	public Sprite activeSprite;
 	public Sprite inactiveSprite;
@@ -29,6 +28,7 @@ public class LightOverlayController : MonoBehaviour
 
 	public void Start()
 	{
+		fingerprints = new Button[FinalAvatarManager.GetFinalAvatarImages().Count];
 		GameObject button;
 
 		button = Instantiate(buttonPrefab.gameObject, container.transform);
@@ -39,19 +39,33 @@ public class LightOverlayController : MonoBehaviour
 		fingerprints[1] = button.GetComponent<Button>();
 		fingerprints[1].onClick.AddListener(onSecondFingerprintClick);
 		
-		if (numberOfPlayers < 3)
+		if (FinalAvatarManager.GetFinalAvatarImages().Count < 3)
 			return ;
 
 		button = Instantiate(buttonPrefab.gameObject, container.transform);
 		fingerprints[2] = button.GetComponent<Button>();
 		fingerprints[2].onClick.AddListener(onThirdFingerprintClick);
 
-		if (numberOfPlayers < 4)
+		if (FinalAvatarManager.GetFinalAvatarImages().Count < 4)
 			return ;
 			
 		button = Instantiate(buttonPrefab.gameObject, container.transform);
 		fingerprints[3] = button.GetComponent<Button>();
 		fingerprints[3].onClick.AddListener(onFourthFingerprintClick);
+		
+		if (FinalAvatarManager.GetFinalAvatarImages().Count < 5)
+			return ;
+			
+		button = Instantiate(buttonPrefab.gameObject, container.transform);
+		fingerprints[4] = button.GetComponent<Button>();
+		fingerprints[4].onClick.AddListener(onFifthFingerprintClick);
+		
+		if (FinalAvatarManager.GetFinalAvatarImages().Count < 6)
+			return ;
+			
+		button = Instantiate(buttonPrefab.gameObject, container.transform);
+		fingerprints[5] = button.GetComponent<Button>();
+		fingerprints[5].onClick.AddListener(onSixthFingerprintClick);
 	}
 
 	public void Update()
@@ -61,7 +75,7 @@ public class LightOverlayController : MonoBehaviour
 			return;
 		
 		// If one of the buttons wasn't clicked, abort
-		for (int i = 0; i < numberOfPlayers; i++)
+		for (int i = 0; i < FinalAvatarManager.GetFinalAvatarImages().Count; i++)
 			if (!wasFingerprintClicked[i])
 				return ;
 		
@@ -73,7 +87,7 @@ public class LightOverlayController : MonoBehaviour
 			wasLoadingRendered = true;
 			
 			// Disable the fingerprint buttons
-			for (int i = 0; i < numberOfPlayers; i++)
+			for (int i = 0; i < FinalAvatarManager.GetFinalAvatarImages().Count; i++)
 				fingerprints[i].enabled = false;
 			gameObject.GetComponent<Button>().enabled = false;
 		}
@@ -123,6 +137,22 @@ public class LightOverlayController : MonoBehaviour
 		else
 			fingerprints[3].GetComponent<Image>().sprite = inactiveSprite;
 	}
+	void onFifthFingerprintClick()
+	{
+		wasFingerprintClicked[4] = !wasFingerprintClicked[4];
+		if (wasFingerprintClicked[4])
+			fingerprints[4].GetComponent<Image>().sprite = activeSprite;
+		else
+			fingerprints[4].GetComponent<Image>().sprite = inactiveSprite;
+	}
+	void onSixthFingerprintClick()
+	{
+		wasFingerprintClicked[5] = !wasFingerprintClicked[5];
+		if (wasFingerprintClicked[5])
+			fingerprints[5].GetComponent<Image>().sprite = activeSprite;
+		else
+			fingerprints[5].GetComponent<Image>().sprite = inactiveSprite;
+	}
 
 	void initPanel()
 	{
@@ -130,7 +160,7 @@ public class LightOverlayController : MonoBehaviour
 		gameObject.GetComponent<Button>().enabled = true;
 		lightSlider.enabled = false;
 		Array.Fill(wasFingerprintClicked, false);
-		for (int i = 0; i < numberOfPlayers; i++)
+		for (int i = 0; i < FinalAvatarManager.GetFinalAvatarImages().Count; i++)
 		{
 			fingerprints[i].enabled = true;
 			fingerprints[i].GetComponent<Image>().sprite = inactiveSprite;

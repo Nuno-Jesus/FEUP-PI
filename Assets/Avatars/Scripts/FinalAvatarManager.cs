@@ -23,6 +23,6 @@ public static class FinalAvatarManager
 
 	public static Sprite GetNextAvatarImage()
 	{
-		return finalAvatarImages[index++ % finalAvatarImages.Count];
+		return finalAvatarImages[++index % finalAvatarImages.Count];
 	}
 }

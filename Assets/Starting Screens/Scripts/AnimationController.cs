@@ -6,8 +6,6 @@ using UnityEngine.UI;
 public class AnimationController : MonoBehaviour
 {
 	public float timer = 0;
-	public float maxTime;
-
 	public const float MAX_TIME = 52.0f;
 	public Button button;
 
@@ -21,7 +19,7 @@ public class AnimationController : MonoBehaviour
     {
         timer += Time.deltaTime;
 		//If the time reaches the max time, the button is set to active
-		if(timer >= maxTime)
+		if(timer >= MAX_TIME)
 			button.gameObject.SetActive(true);
     }
 }

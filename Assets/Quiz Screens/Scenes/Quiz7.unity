@@ -216,7 +216,7 @@ PrefabInstance:
       objectReference: {fileID: 1984278620}
     - target: {fileID: 1817491889765008813, guid: 00a8470e6c405f54cb4dc85151356f5e, type: 3}
       propertyPath: nextScene
-      value: ???
+      value: MedalResult
       objectReference: {fileID: 0}
     - target: {fileID: 1817491889765008813, guid: 00a8470e6c405f54cb4dc85151356f5e, type: 3}
       propertyPath: sceneLoader
@@ -236,7 +236,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 1817491889765008813, guid: 00a8470e6c405f54cb4dc85151356f5e, type: 3}
       propertyPath: isShieldIncrement
-      value: 1
+      value: 0
       objectReference: {fileID: 0}
     - target: {fileID: 8529813206863935920, guid: 00a8470e6c405f54cb4dc85151356f5e, type: 3}
       propertyPath: m_RootOrder
@@ -632,6 +632,10 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   scoreText: {fileID: 1631730565}
+  b1: {fileID: 0}
+  b2: {fileID: 0}
+  nextscene: 
+  isright: 1
 --- !u!4 &1011977279
 Transform:
   m_ObjectHideFlags: 0
