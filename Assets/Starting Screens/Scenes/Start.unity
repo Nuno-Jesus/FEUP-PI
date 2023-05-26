@@ -344,6 +344,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     m_RemovedComponents:
     - {fileID: 4256887245250979428, guid: 00a8470e6c405f54cb4dc85151356f5e, type: 3}
+    - {fileID: 1817491889765008813, guid: 00a8470e6c405f54cb4dc85151356f5e, type: 3}
   m_SourcePrefab: {fileID: 100100000, guid: 00a8470e6c405f54cb4dc85151356f5e, type: 3}
 --- !u!1 &180342798 stripped
 GameObject:
@@ -364,8 +365,9 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   button: {fileID: 952502610}
   nextScene: Initial Animation
-  isPlayerSwap: 0
-  sceneLoader: {fileID: 0}
+  isMinigameSwap: 0
+  isShieldIncrement: 0
+  somerr: {fileID: 0}
 --- !u!1 &265807563
 GameObject:
   m_ObjectHideFlags: 0

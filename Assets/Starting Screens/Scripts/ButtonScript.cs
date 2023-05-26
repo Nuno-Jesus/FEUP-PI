@@ -9,7 +9,12 @@ public class ButtonScript : MonoBehaviour
 	public Button button;
 	public string nextScene;
 	public bool isMinigameSwap;
-	public SceneLoader MinigameLoader;
+	public bool isShieldIncrement;
+	public AudioSource somerr;
+
+    public void playErrado(){
+        somerr.Play();
+    }
 
 	void Start()
 	{
@@ -20,30 +25,30 @@ public class ButtonScript : MonoBehaviour
     public void onClick()
 	{
 		if (isMinigameSwap)			
-			MinigameLoader.loadNextMinigame();
+			GameLoader.loadNextMinigame();
+		else if (isShieldIncrement)
+			GameLoader.loadNextShieldFrame();
 		else
 			SceneManager.LoadScene(nextScene);
 	}
-
-	public void onMinigame1()
+	
+	public void goingDownPath()
 	{
-		Debug.Log("Minigame 1");
-		MinigameLoader.Minigames = null;
-		MinigameLoader.Minigames = new string[4];
-		MinigameLoader.Minigames[0] = "InsectsStartScene";
-		MinigameLoader.Minigames[1] = "LightStartScene";
-		MinigameLoader.Minigames[2] = "EarthquakeStartScene";
-		MinigameLoader.Minigames[3] = "EraserStartScene";
+		GameLoader.setInsectsFirst();
+		Text text = GameObject.FindGameObjectWithTag("debug").GetComponent<Text>();
+		text.text = "1º: Jogos dos Insectos\n" + 
+					"2º: Jogo da Luz/Humidade\n" + 
+					"3º: Jogo do Terramoto\n" + 
+					"4º: Jogo Final";
 	}
 
-	public void onMinigame2()
+	public void goingUpPath()
 	{
-		Debug.Log("Minigame 2");
-		MinigameLoader.Minigames = null;
-		MinigameLoader.Minigames = new string[4];
-		MinigameLoader.Minigames[0] = "LightStartScene";
-		MinigameLoader.Minigames[1] = "InsectsStartScene";
-		MinigameLoader.Minigames[2] = "EarthquakeStartScene";
-		MinigameLoader.Minigames[3] = "EraserStartScene";
+		GameLoader.setEarthquakeFirst();
+		Text text = GameObject.FindGameObjectWithTag("debug").GetComponent<Text>();
+		text.text = "1º: Jogo do Terramoto\n" + 
+					"2º: Jogo da Luz/Humidade\n" + 
+					"3º: Jogos dos Insectos\n" + 
+					"4º: Jogo Final";
 	}
 }

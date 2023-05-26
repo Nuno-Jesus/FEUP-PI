@@ -415,7 +415,7 @@ VideoPlayer:
   m_PlayOnAwake: 1
   m_SkipOnDrop: 1
   m_Looping: 1
-  m_WaitForFirstFrame: 1
+  m_WaitForFirstFrame: 0
   m_FrameReadyEventEnabled: 0
   m_VideoShaders: []
 --- !u!1 &1280600240
@@ -658,8 +658,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   button: {fileID: 1742140986}
   nextScene: Scratch Card
-  isPlayerSwap: 0
-  sceneLoader: {fileID: 0}
+  isMinigameSwap: 0
 --- !u!1 &1742140983
 GameObject:
   m_ObjectHideFlags: 0

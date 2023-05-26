@@ -6,20 +6,74 @@ EditorBuildSettings:
   serializedVersion: 2
   m_Scenes:
   - enabled: 1
+    path: Assets/Starting Screens/Scenes/Start.unity
+    guid: 068fcbe7b4553af46b2417dd9ffa3210
+  - enabled: 1
+    path: Assets/Starting Screens/Scenes/Scratch Card.unity
+    guid: 67754a64b40603c4b9557f7877dc17eb
+  - enabled: 1
+    path: Assets/Starting Screens/Scenes/Hidden Configs.unity
+    guid: 6443b123ff750cf4c9680406fb69359a
+  - enabled: 1
+    path: Assets/Starting Screens/Scenes/Initial Animation.unity
+    guid: 499ddbe0d174dcc4e961668df3c4de0a
+  - enabled: 1
+    path: Assets/Starting Screens/Scenes/More Info.unity
+    guid: bb48aaf29c385d04cad574d6011c8dee
+  - enabled: 1
+    path: Assets/Starting Screens/Scenes/Save Museum Animation.unity
+    guid: feb8c5c994625074d9ad39b50cc500cf
+  - enabled: 1
+    path: Assets/Starting Screens/Scenes/Shield Tutorial.unity
+    guid: 359b07914da258c449f9d4a3b486eee6
+  - enabled: 1
+    path: Assets/Shield Screens/Scenes/ShieldStage1Scene.unity
+    guid: 5f717801bb82672438badf35af732802
+  - enabled: 1
+    path: Assets/Shield Screens/Scenes/ShieldStage2Scene.unity
+    guid: 02f8d4d6b84cf7948a14bed7b85a7d1e
+  - enabled: 1
+    path: Assets/Shield Screens/Scenes/ShieldStage3Scene.unity
+    guid: 1924306b42deaa04ca7a104f66588a45
+  - enabled: 1
+    path: Assets/Shield Screens/Scenes/ShieldStage4Scene.unity
+    guid: fac2c2628b7ed2045b7863e26414d63f
+  - enabled: 1
+    path: Assets/Minigame 1/Scenes/EarthquakeStartScene.unity
+    guid: 109b87553b00bfd48b98b13cf0c6a8bf
+  - enabled: 1
+    path: Assets/Minigame 1/Scenes/MapStatue.unity
+    guid: ddc615f71969b7642a4fdf339675f8ba
+  - enabled: 1
+    path: Assets/Minigame 1/Scenes/DefeatScreen.unity
+    guid: a3e3e37d94cdac84884524f70e37e491
+  - enabled: 1
+    path: Assets/Minigame 1/Scenes/EarthquakeDescription.unity
+    guid: 4c4f05e97418c094fb031c4756d9cea0
+  - enabled: 1
+    path: Assets/Minigame 1/Scenes/EarthquakeTutorial.unity
+    guid: d3a961508263c8944909d84a11ea8f35
+  - enabled: 1
+    path: Assets/Minigame 1/Scenes/TerramotoGame.unity
+    guid: 1ffb5160265d5c54ca89e73cf4e917a3
+  - enabled: 1
+    path: Assets/Minigame 1/Scenes/VictoryScreen.unity
+    guid: 897569f0ba7ed874bb9438f3dfbaf154
+  - enabled: 1
+    path: Assets/Minigame 2/Scenes/LightStartScene.unity
+    guid: ca6fdd87aafeff74183cd97c97da5313
+  - enabled: 1
+    path: Assets/Minigame 2/Scenes/MapPaint.unity
+    guid: bc246001dfbd0ec4493c2ac4cb3a1b51
+  - enabled: 1
+    path: Assets/Minigame 2/Scenes/LightDescription.unity
+    guid: 68f949dccd6b3274a8a399655308d1f7
+  - enabled: 1
     path: Assets/Minigame 2/Scenes/LightGameScene.unity
     guid: 2cda990e2423bbf4892e6590ba056729
   - enabled: 1
-    path: Assets/Minigame 2/Scenes/LightStartScene.unity
-    guid: 68f949dccd6b3274a8a399655308d1f7
-  - enabled: 0
-    path: 
-    guid: 00000000000000000000000000000000
-  - enabled: 1
     path: Assets/Minigame 2/Scenes/HumidityIntro.unity
     guid: 15b843abe83a884418f288ddacd88578
-  - enabled: 0
-    path: 
-    guid: 00000000000000000000000000000000
   - enabled: 1
     path: Assets/Minigame 2/Scenes/LightTutorial.unity
     guid: 28450257d3f7ff145995b746fab1ffc7
@@ -35,6 +89,18 @@ EditorBuildSettings:
   - enabled: 1
     path: Assets/Minigame 2/Scenes/MinigameSwap1.unity
     guid: 560633d4780bba1499c0b5c8a631c3a9
+  - enabled: 0
+    path: 
+    guid: 00000000000000000000000000000000
+  - enabled: 1
+    path: Assets/Minigame 3/Scenes/MapJacket.unity
+    guid: 16f1acf75fc106d4d890b8aa0d9225a8
+  - enabled: 1
+    path: Assets/Minigame 3/Scenes/InsectsStartScene.unity
+    guid: 92c1b0ee2d5bf594ea2e955f14dc0406
+  - enabled: 1
+    path: Assets/Minigame 3/Scenes/InsectsDescription.unity
+    guid: 9f1f03e4fe90cc24a8bb90c7c4747ef3
   - enabled: 1
     path: Assets/Starting Screens/Scenes/Shield Tutorial.unity
     guid: 359b07914da258c449f9d4a3b486eee6
@@ -66,10 +132,173 @@ EditorBuildSettings:
     path: Assets/Minigame 3/Scenes/GameOverScreenByLarvas.unity
     guid: 478aabd954420004685c78c48160415d
   - enabled: 1
+    path: Assets/Minigame 3/Scenes/GameScene.unity
+    guid: 3fc8acdd13e6c734bafef6554d6fdbcd
+  - enabled: 1
+    path: Assets/Minigame 3/Scenes/InsectsPlayerSwap.unity
+    guid: 14ef74b8b5f744f47abaccb71255c729
+  - enabled: 1
+    path: Assets/Minigame 4/Scenes/EraserStartScene.unity
+    guid: af6dc6626440fd64ab15eea4774d2316
+  - enabled: 1
+    path: Assets/Minigame 4/Scenes/Abrir_cofre2.unity
+    guid: 8be6291f82947f64aab777a6a59a0f76
+  - enabled: 1
+    path: Assets/Minigame 4/Scenes/Abrir_cofre1.unity
+    guid: 7991d25cda8bbe34da46b3fc24707010
+  - enabled: 0
+    path: 
+    guid: 00000000000000000000000000000000
+  - enabled: 1
+    path: Assets/Minigame 4/Scenes/Cofre1.unity
+    guid: 7d66b639e4835ae47b0d523c09794706
+  - enabled: 1
+    path: Assets/Minigame 4/Scenes/Cofre2.unity
+    guid: 57e638bdea03c6546a32db4f41637049
+  - enabled: 1
+    path: Assets/Minigame 4/Scenes/Jogo_desintegrador.unity
+    guid: dd55a3372b4bae5468d8909c704bb5e2
+  - enabled: 1
+    path: Assets/Minigame 4/Scenes/Foto_objeto.unity
+    guid: eb74c81a7c1cc2a45a54b82cdc3f1d67
+  - enabled: 1
+    path: Assets/Minigame 4/Scenes/Mapa_piso2.unity
+    guid: bc933c7d40afe5f44a9fabed53ed66ac
+  - enabled: 1
+    path: Assets/Minigame 4/Scenes/Quizz 1.unity
+    guid: d8ced5c66c72dda4e970ac249874b1fd
+  - enabled: 1
+    path: Assets/Minigame 4/Scenes/Quizz 2.unity
+    guid: 5e851dfee5caf8440ba0225b19c73390
+  - enabled: 1
+    path: Assets/Minigame 4/Scenes/Quizz 3.unity
+    guid: e7c6ca0955af9464c8df73b19f558c5d
+  - enabled: 1
+    path: Assets/Minigame 4/Scenes/Quizz 4.unity
+    guid: 63231c34a2c2d8841a0535300b1e99b2
+  - enabled: 0
+    path: 
+    guid: 00000000000000000000000000000000
+  - enabled: 1
+    path: Assets/Minigame 4/Scenes/Salavolta.unity
+    guid: efc1f462925bef548ada333fd11de89f
+  - enabled: 1
+    path: Assets/Minigame 4/Scenes/SampleScene.unity
+    guid: f3474c46b15fc09499ad529d2fdf2995
+  - enabled: 1
+    path: Assets/Minigame 4/Scenes/Silhueta.unity
+    guid: f775cff6bec13434ca96765491d6c5e4
+  - enabled: 0
+    path: 
+    guid: 00000000000000000000000000000000
+  - enabled: 0
+    path: 
+    guid: 00000000000000000000000000000000
+  - enabled: 0
+    path: 
+    guid: 00000000000000000000000000000000
+  - enabled: 0
+    path: 
+    guid: 00000000000000000000000000000000
+  - enabled: 0
+    path: 
+    guid: 00000000000000000000000000000000
+  - enabled: 0
+    path: 
+    guid: 00000000000000000000000000000000
+  - enabled: 1
+    path: Assets/Minigame 4/Scenes/Tjogador1.unity
+    guid: 86265fb05ba13e749b607cdf8077ef40
+  - enabled: 1
+    path: Assets/Minigame 4/Scenes/Tjogador2.unity
+    guid: 320a9a0ee5ee9294d99f28b8ae226e12
+  - enabled: 1
+    path: Assets/Minigame 4/Scenes/Tjogador3.unity
+    guid: 3bf61a3ce9da3e64a9d997b918af3a5b
+  - enabled: 1
+    path: Assets/Minigame 4/Scenes/Bronze.unity
+    guid: 016fe6819c1aefd4894a5b9161ba1f56
+  - enabled: 1
+    path: Assets/Minigame 4/Scenes/Codigo1.unity
+    guid: 7b705441ca6596049b808ddbd3ccd8c2
+  - enabled: 1
+    path: Assets/Minigame 4/Scenes/Codigo2.unity
+    guid: 0069baa8e3a984649b93ddf66b49da2f
+  - enabled: 1
+    path: Assets/Minigame 4/Scenes/Codigo3.unity
+    guid: 632d3805092850b4182ebbf97d0351c5
+  - enabled: 1
+    path: Assets/Minigame 4/Scenes/Codigo4.unity
+    guid: ef24a5f3bf6196d4494feb2685744f89
+  - enabled: 1
+    path: Assets/Minigame 4/Scenes/Desintegrador.unity
+    guid: 9226f88bdb38942448f8a123d0494aa1
+  - enabled: 1
+    path: Assets/Minigame 4/Scenes/Escudo_final.unity
+    guid: f3e851146ba90784696faad4b0fc6d19
+  - enabled: 1
+    path: Assets/Minigame 4/Scenes/Fisga.unity
+    guid: 925d404ead725054dbbcdf0a81cc23e8
+  - enabled: 1
+    path: Assets/Minigame 4/Scenes/Ftecnica1.unity
+    guid: 1218ba319bd96b345a6187e2d5b365b0
+  - enabled: 1
+    path: Assets/Minigame 4/Scenes/Ftecnica2.unity
+    guid: cc16821900de7cb4996695c4532406cb
+  - enabled: 1
+    path: Assets/Minigame 4/Scenes/Gold.unity
+    guid: 1604b4403b220344bacc678f0b0771cd
+  - enabled: 0
+    path: 
+    guid: 00000000000000000000000000000000
+  - enabled: 1
+    path: Assets/Minigame 4/Scenes/Jogo_fisga.unity
+    guid: 12e4578bdf7445c41bb9ca353c946864
+  - enabled: 1
+    path: Assets/Minigame 4/Scenes/Silver.unity
+    guid: 71a17551854e8f149ade27de9282185e
+  - enabled: 1
+    path: Assets/Quiz Screens/Scenes/Quiz1.unity
+    guid: 5b74c8ca6766e454eb622bcc81e70937
+  - enabled: 1
+    path: Assets/Quiz Screens/Scenes/Quiz2.unity
+    guid: 26738907d3de20a49b0841c6fc85efca
+  - enabled: 1
+    path: Assets/Quiz Screens/Scenes/Quiz3.unity
+    guid: 5154e780446915145838d36378e7fddb
+  - enabled: 1
+    path: Assets/Quiz Screens/Scenes/Quiz4.unity
+    guid: 54be98e206238104196d44bcbe2cb26e
+  - enabled: 1
+    path: Assets/Quiz Screens/Scenes/Quiz5.unity
+    guid: 00d2499c8f702fc45bccdb0a761201db
+  - enabled: 1
+    path: Assets/Quiz Screens/Scenes/Quiz6.unity
+    guid: 1a9af92f030a93246ab5a0902ca31543
+  - enabled: 1
+    path: Assets/Quiz Screens/Scenes/Quiz7.unity
+    guid: db5b41109fa98634d8fbc1c428c90f53
+  - enabled: 1
+    path: Assets/Avatars/Scenes/Avatar.unity
+    guid: 8285753c7f410e140b58c3857765c311
+  - enabled: 1
+    path: Assets/Avatars/Scenes/CustomizeScene.unity
+    guid: b9016059bfbec0945952228107f7f752
+  - enabled: 1
+    path: Assets/Minigame 3/Scenes/MedalResult.unity
+    guid: 3bb37fad0f3d7804ba4edc71df7ef7e2
+  - enabled: 1
+    path: Assets/Minigame 2/Scenes/GoodResult.unity
+    guid: 04eb6514531d81e4186e83ee4998f6a4
+  - enabled: 1
+    path: Assets/Minigame 2/Scenes/BestResult.unity
+    guid: 1237706afb37bad4d8f70b55c56250ce
     path: Assets/Minigame 3/Scenes/InsectsStartScene.unity
     guid: 9f1f03e4fe90cc24a8bb90c7c4747ef3
   - enabled: 1
     path: Assets/Minigame 3/Scenes/GameScene.unity
     guid: 3fc8acdd13e6c734bafef6554d6fdbcd
   m_configObjects:
+    com.unity.adaptiveperformance.loader_settings: {fileID: 11400000, guid: f34db9bf4b2a84845afbc76a860e695b, type: 2}
+    com.unity.adaptiveperformance.samsung.android.provider_settings: {fileID: 11400000, guid: 962de8d8379fb2241811f7687c7e9a77, type: 2}
     com.unity.adaptiveperformance.simulator.provider_settings: {fileID: 11400000, guid: fd13200201374fc499d40e409488e0b1, type: 2}

@@ -712,6 +712,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     m_RemovedComponents:
     - {fileID: 4256887245250979428, guid: 00a8470e6c405f54cb4dc85151356f5e, type: 3}
+    - {fileID: 1817491889765008813, guid: 00a8470e6c405f54cb4dc85151356f5e, type: 3}
   m_SourcePrefab: {fileID: 100100000, guid: 00a8470e6c405f54cb4dc85151356f5e, type: 3}
 --- !u!1 &982108828 stripped
 GameObject:
@@ -732,8 +733,8 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   button: {fileID: 890242754}
   nextScene: More Info
-  isPlayerSwap: 0
-  sceneLoader: {fileID: 0}
+  isMinigameSwap: 0
+  isShieldIncrement: 0
 --- !u!1001 &1729437854
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -791,6 +792,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     m_RemovedComponents:
     - {fileID: 4256887245250979428, guid: 00a8470e6c405f54cb4dc85151356f5e, type: 3}
+    - {fileID: 1817491889765008813, guid: 00a8470e6c405f54cb4dc85151356f5e, type: 3}
   m_SourcePrefab: {fileID: 100100000, guid: 00a8470e6c405f54cb4dc85151356f5e, type: 3}
 --- !u!1 &1729437855 stripped
 GameObject:
@@ -810,9 +812,9 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   button: {fileID: 602010482}
-  nextScene: Shield Tutorial
-  isPlayerSwap: 0
-  sceneLoader: {fileID: 0}
+  nextScene: Avatar
+  isMinigameSwap: 0
+  isShieldIncrement: 0
 --- !u!1 &1894740097
 GameObject:
   m_ObjectHideFlags: 0

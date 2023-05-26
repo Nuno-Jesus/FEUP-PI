@@ -46,6 +46,7 @@ public class RestartScript : MonoBehaviour
             string sessionKey = System.DateTime.Now.ToString("yyyyMMddHHmmss");
             PlayerPrefs.SetInt(sessionKey, playerScore);
             PlayerPrefs.SetString("SessionKey", sessionKey);
+			QuizScoreManager.medalhas += 1;
             SceneManager.LoadScene("GameOverSceneYouWon");
         } else if(playerScore<24){
             string sessionKey = System.DateTime.Now.ToString("yyyyMMddHHmmss");

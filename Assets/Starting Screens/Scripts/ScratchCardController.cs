@@ -5,7 +5,6 @@ using UnityEngine.UI;
 
 public class ScratchCardController : MonoBehaviour
 {
-	public SceneLoader sceneLoader;
 	public GameObject maskPrefab;
 	public Canvas canvas;
 	public Text text;
@@ -17,23 +16,28 @@ public class ScratchCardController : MonoBehaviour
     void Start()
     {
 		button.enabled = false;
+		
+		//Set the starting timestamp in the QuizScoreManager duration variable
+		QuizScoreManager.duration = (int)System.DateTime.Now.Ticks;
 
 		//Set the button normal color to dark grey
 		ColorBlock colorBlock = button.colors;
 		colorBlock.normalColor = new Color(0.46f, 0.46f, 0.46f, 1.0f);
 		button.colors = colorBlock;
 
-		sceneLoader.MinigameIndex = 0;
+		GameLoader.minigameIndex = 0;
+		if (GameLoader.minigames == null)
+			GameLoader.setInsectsFirst();
 		
-		if (sceneLoader.Minigames[0] == "LightStartScene")
+		if (GameLoader.minigames[0] == "LightStartScene")
 			text.text = "Saiu o jogo da luz e da humidade!";
-		else if (sceneLoader.Minigames[0] == "InsectsStartScene")
+		else if (GameLoader.minigames[0] == "InsectsStartScene")
 			text.text = "Saiu o jogo dos insectos!";
-		else if (sceneLoader.Minigames[0] == "EarthquakeStartScene")
+		else if (GameLoader.minigames[0] == "EarthquakeStartScene")
 			text.text = "Saiu o jogo do terramoto!";
-		else if (sceneLoader.Minigames[0] == "EraserStartScene")
+		else if (GameLoader.minigames[0] == "EraserStartScene")
 			text.text = "Saiu o jogo do Sr.Borracha!";
-    }
+	}
 
 	void Update()
 	{
