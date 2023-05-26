@@ -11,16 +11,16 @@ public class HumidityController : MonoBehaviour
     public GameObject humidityPicture;
     private KeyValuePair<float, float>[] temperatureRanges;
     public int humidityCurrentFrame = 5;
-    public const int humidityCorrectFrame = 2;
+    public int humidityCorrectFrame = 2;
 
     public Slider temperatureSlider;
     public GameObject temperaturePicture;
     private KeyValuePair<float, float>[] humidityRanges;
     public int temperatureCurrentFrame = 0;
-    public const int temperatureCorrectFrame = 2;
+    public int temperatureCorrectFrame = 2;
 
-	public AudioSource temperatureCorrectSoundSource;
-	public AudioSource humidityCorrectSoundSource;
+	public AudioSource oneCorrectSoundSource;
+	public AudioSource twoCorrectSoundSource;
 
     void Start()
     {
@@ -47,16 +47,24 @@ public class HumidityController : MonoBehaviour
 
     void Update()
     {   
-		if (hasEnteredCorrectTemperatureRange() && !temperatureCorrectSoundSource.isPlaying)
-			temperatureCorrectSoundSource.Play();
-		else if (!hasEnteredCorrectTemperatureRange())
-			temperatureCorrectSoundSource.Stop();
+		if (!hasEnteredOneCorrectRange())
+		{
+			oneCorrectSoundSource.Stop();
+			twoCorrectSoundSource.Stop();
+		}
+		else if (hasEnteredOneCorrectRange())
+		{
+			twoCorrectSoundSource.Stop();
+			if (!oneCorrectSoundSource.isPlaying)
+				oneCorrectSoundSource.Play();
+		}
+		else if (hasEnteredTwoCorrectRanges())
+		{
+			oneCorrectSoundSource.Stop();
+			if (!twoCorrectSoundSource.isPlaying)
+				twoCorrectSoundSource.Play();
+		}
 		
-		if (hasEnteredCorrectHumidityRange() && !humidityCorrectSoundSource.isPlaying)
-			humidityCorrectSoundSource.Play();
-		else if (!hasEnteredCorrectHumidityRange())
-			humidityCorrectSoundSource.Stop();
-
 		temperatureCurrentFrame = getPictureFrame(temperatureSlider, temperatureRanges);     
         temperaturePicture.GetComponent<SpriteRenderer>().sprite = pictureFrames[temperatureCurrentFrame];
 		
@@ -79,7 +87,12 @@ public class HumidityController : MonoBehaviour
 		return (temperatureCorrectFrame == temperatureCurrentFrame);
 	}
 
-	public bool hasEnteredCorrectRange()
+	public bool hasEnteredOneCorrectRange()
+	{
+		return (hasEnteredCorrectHumidityRange() || hasEnteredCorrectTemperatureRange());
+	}
+
+	public bool hasEnteredTwoCorrectRanges()
 	{
 		return (hasEnteredCorrectHumidityRange() && hasEnteredCorrectTemperatureRange());
 	}

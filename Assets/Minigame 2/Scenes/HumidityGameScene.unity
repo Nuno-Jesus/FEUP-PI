@@ -413,8 +413,8 @@ MonoBehaviour:
   temperatureSlider: {fileID: 1036983375}
   temperaturePicture: {fileID: 587411963}
   temperatureCurrentFrame: 0
-  temperatureCorrectSoundSource: {fileID: 1038461161}
-  humidityCorrectSoundSource: {fileID: 1244624675}
+  oneCorrectSoundSource: {fileID: 1038461161}
+  twoCorrectSoundSource: {fileID: 1244624675}
 --- !u!1 &345287885
 GameObject:
   m_ObjectHideFlags: 0
@@ -1238,7 +1238,7 @@ GameObject:
   - component: {fileID: 1038461162}
   - component: {fileID: 1038461161}
   m_Layer: 0
-  m_Name: Temperature Correct Sound Source
+  m_Name: One Correct Range Sound Source
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -1258,7 +1258,7 @@ AudioSource:
   m_PlayOnAwake: 0
   m_Volume: 1
   m_Pitch: 1
-  Loop: 0
+  Loop: 1
   Mute: 0
   Spatialize: 0
   SpatializePostEffects: 0
@@ -1446,7 +1446,7 @@ GameObject:
   - component: {fileID: 1244624676}
   - component: {fileID: 1244624675}
   m_Layer: 0
-  m_Name: Humidity Correct Sound Source
+  m_Name: Two Correct Range Sound Source
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -1466,7 +1466,7 @@ AudioSource:
   m_PlayOnAwake: 0
   m_Volume: 1
   m_Pitch: 1
-  Loop: 0
+  Loop: 1
   Mute: 0
   Spatialize: 0
   SpatializePostEffects: 0
