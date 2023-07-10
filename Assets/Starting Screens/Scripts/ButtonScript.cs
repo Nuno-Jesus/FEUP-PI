@@ -10,6 +10,7 @@ public class ButtonScript : MonoBehaviour
 	public string nextScene;
 	public bool isMinigameSwap;
 	public bool isShieldIncrement;
+	public bool isExit;
 	public AudioSource somerr;
 
     public void playErrado(){
@@ -28,6 +29,8 @@ public class ButtonScript : MonoBehaviour
 			GameLoader.loadNextMinigame();
 		else if (isShieldIncrement)
 			GameLoader.loadNextShieldFrame();
+		else if (isExit)
+			Application.Quit();
 		else
 			SceneManager.LoadScene(nextScene);
 	}

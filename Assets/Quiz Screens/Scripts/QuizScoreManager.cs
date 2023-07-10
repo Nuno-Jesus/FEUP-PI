@@ -52,8 +52,10 @@ public class QuizScoreManager : MonoBehaviour
 
     public void IncreaseScore()
     {
-       	if (isright) {
+       	if (isright)
+		{
             right_answers += 1;
+			scorelog("IncreaseScore: right answer");
         }
         else { 
             isright = true;
@@ -78,7 +80,18 @@ public class QuizScoreManager : MonoBehaviour
 		}
 		else
 			SceneManager.LoadScene("GoodResult");
-	}	
+	}
+
+	public static void scorelog(string function)
+	{
+		Debug.Log(" ============= DEBUGGING FROM: " + function + " ============= ");
+		Debug.Log("Score: " + score);
+		Debug.Log("Duration: " + duration);
+		Debug.Log("Medalhas: " + medalhas);
+		// Debug.Log("Is Right: " + isright);
+		Debug.Log("Right Answers: " + right_answers);
+		Debug.Log("Right Options: " + right_options);
+	}
 }
 
 

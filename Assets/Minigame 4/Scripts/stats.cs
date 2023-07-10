@@ -14,6 +14,8 @@ public class stats : MonoBehaviour
         ra = QuizScoreManager.right_answers;
         du = QuizScoreManager.duration;
         me = QuizScoreManager.medalhas;
+
+		QuizScoreManager.scorelog("stats class");
 		//Set the current timestamp in int variable
 		int currentDuration = (int)System.DateTime.Now.Ticks;
 		
