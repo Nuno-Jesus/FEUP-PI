@@ -20,17 +20,25 @@ public class stats : MonoBehaviour
 		
 		//Calculate the duration of the game
 		float tsec = currentDuration - QuizScoreManager.duration;
-		int min = (int)(tsec / 60.0f);
-		int sec = (int)tsec % 60;
-		QuizScoreManager.scorelog("stats class");
+		int hours = (int)(tsec / 3600);
+		int min = (int)((tsec - hours * 3600) / 60);
+		int sec = (int)(tsec - hours * 3600 - min * 60);
 
-        // st.text = string.Format("perguntas corretas: {0}/13\n\ntempo decorrido: {1}:{2}\n\nmedalhas: {3}/2", ra, min, sec, me);
+		QuizScoreManager.scorelog("stats class");
+		Debug.Log("Total time: " + tsec + " seconds.");
+		Debug.Log("Duration: " + hours + ":" + min + ":" + sec);
+
 		st.text = "perguntas corretas: " + ra + "/13\n\n";        
-		st.text += "tempo decorrido : " + min + ":";
+		st.text += "tempo decorrido : ";
+		if (hours < 10)
+			st.text += "0";
+		st.text += hours + ":";
+		if (min < 10)
+			st.text += "0";
+		st.text += min + ":";
 		if (sec < 10)
-			st.text += "0" + sec + "\n\n";
-		else
-			st.text += sec + "\n\n";
+			st.text += "0";
+		st.text += sec + "\n\n";
 		st.text += "medalhas: " + me + "/2";
     }
 
