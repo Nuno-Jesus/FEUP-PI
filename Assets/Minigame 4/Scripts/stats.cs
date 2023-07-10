@@ -7,55 +7,58 @@ using UnityEngine.SceneManagement;
 public class stats : MonoBehaviour
 {
     public Text st;
-    public int ra, du , me;
-    // Start is called before the first frame update
+    public int ra, me;
+	
     void Start()
     {
         ra = QuizScoreManager.right_answers;
-        du = QuizScoreManager.duration;
         me = QuizScoreManager.medalhas;
 
-		QuizScoreManager.scorelog("stats class");
 		//Set the current timestamp in int variable
-		int currentDuration = (int)System.DateTime.Now.Ticks;
+		float currentDuration = Time.time;
+		Debug.Log("Current time: " + currentDuration);
 		
 		//Calculate the duration of the game
-		du = currentDuration - du;
-		du = du / 10000000;
+		float tsec = currentDuration - QuizScoreManager.duration;
+		int min = (int)(tsec / 60.0f);
+		int sec = (int)tsec % 60;
+		QuizScoreManager.scorelog("stats class");
 
-        st.text = string.Format("perguntas corretas: {0}/13\n\ntempo decorrido: {1}\n\nmedalhas: {2}/2", ra, du, me);        
+        // st.text = string.Format("perguntas corretas: {0}/13\n\ntempo decorrido: {1}:{2}\n\nmedalhas: {3}/2", ra, min, sec, me);
+		st.text = "perguntas corretas: " + ra + "/13\n\n";        
+		st.text += "tempo decorrido : " + min + ":";
+		if (sec < 10)
+			st.text += "0" + sec + "\n\n";
+		else
+			st.text += sec + "\n\n";
+		st.text += "medalhas: " + me + "/2";
     }
 
     public void show_medal() {
-        if(me == 2){
-            if(ra >= 8){
+        if(me == 2)
+		{
+            if(ra >= 8)
                 SceneManager.LoadScene("Gold");
-            }
-            else if(ra >= 4){
+            else if(ra >= 4)
                 SceneManager.LoadScene("Silver");
-            }
-            else{
+            else
                 SceneManager.LoadScene("Bronze");
-            }
         }
-        else if(me == 1){
-            if(ra == 13){
+        else if(me == 1)
+		{
+            if(ra == 13)
                 SceneManager.LoadScene("Gold");
-            }
-            else if(ra >= 8){
+            else if(ra >= 8)
                 SceneManager.LoadScene("Silver");
-            }
-            else{
+            else
                 SceneManager.LoadScene("Bronze");
-            }
         }
-        else if(me == 0){
-            if(ra == 13){
+        else if(me == 0)
+		{
+            if(ra == 13)
                 SceneManager.LoadScene("Silver");
-            }
-            else{
+            else
                 SceneManager.LoadScene("Bronze");
-            }
         }
     }
 

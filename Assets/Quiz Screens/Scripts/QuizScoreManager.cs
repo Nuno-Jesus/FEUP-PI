@@ -15,7 +15,7 @@ public class QuizScoreManager : MonoBehaviour
     public static int right_options = 0;
     public static int score = 0;
     public static int right_answers = 0;
-    public static int duration = 0;
+    public static float duration = 0;
     public static int medalhas = 0;
 	public bool isright = true;
 

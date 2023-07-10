@@ -19,7 +19,7 @@ public class ScratchCardController : MonoBehaviour
 		button.enabled = false;
 		
 		//Set the starting timestamp in the QuizScoreManager duration variable
-		QuizScoreManager.duration = (int)System.DateTime.Now.Ticks;
+		QuizScoreManager.duration = Time.time;
 
 		//Set the button normal color to dark grey
 		ColorBlock colorBlock = button.colors;
