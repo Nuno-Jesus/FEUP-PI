@@ -6,7 +6,7 @@ using UnityEngine.UI;
 public class AnimationController : MonoBehaviour
 {
 	public float timer = 0;
-	public const float MAX_TIME = 52.0f;
+	public const float MAX_TIME = 0.0f;
 	public Button button;
 
 	void Start()

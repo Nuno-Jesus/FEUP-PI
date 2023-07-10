@@ -13,6 +13,7 @@ public class ScratchCardController : MonoBehaviour
 	public Button button;
 	public int counter = 0;
 	public int maxMasks;
+	
     void Start()
     {
 		button.enabled = false;
