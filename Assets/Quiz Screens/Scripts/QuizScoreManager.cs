@@ -68,7 +68,7 @@ public class QuizScoreManager : MonoBehaviour
     {
         score -= 50;
         scoreText.text = score.ToString();
-    }
+	}
 
 	//Load the medal scene if the score of this minigame was 300
 	public void showLightResult()

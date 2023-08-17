@@ -590,6 +590,10 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   scoreText: {fileID: 2069590457}
+  b1: {fileID: 0}
+  b2: {fileID: 0}
+  nextscene: 
+  isright: 1
 --- !u!4 &1011977279
 Transform:
   m_ObjectHideFlags: 0
@@ -811,7 +815,7 @@ Transform:
   m_ConstrainProportionsScale: 0
   m_Children: []
   m_Father: {fileID: 0}
-  m_RootOrder: 10
+  m_RootOrder: 9
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!1 &1327226213
 GameObject:
@@ -1040,7 +1044,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 8529813206863935920, guid: 00a8470e6c405f54cb4dc85151356f5e, type: 3}
       propertyPath: m_RootOrder
-      value: 8
+      value: 7
       objectReference: {fileID: 0}
     - target: {fileID: 8529813206863935920, guid: 00a8470e6c405f54cb4dc85151356f5e, type: 3}
       propertyPath: m_LocalPosition.x
@@ -1084,7 +1088,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 8975273075148747887, guid: 00a8470e6c405f54cb4dc85151356f5e, type: 3}
       propertyPath: m_Name
-      value: Button Manager (1)
+      value: Button Manager
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 00a8470e6c405f54cb4dc85151356f5e, type: 3}
@@ -1100,6 +1104,7 @@ GameObject:
   - component: {fileID: 1542653881}
   - component: {fileID: 1542653880}
   - component: {fileID: 1542653879}
+  - component: {fileID: 1542653882}
   m_Layer: 5
   m_Name: Button3
   m_TagString: Untagged
@@ -1152,7 +1157,7 @@ MonoBehaviour:
   m_Colors:
     m_NormalColor: {r: 1, g: 1, b: 1, a: 1}
     m_HighlightedColor: {r: 0.9607843, g: 0.9607843, b: 0.9607843, a: 1}
-    m_PressedColor: {r: 1, g: 0, b: 0, a: 1}
+    m_PressedColor: {r: 1, g: 1, b: 1, a: 1}
     m_SelectedColor: {r: 0.9607843, g: 0.9607843, b: 0.9607843, a: 1}
     m_DisabledColor: {r: 0.78431374, g: 0.78431374, b: 0.78431374, a: 0.5019608}
     m_ColorMultiplier: 1
@@ -1188,6 +1193,18 @@ MonoBehaviour:
       - m_Target: {fileID: 1429324464}
         m_TargetAssemblyTypeName: MySceneManager, Assembly-CSharp
         m_MethodName: playErrado
+        m_Mode: 1
+        m_Arguments:
+          m_ObjectArgument: {fileID: 0}
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+          m_IntArgument: 0
+          m_FloatArgument: 0
+          m_StringArgument: 
+          m_BoolArgument: 0
+        m_CallState: 2
+      - m_Target: {fileID: 1542653882}
+        m_TargetAssemblyTypeName: ButtonChangeColor, Assembly-CSharp
+        m_MethodName: onWrongButtonClick
         m_Mode: 1
         m_Arguments:
           m_ObjectArgument: {fileID: 0}
@@ -1235,6 +1252,19 @@ CanvasRenderer:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1542653877}
   m_CullTransparentMesh: 1
+--- !u!114 &1542653882
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1542653877}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 796db93a3b61aa34baf2ca052132a88a, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  button: {fileID: 1542653879}
 --- !u!1 &1584262538
 GameObject:
   m_ObjectHideFlags: 0
@@ -1331,6 +1361,7 @@ GameObject:
   - component: {fileID: 1698412740}
   - component: {fileID: 1698412739}
   - component: {fileID: 1698412738}
+  - component: {fileID: 1698412741}
   m_Layer: 5
   m_Name: Button1
   m_TagString: Untagged
@@ -1383,7 +1414,7 @@ MonoBehaviour:
   m_Colors:
     m_NormalColor: {r: 1, g: 1, b: 1, a: 1}
     m_HighlightedColor: {r: 0.9607843, g: 0.9607843, b: 0.9607843, a: 1}
-    m_PressedColor: {r: 1, g: 0, b: 0, a: 1}
+    m_PressedColor: {r: 1, g: 1, b: 1, a: 1}
     m_SelectedColor: {r: 0.9607843, g: 0.9607843, b: 0.9607843, a: 1}
     m_DisabledColor: {r: 0.78431374, g: 0.78431374, b: 0.78431374, a: 0.5019608}
     m_ColorMultiplier: 1
@@ -1419,6 +1450,18 @@ MonoBehaviour:
       - m_Target: {fileID: 1429324464}
         m_TargetAssemblyTypeName: MySceneManager, Assembly-CSharp
         m_MethodName: playErrado
+        m_Mode: 1
+        m_Arguments:
+          m_ObjectArgument: {fileID: 0}
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+          m_IntArgument: 0
+          m_FloatArgument: 0
+          m_StringArgument: 
+          m_BoolArgument: 0
+        m_CallState: 2
+      - m_Target: {fileID: 1698412741}
+        m_TargetAssemblyTypeName: ButtonChangeColor, Assembly-CSharp
+        m_MethodName: onWrongButtonClick
         m_Mode: 1
         m_Arguments:
           m_ObjectArgument: {fileID: 0}
@@ -1466,6 +1509,19 @@ CanvasRenderer:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1698412736}
   m_CullTransparentMesh: 1
+--- !u!114 &1698412741
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1698412736}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 796db93a3b61aa34baf2ca052132a88a, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  button: {fileID: 1698412738}
 --- !u!1 &1708242670
 GameObject:
   m_ObjectHideFlags: 0
@@ -1672,7 +1728,7 @@ Transform:
   m_ConstrainProportionsScale: 0
   m_Children: []
   m_Father: {fileID: 0}
-  m_RootOrder: 9
+  m_RootOrder: 8
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!1 &1969937297
 GameObject:
@@ -1770,6 +1826,7 @@ GameObject:
   - component: {fileID: 1984278622}
   - component: {fileID: 1984278621}
   - component: {fileID: 1984278620}
+  - component: {fileID: 1984278623}
   m_Layer: 5
   m_Name: Button2
   m_TagString: Untagged
@@ -1855,6 +1912,18 @@ MonoBehaviour:
           m_StringArgument: 
           m_BoolArgument: 0
         m_CallState: 2
+      - m_Target: {fileID: 1984278623}
+        m_TargetAssemblyTypeName: ButtonChangeColor, Assembly-CSharp
+        m_MethodName: onRightButtonClick
+        m_Mode: 1
+        m_Arguments:
+          m_ObjectArgument: {fileID: 0}
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+          m_IntArgument: 0
+          m_FloatArgument: 0
+          m_StringArgument: 
+          m_BoolArgument: 0
+        m_CallState: 2
 --- !u!114 &1984278621
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -1893,6 +1962,19 @@ CanvasRenderer:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1984278618}
   m_CullTransparentMesh: 1
+--- !u!114 &1984278623
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1984278618}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 796db93a3b61aa34baf2ca052132a88a, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  button: {fileID: 1984278620}
 --- !u!1 &2040869070
 GameObject:
   m_ObjectHideFlags: 0
@@ -1973,83 +2055,6 @@ CanvasRenderer:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 2040869070}
   m_CullTransparentMesh: 1
---- !u!1001 &2067819366
-PrefabInstance:
-  m_ObjectHideFlags: 0
-  serializedVersion: 2
-  m_Modification:
-    m_TransformParent: {fileID: 0}
-    m_Modifications:
-    - target: {fileID: 1817491889765008813, guid: 00a8470e6c405f54cb4dc85151356f5e, type: 3}
-      propertyPath: button
-      value: 
-      objectReference: {fileID: 1698412738}
-    - target: {fileID: 1817491889765008813, guid: 00a8470e6c405f54cb4dc85151356f5e, type: 3}
-      propertyPath: nextScene
-      value: ???
-      objectReference: {fileID: 0}
-    - target: {fileID: 1817491889765008813, guid: 00a8470e6c405f54cb4dc85151356f5e, type: 3}
-      propertyPath: MinigameLoader
-      value: 
-      objectReference: {fileID: 11400000, guid: 2d9636fbb4ef449458eedc6cb0b5c9aa, type: 2}
-    - target: {fileID: 1817491889765008813, guid: 00a8470e6c405f54cb4dc85151356f5e, type: 3}
-      propertyPath: isMinigameSwap
-      value: 0
-      objectReference: {fileID: 0}
-    - target: {fileID: 1817491889765008813, guid: 00a8470e6c405f54cb4dc85151356f5e, type: 3}
-      propertyPath: isShieldIncrement
-      value: 1
-      objectReference: {fileID: 0}
-    - target: {fileID: 8529813206863935920, guid: 00a8470e6c405f54cb4dc85151356f5e, type: 3}
-      propertyPath: m_RootOrder
-      value: 7
-      objectReference: {fileID: 0}
-    - target: {fileID: 8529813206863935920, guid: 00a8470e6c405f54cb4dc85151356f5e, type: 3}
-      propertyPath: m_LocalPosition.x
-      value: -1.5652233
-      objectReference: {fileID: 0}
-    - target: {fileID: 8529813206863935920, guid: 00a8470e6c405f54cb4dc85151356f5e, type: 3}
-      propertyPath: m_LocalPosition.y
-      value: 5.0089426
-      objectReference: {fileID: 0}
-    - target: {fileID: 8529813206863935920, guid: 00a8470e6c405f54cb4dc85151356f5e, type: 3}
-      propertyPath: m_LocalPosition.z
-      value: 271.23312
-      objectReference: {fileID: 0}
-    - target: {fileID: 8529813206863935920, guid: 00a8470e6c405f54cb4dc85151356f5e, type: 3}
-      propertyPath: m_LocalRotation.w
-      value: 1
-      objectReference: {fileID: 0}
-    - target: {fileID: 8529813206863935920, guid: 00a8470e6c405f54cb4dc85151356f5e, type: 3}
-      propertyPath: m_LocalRotation.x
-      value: -0
-      objectReference: {fileID: 0}
-    - target: {fileID: 8529813206863935920, guid: 00a8470e6c405f54cb4dc85151356f5e, type: 3}
-      propertyPath: m_LocalRotation.y
-      value: -0
-      objectReference: {fileID: 0}
-    - target: {fileID: 8529813206863935920, guid: 00a8470e6c405f54cb4dc85151356f5e, type: 3}
-      propertyPath: m_LocalRotation.z
-      value: -0
-      objectReference: {fileID: 0}
-    - target: {fileID: 8529813206863935920, guid: 00a8470e6c405f54cb4dc85151356f5e, type: 3}
-      propertyPath: m_LocalEulerAnglesHint.x
-      value: 0
-      objectReference: {fileID: 0}
-    - target: {fileID: 8529813206863935920, guid: 00a8470e6c405f54cb4dc85151356f5e, type: 3}
-      propertyPath: m_LocalEulerAnglesHint.y
-      value: 0
-      objectReference: {fileID: 0}
-    - target: {fileID: 8529813206863935920, guid: 00a8470e6c405f54cb4dc85151356f5e, type: 3}
-      propertyPath: m_LocalEulerAnglesHint.z
-      value: 0
-      objectReference: {fileID: 0}
-    - target: {fileID: 8975273075148747887, guid: 00a8470e6c405f54cb4dc85151356f5e, type: 3}
-      propertyPath: m_Name
-      value: Button Manager
-      objectReference: {fileID: 0}
-    m_RemovedComponents: []
-  m_SourcePrefab: {fileID: 100100000, guid: 00a8470e6c405f54cb4dc85151356f5e, type: 3}
 --- !u!1 &2069590455
 GameObject:
   m_ObjectHideFlags: 0
