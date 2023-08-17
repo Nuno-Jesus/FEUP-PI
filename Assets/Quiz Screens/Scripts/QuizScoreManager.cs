@@ -32,6 +32,11 @@ public class QuizScoreManager : MonoBehaviour
 
     public void IncreaseOptions1()
     {
+		ColorBlock buttonColors = b1.colors;
+
+		buttonColors.disabledColor = Color.green;
+		b1.colors = buttonColors;
+
         right_options += 1;
         b1.interactable = false;
         if(right_options == 2){
@@ -42,6 +47,11 @@ public class QuizScoreManager : MonoBehaviour
 
     public void IncreaseOptions2()
     {
+		ColorBlock buttonColors = b2.colors;
+
+		buttonColors.disabledColor = Color.green;
+		b2.colors = buttonColors;
+
         right_options += 1;
         b2.interactable = false;
         if(right_options == 2){

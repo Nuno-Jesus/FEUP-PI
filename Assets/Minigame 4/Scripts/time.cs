@@ -6,7 +6,8 @@ using UnityEngine.SceneManagement;
 
 public class time : MonoBehaviour
 {
-    public static float timeRemaining = 60;
+	public const float MAXTIME = 300.0f;
+    public static float timeRemaining = MAXTIME;
 
     public static int lifes = 5;
 
@@ -14,6 +15,7 @@ public class time : MonoBehaviour
 
     public void changeScreen2()
     {
+    	timeRemaining = MAXTIME;
         SceneManager.LoadScene("DefeatScr");
     }
 

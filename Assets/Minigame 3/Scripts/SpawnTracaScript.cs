@@ -24,6 +24,7 @@ public class SpawnTracaScript : MonoBehaviour
     public int TracasEscaped = 0;
     public bool ContinueGame = true;
     private int remainingTracas;
+	public int totalNumberOfTracas = 45;
     public int numoflarvas1;
     // Start is called before the first frame update
 
@@ -37,7 +38,7 @@ public class SpawnTracaScript : MonoBehaviour
         casacoRenderer.sortingOrder = 1;
         Circlecollider = GameObject.FindGameObjectWithTag("Casaco").GetComponent<CircleCollider2D>();
         BoxCollider = GameObject.FindGameObjectWithTag("Tracas").GetComponent<BoxCollider2D>();
-        remainingTracas=30;
+        remainingTracas = totalNumberOfTracas;
     }
 
     // Update is called once per frame
@@ -80,7 +81,7 @@ public class SpawnTracaScript : MonoBehaviour
     tracaRenderer.sortingOrder = -1;
 
     // Check if game should end
-    if (remainingTracas == 0 && numberofTracas == 30){
+    if (remainingTracas == 0 && numberofTracas == totalNumberOfTracas) {
         logic.GameOver(logic.playerScore);
         PlayerPrefs.SetInt("Score", logic.playerScore);
         PlayerPrefs.Save();

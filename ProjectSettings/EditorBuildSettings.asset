@@ -158,7 +158,7 @@ EditorBuildSettings:
   - enabled: 1
     path: Assets/Minigame 4/Scenes/Jogo_desintegrador.unity
     guid: dd55a3372b4bae5468d8909c704bb5e2
-  - enabled: 1
+  - enabled: 0
     path: Assets/Minigame 4/Scenes/Foto_objeto.unity
     guid: eb74c81a7c1cc2a45a54b82cdc3f1d67
   - enabled: 1
@@ -258,6 +258,12 @@ EditorBuildSettings:
     path: Assets/Minigame 4/Scenes/Silver.unity
     guid: 71a17551854e8f149ade27de9282185e
   - enabled: 1
+    path: Assets/Minigame 4/Scenes/DefeatScr fisga.unity
+    guid: 31c0a2742f1baaa4b959793759cee4fe
+  - enabled: 1
+    path: Assets/Minigame 4/Scenes/DefeatScr.unity
+    guid: 5c483ebcaf80724488773ad46a32dbad
+  - enabled: 1
     path: Assets/Quiz Screens/Scenes/Quiz1.unity
     guid: 5b74c8ca6766e454eb622bcc81e70937
   - enabled: 1
@@ -293,8 +299,6 @@ EditorBuildSettings:
   - enabled: 1
     path: Assets/Minigame 2/Scenes/BestResult.unity
     guid: 1237706afb37bad4d8f70b55c56250ce
-    path: Assets/Minigame 3/Scenes/InsectsStartScene.unity
-    guid: 9f1f03e4fe90cc24a8bb90c7c4747ef3
   - enabled: 1
     path: Assets/Minigame 3/Scenes/GameScene.unity
     guid: 3fc8acdd13e6c734bafef6554d6fdbcd

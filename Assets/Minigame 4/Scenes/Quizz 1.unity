@@ -986,6 +986,7 @@ MonoBehaviour:
   b1: {fileID: 901934593}
   b2: {fileID: 698158220}
   nextscene: Codigo2
+  isright: 1
 --- !u!4 &732879900
 Transform:
   m_ObjectHideFlags: 0
@@ -1013,6 +1014,7 @@ GameObject:
   - component: {fileID: 755600509}
   - component: {fileID: 755600508}
   - component: {fileID: 755600507}
+  - component: {fileID: 755600510}
   m_Layer: 5
   m_Name: Answer 4 Button
   m_TagString: Untagged
@@ -1097,6 +1099,18 @@ MonoBehaviour:
           m_StringArgument: 
           m_BoolArgument: 0
         m_CallState: 2
+      - m_Target: {fileID: 755600510}
+        m_TargetAssemblyTypeName: ButtonChangeColor, Assembly-CSharp
+        m_MethodName: onWrongButtonClick
+        m_Mode: 1
+        m_Arguments:
+          m_ObjectArgument: {fileID: 0}
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+          m_IntArgument: 0
+          m_FloatArgument: 0
+          m_StringArgument: 
+          m_BoolArgument: 0
+        m_CallState: 2
       - m_Target: {fileID: 686154267}
         m_TargetAssemblyTypeName: ButtonScript, Assembly-CSharp
         m_MethodName: playErrado
@@ -1147,6 +1161,19 @@ CanvasRenderer:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 755600505}
   m_CullTransparentMesh: 1
+--- !u!114 &755600510
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 755600505}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 796db93a3b61aa34baf2ca052132a88a, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  button: {fileID: 755600507}
 --- !u!1 &851942995
 GameObject:
   m_ObjectHideFlags: 0
@@ -1159,6 +1186,7 @@ GameObject:
   - component: {fileID: 851942999}
   - component: {fileID: 851942998}
   - component: {fileID: 851942997}
+  - component: {fileID: 851943000}
   m_Layer: 5
   m_Name: Answer 2 Button
   m_TagString: Untagged
@@ -1255,6 +1283,18 @@ MonoBehaviour:
           m_StringArgument: 
           m_BoolArgument: 0
         m_CallState: 2
+      - m_Target: {fileID: 851943000}
+        m_TargetAssemblyTypeName: ButtonChangeColor, Assembly-CSharp
+        m_MethodName: onWrongButtonClick
+        m_Mode: 1
+        m_Arguments:
+          m_ObjectArgument: {fileID: 0}
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+          m_IntArgument: 0
+          m_FloatArgument: 0
+          m_StringArgument: 
+          m_BoolArgument: 0
+        m_CallState: 2
 --- !u!114 &851942998
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -1293,6 +1333,19 @@ CanvasRenderer:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 851942995}
   m_CullTransparentMesh: 1
+--- !u!114 &851943000
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 851942995}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 796db93a3b61aa34baf2ca052132a88a, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  button: {fileID: 851942997}
 --- !u!1 &877834390
 GameObject:
   m_ObjectHideFlags: 0
