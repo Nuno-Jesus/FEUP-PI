@@ -194,8 +194,8 @@ MonoBehaviour:
     m_HorizontalOverflow: 0
     m_VerticalOverflow: 0
     m_LineSpacing: 1
-  m_Text: Para este desafio devem de jogar a pares. Usem o dedo para procurarem os
-    intervalos ideais.
+  m_Text: Para este desafio devem jogar a pares. Usem o dedo para procurarem os intervalos
+    ideais.
 --- !u!222 &56783976
 CanvasRenderer:
   m_ObjectHideFlags: 0
