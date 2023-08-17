@@ -917,6 +917,7 @@ GameObject:
   - component: {fileID: 1542653881}
   - component: {fileID: 1542653880}
   - component: {fileID: 1542653879}
+  - component: {fileID: 1542653882}
   m_Layer: 5
   m_Name: Button3
   m_TagString: Untagged
@@ -968,7 +969,7 @@ MonoBehaviour:
   m_Colors:
     m_NormalColor: {r: 1, g: 1, b: 1, a: 1}
     m_HighlightedColor: {r: 0.9607843, g: 0.9607843, b: 0.9607843, a: 1}
-    m_PressedColor: {r: 1, g: 0, b: 0, a: 1}
+    m_PressedColor: {r: 0.27058825, g: 0.27058825, b: 0.27058825, a: 1}
     m_SelectedColor: {r: 0.9607843, g: 0.9607843, b: 0.9607843, a: 1}
     m_DisabledColor: {r: 0.78431374, g: 0.78431374, b: 0.78431374, a: 0.5019608}
     m_ColorMultiplier: 1
@@ -1004,6 +1005,18 @@ MonoBehaviour:
       - m_Target: {fileID: 1825321169}
         m_TargetAssemblyTypeName: MySceneManager, Assembly-CSharp
         m_MethodName: playErrado
+        m_Mode: 1
+        m_Arguments:
+          m_ObjectArgument: {fileID: 0}
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+          m_IntArgument: 0
+          m_FloatArgument: 0
+          m_StringArgument: 
+          m_BoolArgument: 0
+        m_CallState: 2
+      - m_Target: {fileID: 1542653882}
+        m_TargetAssemblyTypeName: ButtonChangeColor, Assembly-CSharp
+        m_MethodName: onWrongButtonClick
         m_Mode: 1
         m_Arguments:
           m_ObjectArgument: {fileID: 0}
@@ -1051,6 +1064,19 @@ CanvasRenderer:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1542653877}
   m_CullTransparentMesh: 1
+--- !u!114 &1542653882
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1542653877}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 796db93a3b61aa34baf2ca052132a88a, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  button: {fileID: 1542653879}
 --- !u!1 &1584262538
 GameObject:
   m_ObjectHideFlags: 0
@@ -1275,6 +1301,7 @@ GameObject:
   - component: {fileID: 1698412740}
   - component: {fileID: 1698412739}
   - component: {fileID: 1698412738}
+  - component: {fileID: 1698412741}
   m_Layer: 5
   m_Name: Button1
   m_TagString: Untagged
@@ -1326,7 +1353,7 @@ MonoBehaviour:
   m_Colors:
     m_NormalColor: {r: 1, g: 1, b: 1, a: 1}
     m_HighlightedColor: {r: 0.9607843, g: 0.9607843, b: 0.9607843, a: 1}
-    m_PressedColor: {r: 1, g: 0, b: 0, a: 1}
+    m_PressedColor: {r: 0.27058825, g: 0.27058825, b: 0.27058825, a: 1}
     m_SelectedColor: {r: 0.9607843, g: 0.9607843, b: 0.9607843, a: 1}
     m_DisabledColor: {r: 0.78431374, g: 0.78431374, b: 0.78431374, a: 0.5019608}
     m_ColorMultiplier: 1
@@ -1362,6 +1389,18 @@ MonoBehaviour:
       - m_Target: {fileID: 1825321169}
         m_TargetAssemblyTypeName: MySceneManager, Assembly-CSharp
         m_MethodName: playErrado
+        m_Mode: 1
+        m_Arguments:
+          m_ObjectArgument: {fileID: 0}
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+          m_IntArgument: 0
+          m_FloatArgument: 0
+          m_StringArgument: 
+          m_BoolArgument: 0
+        m_CallState: 2
+      - m_Target: {fileID: 1698412741}
+        m_TargetAssemblyTypeName: ButtonChangeColor, Assembly-CSharp
+        m_MethodName: onWrongButtonClick
         m_Mode: 1
         m_Arguments:
           m_ObjectArgument: {fileID: 0}
@@ -1409,6 +1448,19 @@ CanvasRenderer:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1698412736}
   m_CullTransparentMesh: 1
+--- !u!114 &1698412741
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1698412736}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 796db93a3b61aa34baf2ca052132a88a, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  button: {fileID: 1698412738}
 --- !u!1 &1759620934
 GameObject:
   m_ObjectHideFlags: 0
@@ -1551,6 +1603,7 @@ GameObject:
   - component: {fileID: 1984278622}
   - component: {fileID: 1984278621}
   - component: {fileID: 1984278620}
+  - component: {fileID: 1984278623}
   m_Layer: 5
   m_Name: Button2
   m_TagString: Untagged
@@ -1602,7 +1655,7 @@ MonoBehaviour:
   m_Colors:
     m_NormalColor: {r: 1, g: 1, b: 1, a: 1}
     m_HighlightedColor: {r: 0.9607843, g: 0.9607843, b: 0.9607843, a: 1}
-    m_PressedColor: {r: 1, g: 1, b: 1, a: 1}
+    m_PressedColor: {r: 0.27058825, g: 0.27058825, b: 0.27058825, a: 1}
     m_SelectedColor: {r: 0.9607843, g: 0.9607843, b: 0.9607843, a: 1}
     m_DisabledColor: {r: 0.78431374, g: 0.78431374, b: 0.78431374, a: 0.5019608}
     m_ColorMultiplier: 1
@@ -1638,6 +1691,18 @@ MonoBehaviour:
       - m_Target: {fileID: 1011977278}
         m_TargetAssemblyTypeName: QuizScoreManager, Assembly-CSharp
         m_MethodName: showLightResult
+        m_Mode: 1
+        m_Arguments:
+          m_ObjectArgument: {fileID: 0}
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+          m_IntArgument: 0
+          m_FloatArgument: 0
+          m_StringArgument: 
+          m_BoolArgument: 0
+        m_CallState: 2
+      - m_Target: {fileID: 1984278623}
+        m_TargetAssemblyTypeName: ButtonChangeColor, Assembly-CSharp
+        m_MethodName: onRightButtonClick
         m_Mode: 1
         m_Arguments:
           m_ObjectArgument: {fileID: 0}
@@ -1685,6 +1750,19 @@ CanvasRenderer:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1984278618}
   m_CullTransparentMesh: 1
+--- !u!114 &1984278623
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1984278618}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 796db93a3b61aa34baf2ca052132a88a, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  button: {fileID: 1984278620}
 --- !u!1 &2040869070
 GameObject:
   m_ObjectHideFlags: 0
