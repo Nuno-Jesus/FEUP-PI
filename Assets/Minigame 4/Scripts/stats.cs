@@ -54,7 +54,7 @@ public class stats : MonoBehaviour
         }
         else if(me == 1)
 		{
-            if(ra == 13)
+            if(ra >= 13)
                 SceneManager.LoadScene("Gold");
             else if(ra >= 8)
                 SceneManager.LoadScene("Silver");
@@ -63,7 +63,7 @@ public class stats : MonoBehaviour
         }
         else if(me == 0)
 		{
-            if(ra == 13)
+            if(ra >= 13)
                 SceneManager.LoadScene("Silver");
             else
                 SceneManager.LoadScene("Bronze");

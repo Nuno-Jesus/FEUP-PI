@@ -15,7 +15,6 @@ public class time : MonoBehaviour
 
     public void changeScreen2()
     {
-    	timeRemaining = MAXTIME;
         SceneManager.LoadScene("DefeatScr");
     }
 
@@ -26,11 +25,10 @@ public class time : MonoBehaviour
             timeRemaining -= Time.deltaTime;
             int minutes = Mathf.FloorToInt(timeRemaining / 60);
             int seconds = Mathf.FloorToInt(timeRemaining % 60);
-            CountDownTimer.text = string.Format("{0:00}:{1:00}", minutes, seconds);
+			if (CountDownTimer != null)
+				CountDownTimer.text = string.Format("{0:00}:{1:00}", minutes, seconds);
         }
         else
-        {
             changeScreen2();
-        }
     }
 }
