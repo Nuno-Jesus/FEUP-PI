@@ -16,17 +16,12 @@ public class stats : MonoBehaviour
 
 		//Set the current timestamp in int variable
 		float currentDuration = Time.time;
-		Debug.Log("Current time: " + currentDuration);
 		
 		//Calculate the duration of the game
 		float tsec = currentDuration - QuizScoreManager.duration;
 		int hours = (int)(tsec / 3600);
 		int min = (int)((tsec - hours * 3600) / 60);
 		int sec = (int)(tsec - hours * 3600 - min * 60);
-
-		QuizScoreManager.scorelog("stats class");
-		Debug.Log("Total time: " + tsec + " seconds.");
-		Debug.Log("Duration: " + hours + ":" + min + ":" + sec);
 
 		st.text = "perguntas corretas: " + ra + "/13\n\n";        
 		st.text += "tempo decorrido : ";
