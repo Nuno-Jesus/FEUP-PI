@@ -35,7 +35,7 @@ public class Borracha : MonoBehaviour
 	}
 	public void changeScreen()
 	{
-		SceneManager.LoadScene("Escudo_final");
+		SceneManager.LoadScene("ShieldStage4Scene");
 	}
 
 	private IEnumerator ShowHide(Vector2 start, Vector2 end)
