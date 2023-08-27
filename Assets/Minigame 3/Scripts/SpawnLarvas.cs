@@ -50,6 +50,7 @@ public class SpawnLarvas : MonoBehaviour
 
 			GameObject newLarva = Instantiate(Larvas, new Vector3(randomXX, randomYY, 0), transform.rotation);
 			numoflarvas++;
+			Debug.Log("Number of larvas: " + numoflarvas);
 
 			// Set the sorting order of the new larva to a higher value
 			SpriteRenderer larvaRenderer = newLarva.GetComponent<SpriteRenderer>();

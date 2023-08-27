@@ -159,7 +159,7 @@ EditorBuildSettings:
     path: Assets/Minigame 4/Scenes/Jogo_desintegrador.unity
     guid: dd55a3372b4bae5468d8909c704bb5e2
   - enabled: 0
-    path: Assets/Minigame 4/Scenes/Foto_objeto.unity
+    path: 
     guid: eb74c81a7c1cc2a45a54b82cdc3f1d67
   - enabled: 1
     path: Assets/Minigame 4/Scenes/Mapa_piso2.unity
@@ -302,6 +302,9 @@ EditorBuildSettings:
   - enabled: 1
     path: Assets/Minigame 3/Scenes/GameScene.unity
     guid: 3fc8acdd13e6c734bafef6554d6fdbcd
+  - enabled: 1
+    path: Assets/Minigame 2/Scenes/GameOverScene.unity
+    guid: 9a8d67ce77cd0244dbd6170c25dd2522
   m_configObjects:
     com.unity.adaptiveperformance.loader_settings: {fileID: 11400000, guid: f34db9bf4b2a84845afbc76a860e695b, type: 2}
     com.unity.adaptiveperformance.samsung.android.provider_settings: {fileID: 11400000, guid: 962de8d8379fb2241811f7687c7e9a77, type: 2}

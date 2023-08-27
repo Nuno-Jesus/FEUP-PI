@@ -13,10 +13,12 @@ public class LightOverlayController : MonoBehaviour
 	public GameObject container;
 	public Button buttonPrefab;
 	public Button[] fingerprints;
-	private bool[] wasFingerprintClicked = new bool[6];	
+	private bool[] wasFingerprintClicked = new bool[4];	
 	private bool wasLoadingRendered = false; 
 	public Sprite activeSprite;
 	public Sprite inactiveSprite;
+
+	public int lives;
 
     public void togglePanel()
 	{
@@ -28,6 +30,7 @@ public class LightOverlayController : MonoBehaviour
 
 	public void Start()
 	{
+		lives = 2;
 		fingerprints = new Button[FinalAvatarManager.GetFinalAvatarImages().Count];
 		GameObject button;
 
@@ -52,20 +55,6 @@ public class LightOverlayController : MonoBehaviour
 		button = Instantiate(buttonPrefab.gameObject, container.transform);
 		fingerprints[3] = button.GetComponent<Button>();
 		fingerprints[3].onClick.AddListener(onFourthFingerprintClick);
-		
-		if (FinalAvatarManager.GetFinalAvatarImages().Count < 5)
-			return ;
-			
-		button = Instantiate(buttonPrefab.gameObject, container.transform);
-		fingerprints[4] = button.GetComponent<Button>();
-		fingerprints[4].onClick.AddListener(onFifthFingerprintClick);
-		
-		if (FinalAvatarManager.GetFinalAvatarImages().Count < 6)
-			return ;
-			
-		button = Instantiate(buttonPrefab.gameObject, container.transform);
-		fingerprints[5] = button.GetComponent<Button>();
-		fingerprints[5].onClick.AddListener(onSixthFingerprintClick);
 	}
 
 	public void Update()
@@ -100,6 +89,11 @@ public class LightOverlayController : MonoBehaviour
 		// If the user locked the input in the right range, load next screen
 		if (lightSlider.GetComponent<LightController>().hasEnteredCorrectRange())
 			SceneManager.LoadScene("LightHumiditySwap");
+		else
+			lives--;
+
+		if (lives <= 0)
+			SceneManager.LoadScene("GameOverScene");
 		
 		//Otherwise, untoggle the overlay and reset variables
 		resetPanel();
@@ -136,22 +130,6 @@ public class LightOverlayController : MonoBehaviour
 			fingerprints[3].GetComponent<Image>().sprite = activeSprite;
 		else
 			fingerprints[3].GetComponent<Image>().sprite = inactiveSprite;
-	}
-	void onFifthFingerprintClick()
-	{
-		wasFingerprintClicked[4] = !wasFingerprintClicked[4];
-		if (wasFingerprintClicked[4])
-			fingerprints[4].GetComponent<Image>().sprite = activeSprite;
-		else
-			fingerprints[4].GetComponent<Image>().sprite = inactiveSprite;
-	}
-	void onSixthFingerprintClick()
-	{
-		wasFingerprintClicked[5] = !wasFingerprintClicked[5];
-		if (wasFingerprintClicked[5])
-			fingerprints[5].GetComponent<Image>().sprite = activeSprite;
-		else
-			fingerprints[5].GetComponent<Image>().sprite = inactiveSprite;
 	}
 
 	void initPanel()

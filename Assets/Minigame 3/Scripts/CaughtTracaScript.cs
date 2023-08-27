@@ -61,6 +61,11 @@ public class CaughtTracaScript : MonoBehaviour
 	private void DeleteTraca(bool wasCaught)
 	{
 		if (wasCaught)
+		{
+			SpawnTracaScript.aliveTracas--;
+			// Debug.Log("Traca was caught. Alive tracas: " + SpawnTracaScript.aliveTracas);
 			Destroy(gameObject);
+		}
+
 	}
 }

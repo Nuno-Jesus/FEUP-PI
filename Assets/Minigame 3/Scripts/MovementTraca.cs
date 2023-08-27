@@ -42,6 +42,10 @@ public class MovementTraca : MonoBehaviour
 	private void OnTriggerEnter2D(Collider2D collision)
 	{
 		if (collision.tag == DespawnBoxY.tag)
+		{
+			SpawnTracaScript.aliveTracas--;
+			// Debug.Log("Traca destroyed. Alive tracas: " + SpawnTracaScript.aliveTracas);
 			Destroy(gameObject);
+		}
 	}
 }

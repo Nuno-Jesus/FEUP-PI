@@ -14,6 +14,7 @@ public class RestartScript : MonoBehaviour
 	public void addScore()
 	{
 		playerScore += 1;
+		Debug.Log("Current score: " + playerScore);
 		string sessionKey = System.DateTime.Now.ToString("yyyyMMddHHmmss");
 		PlayerPrefs.SetInt(sessionKey, playerScore);
 	}
@@ -27,27 +28,27 @@ public class RestartScript : MonoBehaviour
 	}
 	public void GameOver(int playerScore)
 	{
-		if (playerScore >= 39 && playerScore <= 44)
+		if (playerScore < SpawnTracaScript.MAXTRACAS - 7)
 		{
 			string sessionKey = System.DateTime.Now.ToString("yyyyMMddHHmmss");
 			PlayerPrefs.SetInt(sessionKey, playerScore);
 			PlayerPrefs.SetString("SessionKey", sessionKey);
 			SceneManager.LoadScene("GameOverGorPlayAgain");
 		}
-		else if (playerScore > 44)
+		else if (playerScore >= SpawnTracaScript.MAXTRACAS - 7 && playerScore < SpawnTracaScript.MAXTRACAS - 2)
+		{
+			string sessionKey = System.DateTime.Now.ToString("yyyyMMddHHmmss");
+			PlayerPrefs.SetInt(sessionKey, playerScore);
+			PlayerPrefs.SetString("SessionKey", sessionKey);
+			SceneManager.LoadScene("GameOverGorPlayAgain");
+		}
+		else if (playerScore == SpawnTracaScript.MAXTRACAS - 2)
 		{
 			string sessionKey = System.DateTime.Now.ToString("yyyyMMddHHmmss");
 			PlayerPrefs.SetInt(sessionKey, playerScore);
 			PlayerPrefs.SetString("SessionKey", sessionKey);
 			QuizScoreManager.medalhas += 1;
 			SceneManager.LoadScene("GameOverSceneYouWon");
-		}
-		else if (playerScore < 39)
-		{
-			string sessionKey = System.DateTime.Now.ToString("yyyyMMddHHmmss");
-			PlayerPrefs.SetInt(sessionKey, playerScore);
-			PlayerPrefs.SetString("SessionKey", sessionKey);
-			SceneManager.LoadScene("GameOverGorPlayAgain");
 		}
 	}
 

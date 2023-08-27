@@ -140,7 +140,7 @@ GameObject:
   m_Icon: {fileID: 7250588514170254948, guid: 0000000000000000d000000000000000, type: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 0
+  m_IsActive: 1
 --- !u!114 &217759527
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -1266,6 +1266,7 @@ MonoBehaviour:
   - {fileID: 0}
   activeSprite: {fileID: 21300000, guid: 252108ff28c3b0d4fa2942864fdbb5a4, type: 3}
   inactiveSprite: {fileID: 21300000, guid: ecf445d70c168ce4583b861094bd6569, type: 3}
+  lives: 0
 --- !u!114 &1096398598
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -2076,7 +2077,7 @@ MonoBehaviour:
   m_CellSize: {x: 200, y: 250}
   m_Spacing: {x: 50, y: 50}
   m_Constraint: 2
-  m_ConstraintCount: 2
+  m_ConstraintCount: 1
 --- !u!1 &1817579340
 GameObject:
   m_ObjectHideFlags: 0

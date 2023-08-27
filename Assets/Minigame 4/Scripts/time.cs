@@ -18,6 +18,11 @@ public class time : MonoBehaviour
         SceneManager.LoadScene("DefeatScr");
     }
 
+	void Start()
+	{
+		lifes = 5;
+	}
+
     void Update()
     {
         if (timeRemaining > 0.1)
@@ -31,4 +36,9 @@ public class time : MonoBehaviour
         else
             changeScreen2();
     }
+
+	public static void resetTimer()
+	{
+		timeRemaining = MAXTIME;
+	}
 }

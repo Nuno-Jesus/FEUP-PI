@@ -95,8 +95,17 @@ public class Code : MonoBehaviour
 	public void checkCode()
 	{
 		string checker = n1.ToString() + n2.ToString() + n3.ToString() + n4.ToString();
+		
 		if (checker == code)
 			SceneManager.LoadScene("Abrir_cofre2");
+		else
+			time.lifes--;
+
+		if (time.lifes <= 0)
+		{
+			time.resetTimer();
+			SceneManager.LoadScene("DefeatScr");
+		}
 	}
 	// Update is called once per frame
 }
