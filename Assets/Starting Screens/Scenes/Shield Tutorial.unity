@@ -659,6 +659,9 @@ MonoBehaviour:
   button: {fileID: 1742140986}
   nextScene: Scratch Card
   isMinigameSwap: 0
+  isShieldIncrement: 0
+  isExit: 0
+  somerr: {fileID: 0}
 --- !u!1 &1742140983
 GameObject:
   m_ObjectHideFlags: 0

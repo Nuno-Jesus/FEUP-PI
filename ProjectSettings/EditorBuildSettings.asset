@@ -305,6 +305,9 @@ EditorBuildSettings:
   - enabled: 1
     path: Assets/Minigame 2/Scenes/GameOverScene.unity
     guid: 9a8d67ce77cd0244dbd6170c25dd2522
+  - enabled: 1
+    path: Assets/Minigame 4/Scenes/MapSilluette.unity
+    guid: 4a658cb6f5ca9d7469f4e76b2576d0b6
   m_configObjects:
     com.unity.adaptiveperformance.loader_settings: {fileID: 11400000, guid: f34db9bf4b2a84845afbc76a860e695b, type: 2}
     com.unity.adaptiveperformance.samsung.android.provider_settings: {fileID: 11400000, guid: 962de8d8379fb2241811f7687c7e9a77, type: 2}

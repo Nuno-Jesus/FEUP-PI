@@ -3,6 +3,7 @@ using System.Collections.Generic;
 using UnityEngine;
 using UnityEngine.UI;
 using UnityEngine.SceneManagement;
+using System;
 
 public class RestartScript : MonoBehaviour
 {
@@ -13,7 +14,7 @@ public class RestartScript : MonoBehaviour
 	[ContextMenu("Increase Score")]
 	public void addScore()
 	{
-		playerScore += 1;
+		playerScore = Mathf.Clamp(playerScore + 1, 0, SpawnTracaScript.MAXSCORE);
 		Debug.Log("Current score: " + playerScore);
 		string sessionKey = System.DateTime.Now.ToString("yyyyMMddHHmmss");
 		PlayerPrefs.SetInt(sessionKey, playerScore);
@@ -28,21 +29,21 @@ public class RestartScript : MonoBehaviour
 	}
 	public void GameOver(int playerScore)
 	{
-		if (playerScore < SpawnTracaScript.MAXTRACAS - 7)
+		if (playerScore < SpawnTracaScript.MAXSCORE - 5)
 		{
 			string sessionKey = System.DateTime.Now.ToString("yyyyMMddHHmmss");
 			PlayerPrefs.SetInt(sessionKey, playerScore);
 			PlayerPrefs.SetString("SessionKey", sessionKey);
 			SceneManager.LoadScene("GameOverGorPlayAgain");
 		}
-		else if (playerScore >= SpawnTracaScript.MAXTRACAS - 7 && playerScore < SpawnTracaScript.MAXTRACAS - 2)
+		else if (playerScore >= SpawnTracaScript.MAXSCORE - 5 && playerScore < SpawnTracaScript.MAXSCORE)
 		{
 			string sessionKey = System.DateTime.Now.ToString("yyyyMMddHHmmss");
 			PlayerPrefs.SetInt(sessionKey, playerScore);
 			PlayerPrefs.SetString("SessionKey", sessionKey);
 			SceneManager.LoadScene("GameOverGorPlayAgain");
 		}
-		else if (playerScore == SpawnTracaScript.MAXTRACAS - 2)
+		else if (playerScore >= SpawnTracaScript.MAXSCORE)
 		{
 			string sessionKey = System.DateTime.Now.ToString("yyyyMMddHHmmss");
 			PlayerPrefs.SetInt(sessionKey, playerScore);

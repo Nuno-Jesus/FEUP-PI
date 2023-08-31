@@ -21,9 +21,9 @@ public class SpawnTracaScript : MonoBehaviour
 	public float maxY;
 	public int TracasEscaped = 0;
 	public bool ContinueGame = true;
-	private int remainingTracas;
-	public static int aliveTracas = 0;
-	public const int MAXTRACAS = 47;
+	public const int MAXTRACAS = MAXSCORE + OFFSET;
+	public const int MAXSCORE = 40;
+	public const int OFFSET = 2;
 	public int numoflarvas1;
 	// Start is called before the first frame update
 
@@ -34,7 +34,6 @@ public class SpawnTracaScript : MonoBehaviour
 		numberofTracas = 0;
 		SpriteRenderer casacoRenderer = Casaco.GetComponent<SpriteRenderer>();
 		casacoRenderer.sortingOrder = 1;
-		remainingTracas = MAXTRACAS;
 	}
 
 	// Update is called once per frame
@@ -46,7 +45,7 @@ public class SpawnTracaScript : MonoBehaviour
 		{
 			timer = 0;
 			numberofTracas++;
-			remainingTracas--;
+			// Debug.Log("Spawned tracas: " + numberofTracas);
 			Spawntraca();
 		}
 	}
@@ -76,7 +75,6 @@ public class SpawnTracaScript : MonoBehaviour
 
 		GameObject newTraca = Instantiate(traca, new Vector3(randomX, randomY, 0), transform.rotation);
 		newTraca.tag = "Tracas"; // set tag for traca
-		aliveTracas++;
 
 		// Set the sorting layer and order of the traca sprite renderer
 		SpriteRenderer tracaRenderer = newTraca.GetComponent<SpriteRenderer>();

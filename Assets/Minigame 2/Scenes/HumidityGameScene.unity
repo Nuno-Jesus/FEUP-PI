@@ -1731,6 +1731,7 @@ MonoBehaviour:
   canvas: {fileID: 323402578}
   overlay: {fileID: 1761358773}
   humidityLoading: {fileID: 4861899907999420876, guid: 3abf39be88cf1944999888ebbefb890b, type: 3}
+  lives: 0
 --- !u!1 &1386438696
 GameObject:
   m_ObjectHideFlags: 0
@@ -2314,7 +2315,7 @@ RectTransform:
   m_AnchorMin: {x: 0, y: 0}
   m_AnchorMax: {x: 1, y: 1}
   m_AnchoredPosition: {x: 0, y: 0}
-  m_SizeDelta: {x: 0, y: 0}
+  m_SizeDelta: {x: -0.00000667572, y: 0}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!1 &1817579340
 GameObject:

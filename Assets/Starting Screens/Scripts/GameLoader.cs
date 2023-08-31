@@ -40,6 +40,8 @@ public class GameLoader : MonoBehaviour
 	public static void loadNextMinigame()
 	{
 		GameLoader.minigameIndex++;
+		if (minigames[(GameLoader.minigameIndex - 1) % GameLoader.minigames.Length] == "EraserStartScene")
+			QuizScoreManager.right_answers_before_last_game = QuizScoreManager.right_answers;
 		SceneManager.LoadScene(minigames[(GameLoader.minigameIndex - 1) % GameLoader.minigames.Length]);
 	}
 
@@ -66,5 +68,10 @@ public class GameLoader : MonoBehaviour
 	{
 		Code.code = null;
 		Code.code = "";
+	}
+
+	public void resetRightAnswers()
+	{
+		QuizScoreManager.right_answers = QuizScoreManager.right_answers_before_last_game;
 	}
 }

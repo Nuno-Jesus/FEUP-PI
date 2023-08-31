@@ -27,7 +27,7 @@ public class GetScore : MonoBehaviour
 	public void ShowHowManyHoles()
 	{
 		int score = PlayerPrefs.GetInt("Score");
-		int tracasEscaped = SpawnTracaScript.MAXTRACAS - score - 2;
+		int tracasEscaped = Mathf.Clamp(SpawnTracaScript.MAXSCORE - score, 0, SpawnTracaScript.MAXTRACAS);
 		string scorePhrase;
 
 		if (tracasEscaped > 1)
