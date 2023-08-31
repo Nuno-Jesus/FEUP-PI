@@ -16,6 +16,7 @@ public class ButtonChangeColor : MonoBehaviour
 		buttonColors.highlightedColor = Color.red;
 		buttonColors.selectedColor = Color.red;
 		buttonColors.pressedColor = Color.red;
+		button.GetComponentInChildren<Text>().color = Color.white;
 		button.colors = buttonColors;
 	}
 	public void onRightButtonClick()
@@ -26,6 +27,7 @@ public class ButtonChangeColor : MonoBehaviour
 		buttonColors.highlightedColor = Color.green;
 		buttonColors.selectedColor = Color.green;
 		buttonColors.pressedColor = Color.green;
+		button.GetComponentInChildren<Text>().color = Color.white;
 		button.colors = buttonColors;
 	}
 }
